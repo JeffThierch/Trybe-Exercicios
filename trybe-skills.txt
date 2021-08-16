@@ -11,4 +11,5 @@ O que eu vou aprender na Trybe:
 - Express.js
 - SQL
 - Metodologias Ageis
-- Dentre outras coisas
+- MongoDB
+
