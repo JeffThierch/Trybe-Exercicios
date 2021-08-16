@@ -5,14 +5,15 @@ O que eu vou aprender na Trybe:
 - HTML
 - CSS
 - JavaScript
-- React
-- Node
-- Express.js
-- SQL
-- Metodologias Ageis
 - Testes Automatizados
-- Estrutura de Dados
+- React
+- Metodologias Ageis
+- Node
+- SQL
+- MongoDB
+- Express.js
 - Soft Skills
+- Estrutura de Dados
 - Dentre varias outras coisas!
 
 
