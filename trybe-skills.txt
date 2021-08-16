@@ -1,8 +1,7 @@
 O que eu vou aprender na Trybe:
 
-- Unix
-- Bash
-- Git e GitHub
+- Unix & Bash
+- Git & GitHub
 - HTML
 - CSS
 - JavaScript
@@ -11,4 +10,7 @@ O que eu vou aprender na Trybe:
 - Express.js
 - SQL
 - Metodologias Ageis
-- Dentre outras coisas
+- Testes Automatizados
+- Estruturas de Dados
+- Soft Skills
+- Dentre varias outras coisas !
