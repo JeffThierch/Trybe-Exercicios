@@ -1,0 +1,10 @@
+ol{
+  background-color: yellow;
+}
+ol li:nth-of-type(odd){
+  text-transform: uppercase;
+}
+
+ol li:nth-of-type(even){
+  color: green;
+}
