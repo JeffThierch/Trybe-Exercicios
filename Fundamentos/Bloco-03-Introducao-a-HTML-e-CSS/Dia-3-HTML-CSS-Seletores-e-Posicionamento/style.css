@@ -25,3 +25,17 @@ font-size: 20px;
 li em{
   font-weight: bold;
 }
+
+ul li:nth-child(1){
+  color: blue;
+}
+ul li:nth-of-type(2){
+  color: blue;
+}
+ul li:nth-of-type(3){
+  color: blue;
+}
+
+li.java{
+  background-color: pink;
+}
