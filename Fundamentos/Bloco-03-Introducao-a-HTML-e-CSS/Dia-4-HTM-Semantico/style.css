@@ -2,6 +2,10 @@ h1 {
   text-align: center;
 }
 
+.podium ul {
+  text-align: center;
+}
+
 .first {
   background-color: rgb(235, 200, 84);
   font-size: 20px;
@@ -24,4 +28,21 @@ h1 {
   height: 50px;
   text-align: center;
   width: 300px;
+}
+
+.second, .third{
+  display: inline-block;
+}
+
+.header-prizes{
+  text-align: center;
+  
+}
+
+.premios ul {
+  text-align: center;
+}
+
+.premios ul li{
+  display: inline-block;
 }
