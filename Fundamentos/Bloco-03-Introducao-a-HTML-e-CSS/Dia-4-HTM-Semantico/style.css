@@ -7,6 +7,8 @@ h1 {
 }
 
 .first {
+  margin:auto;
+  list-style: none;
   background-color: rgb(235, 200, 84);
   font-size: 20px;
   height: 50px;
@@ -44,5 +46,6 @@ h1 {
 }
 
 .premios ul li{
+  margin: auto;
   display: inline-block;
 }
