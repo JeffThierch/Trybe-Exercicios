@@ -53,7 +53,7 @@ body{
   font-family: 'Montserrat', sans-serif;
   color: aliceblue;
   margin-left: 10px;
-  padding-top: 10px;
+  padding-top: 20px;
   text-decoration: underline;
 }
 
@@ -68,7 +68,6 @@ body{
   margin-top: 15px;
   text-align: left;
   width: 95vw;
-  height: 50vh;
   margin-left: 20px;
   font-size: 20px;
 }
@@ -132,9 +131,52 @@ strong{
 .content-image{
   margin-top: 20px;
   width: 400px;
-  margin-left: 30% ;
+  margin-left: 35% ;
   border: #0f2330 2px solid;
   
+}
+
+.references{
+  background-color: #1a3a4e;
+}
+
+.references ul li {
+  margin-top: 10px;
+}
+.references ul li a{
+  color: aliceblue;
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.link-video{
+  background-color: #1a3a4e;
+}
+
+.video {
+  margin-top: 20px;
+  width: 400px;
+  height: 300px;
+  margin-left: 35% ;
+  border: #0f2330 2px solid;
+}
+.footer{
+  background-color: #1a3a4e;
+  text-align: center;
+  border-top: #0f2330 solid 1px;
+}
+
+
+.footer p {
+  display: inline-block;
+  padding: 20px;font-family: 'Montserrat', sans-serif;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+.footer span{
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 
