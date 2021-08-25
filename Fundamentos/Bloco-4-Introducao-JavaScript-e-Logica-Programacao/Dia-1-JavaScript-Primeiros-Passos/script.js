@@ -12,3 +12,6 @@ console.log(subtracao);
 let multiplicacao = a * b
 
 console.log(multiplicacao)
+
+let divisao = a / b
+console.log(divisao)
