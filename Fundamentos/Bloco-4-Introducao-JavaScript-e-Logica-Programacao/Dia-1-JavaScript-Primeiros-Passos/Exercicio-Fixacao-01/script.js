@@ -1,2 +1,3 @@
 const muName = "Jefferson";
-const birthCity = "Ribeirao Preto"
+const birthCity = "Ribeirao Preto";
+let birthYear = 2000;
