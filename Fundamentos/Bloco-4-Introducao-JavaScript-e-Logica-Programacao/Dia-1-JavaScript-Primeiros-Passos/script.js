@@ -40,22 +40,44 @@ const numero2 = 40;
 const numero3 = 30;
 
 if(numero1 > numero2 && numero1 > numero3){
-  console.log("O Numero: " + numero1 + " e maior" )
+  console.log("O Numero: " + numero1 + " e maior" );
 }else if(numero2 > numero1 && numero2 > numero3){
-  console.log("O Numero: " + numero2 + " e maior" )
+  console.log("O Numero: " + numero2 + " e maior" );
 }else{
-  console.log("O Numero: " + numero3 + " e maior" )
+  console.log("O Numero: " + numero3 + " e maior" );
 }
 
-console.log("Programa 08")
+console.log("Programa 08");
 
-const numeroDado = 0
+const numeroDado = 0;
 
 if(numeroDado < 0){
-  console.log("negative")
+  console.log("negative");
 }else if(numeroDado > 0){
-  console.log("positive")
+  console.log("positive");
 }else{
-  console.log("zero")
+  console.log("zero");
 }
+
+console.log("Programa 09")
+
+let ladoA = 60;
+let ladoB = -20;
+let ladoC = 60;
+
+let total = ladoA + ladoB + ladoC;
+const anguloMaximo = 180;
+
+
+if(total == anguloMaximo && ladoA > 0 && ladoB > 0 && ladoC > 0){
+  console.log(true);
+}
+else if (total > anguloMaximo || total < anguloMaximo && ladoA > 0 && ladoB > 0 && ladoC > 0){
+  console.log(false);
+}
+else{
+  console.log("angulo invalido");
+}
+
+
 
