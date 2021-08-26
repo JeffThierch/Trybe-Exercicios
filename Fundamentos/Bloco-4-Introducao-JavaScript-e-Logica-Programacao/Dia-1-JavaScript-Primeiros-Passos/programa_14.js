@@ -1,10 +1,10 @@
 
 
-const custoProduto = 10
+const custoProduto = 20
 const valorVenda = 10;
 
 const imposto = 20
-const custoTotalProduto = custoProduto + ((imposto/100)*100)
+const custoTotalProduto = custoProduto + (custoProduto * (imposto/100))
 const lucroProduto = valorVenda - custoTotalProduto
 
 let numeroVendas = 1000
