@@ -27,11 +27,11 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [X]  3.2 - HTML & CSS - Primeiros passos em CSS
 - [X]  3.3 - HTML & CSS - Seletores e posicionamento
 - [X]  3.4 - HTML Semântico
-- [ ]  3.5 - Projeto - Lessons Learned
+- [X]  3.5 - Projeto - Lessons Learned
 
 ##### Bloco 4: Introdução à JavaScript e Lógica de Programação
-- [ ] 4.1 - Introdução - JavaScript
-- [ ] 4.1 - JavaScript - Primeiros passos
+- [X] 4.1 - Introdução - JavaScript
+- [X] 4.1 - JavaScript - Primeiros passos
 - [ ] 4.2 - JavaScript - Array e loop For
 - [ ] 4.3 - JavaScript - Lógica de Programação e Algoritmos
 - [ ] 4.4 - JavaScript - Objetos e funções
