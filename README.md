@@ -106,10 +106,10 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [ ] 14.2 - Projeto - Frontend Online Store
 
 ##### Bloco 15: Testes automatizados com React Testing Library
-- [] 15.1 - RTL - Primeiros passos
-- [] 15.2 - RTL - Mocks e Inputs
-- [] 15.3 - RTL - Testando React Router
-- [] 15.4 - Projeto - Testes em React
+- [ ] 15.1 - RTL - Primeiros passos
+- [ ] 15.2 - RTL - Mocks e Inputs
+- [ ] 15.3 - RTL - Testando React Router
+- [ ] 15.4 - Projeto - Testes em React
 
 ##### Bloco 16: Gerenciamento de estado com Redux
 - [ ] 16.1 - Introdução ao Redux - O estado global da aplicação
@@ -167,9 +167,9 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [ ] 24.4 - Projeto - Commerce
 
 ##### Bloco 25: MongoDB: Aggregation Framework
-- [] 25.1 - Aggregation Framework - Parte 1
-- [] 25.2 - Aggregation Framework - Parte 2
-- [] 25.3 - Projeto - Aggregations
+- [ ] 25.1 - Aggregation Framework - Parte 1
+- [ ] 25.2 - Aggregation Framework - Parte 2
+- [ ] 25.3 - Projeto - Aggregations
 
 ##### Bloco 26: Introdução ao desenvolvimento Web com NodeJS
 - [ ] 26.1 - Intro - NodeJS
