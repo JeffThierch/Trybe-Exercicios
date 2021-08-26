@@ -1,19 +1,10 @@
+const numero1 = 1
+const numero2 = 2
+const numero3 = 4
 
-
-const custoProduto = 10
-const valorVenda = 10;
-
-const imposto = 20
-const custoTotalProduto = custoProduto + ((imposto/100)*100)
-const lucroProduto = valorVenda - custoTotalProduto
-
-let numeroVendas = 1000
-
-
-if(custoProduto < 0 || valorVenda < 0){
-  console.log("Insira um valor valido")
+if(numero1 % 2 != 0 || numero2 % 2 != 0 || numero3 % 2 != 0){
+  console.log(true)
 }
-else{
-  const lucroTotalProduto = lucroProduto * numeroVendas
-  console.log("O lucro total sera de R$ " + lucroTotalProduto )
-}
+else(
+  console.log(false)
+)
