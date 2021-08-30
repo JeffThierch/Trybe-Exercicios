@@ -1,6 +1,7 @@
 const a = 30;
 const b = 20;
 
+/* Refatoracao exercicios 1 - 5  */
 
 function soma(a, b){
   let adicao = a + b;
@@ -42,4 +43,3 @@ function modulo(a, b){
 
 
 console.log(modulo(a, b));
-
