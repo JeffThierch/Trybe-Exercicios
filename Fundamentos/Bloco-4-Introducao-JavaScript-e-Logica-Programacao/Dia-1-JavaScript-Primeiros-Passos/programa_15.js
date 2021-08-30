@@ -1,5 +1,6 @@
 const salarioBruto = 20000;
 
+function calculaINSS(salarioBruto){
 /* Calculando INSS  */
 
 let valorINSS;
@@ -23,28 +24,43 @@ else{
   
 }
 
-let salarioBase = salarioBruto - valorINSS;
+return valorINSS;
 
-let impostoRenda;
-
-if(salarioBase < 1903.38){
-  impostoRenda = 0
-}
-else if (salarioBase >= 1903.99 && salarioBase <= 2826.65){
-  impostoRenda = (salarioBase * 0.075) - 142.8;
-}
-else if (salarioBase >= 2826.66 && salarioBase <= 3751.05){
-  impostoRenda = (salarioBase * 0.15) - 354.8;
-}
-else if (salarioBase >= 3751.06 && salarioBase <= 4664.68){
-  impostoRenda = (salarioBase * 0.225) - 636.13;
-}
-else{
-  impostoRenda = (salarioBase * 0.275) - 869.36;
 }
 
-const salarioLiquido = salarioBase - impostoRenda
-const descontado = salarioBruto - salarioLiquido
 
-console.log("Seu salario liquido e de R$ " + salarioLiquido)
-console.log("Foram descontados R$ " + descontado)
+function calculandoIR(salarioBruto ,valorINSS){
+  let salarioBase = salarioBruto - valorINSS;
+
+  let impostoRenda;
+  
+  if(salarioBase < 1903.38){
+    impostoRenda = 0
+  }
+  else if (salarioBase >= 1903.99 && salarioBase <= 2826.65){
+    impostoRenda = (salarioBase * 0.075) - 142.8;
+  }
+  else if (salarioBase >= 2826.66 && salarioBase <= 3751.05){
+    impostoRenda = (salarioBase * 0.15) - 354.8;
+  }
+  else if (salarioBase >= 3751.06 && salarioBase <= 4664.68){
+    impostoRenda = (salarioBase * 0.225) - 636.13;
+  }
+  else{
+    impostoRenda = (salarioBase * 0.275) - 869.36;
+  }
+  
+  const salarioLiquido = salarioBase - impostoRenda
+  const salarioLiquidoArredondado = salarioLiquido.toFixed(2)
+  const descontado = salarioBruto - salarioLiquido
+  const valorDescontadoArredondado = descontado.toFixed(2)
+  
+  console.log("Seu salario liquido e de R$ " + salarioLiquidoArredondado)
+  console.log("Foram descontados R$ " + valorDescontadoArredondado)
+}
+
+let valorINSS = calculaINSS(salarioBruto)
+
+calculandoIR(salarioBruto, valorINSS)
+
+
