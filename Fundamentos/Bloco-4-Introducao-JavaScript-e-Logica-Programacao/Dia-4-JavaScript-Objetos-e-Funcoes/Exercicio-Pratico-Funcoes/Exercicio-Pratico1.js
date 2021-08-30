@@ -8,10 +8,10 @@ function verificaPalindrome(palavra){
   }
   
   if (palavraInvertida === palavra){
-    console.log(true)
+    console.log(true);
   }
   else{
-    console.log(false)
+    console.log(false);
   }
 }
 
