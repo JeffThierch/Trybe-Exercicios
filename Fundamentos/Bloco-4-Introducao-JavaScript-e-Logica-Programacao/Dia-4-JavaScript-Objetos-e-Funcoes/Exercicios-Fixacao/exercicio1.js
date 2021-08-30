@@ -5,5 +5,4 @@ let player = {
   medals : { golden: 2, silver: 3 }
 }
 
-console.log(player.name
-  )
+console.log("A jogadora " + player.name + " " + player.lastName + " possui : " + player.age + " Anos")
