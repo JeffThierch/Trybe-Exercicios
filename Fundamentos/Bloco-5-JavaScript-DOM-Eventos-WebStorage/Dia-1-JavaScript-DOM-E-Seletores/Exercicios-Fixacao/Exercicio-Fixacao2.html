@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <h2 id="page-title">Título</h2>
+      <p class="exercicio2" id="paragraph">Dê uma cor para este parágrafo!</p>
+      <h4 id="subtitle">Subtítulo</h4>
+      <p class="exercicio2" id="second-paragraph">Segundo parágrafo!</p>
+    </header>
+    <script>
+      const paragraph = document.getElementById("paragraph");
+      paragraph.style.color = "red";
+      const title = document.getElementById("page-title").innerHTML = "O Lobo de Wall Street";
+      const secondParagraph = document.getElementById("second-paragraph").innerHTML = "Nemo"
+      const subtitle = document.getElementById("subtitle").innerHTML = "South Park";
+
+      /* Exercicio 2 */
+
+      const prg = document.getElementsByClassName("exercicio2");
+
+      prg[0].style.color = "green";
+
+      const exercicio2Subtitle = document.getElementsByTagName("h4")
+
+      exercicio2Subtitle[0].style.color = "blue";
+      
+    </script>
+  </body>
+</html>
