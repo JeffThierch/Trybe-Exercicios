@@ -55,15 +55,56 @@
  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
 
-        function changeDescription(text) { /* Exercicio 1 */
+/* Exercicio 1 */
+
+        function changeDescription(text) { 
           document.getElementsByTagName("p")[0].innerHTML = text
         }
         changeDescription("Em 2 anos eu me vejo como uma Pessoa Desenvolvedora, com as capacidades de exercer minha profissao com exelencia.")
 
-        function changeColorMain (colorRGB) { /* Exercicio 2 */
+/* Exercicio 2 */
+
+        function changeColorMain (colorRGB) { 
           document.getElementsByClassName("main-content")[0].style.backgroundColor = colorRGB;
         }
         changeColorMain("rgb(76,164,109)");
+
+/* Exercicio 3 */
+
+        function changeColorCenterSquare (color) { 
+            document.getElementsByClassName("center-content")[0].style.backgroundColor = color;
+        }
+        changeColorCenterSquare("white");
+
+/* Exercicio 4 */
+
+        function changeH1Text (text) {
+          document.getElementsByClassName("title")[0].innerText = text
+        }
+        changeH1Text("Exercício 5.1 - JavaScript");
+
+/* Exercicio 5 */
+
+        function changeParagraphToUpperCase() {
+          let paragraphs = document.getElementsByTagName("p")
+          
+          for (let index = 0; index < paragraphs.length; index += 1){
+            paragraphs[index].style.textTransform = "uppercase"
+          }
+          
+        }
+        changeParagraphToUpperCase()
+
+        /* Exercicio 6 */
+
+        function showAllParagraphInConsole(){
+          let paragraphs = document.getElementsByTagName("p");
+
+          for (let index = 0; index < paragraphs.length; index += 1){
+            console.log(paragraphs[index].innerText)
+          }
+        }
+        showAllParagraphInConsole()
 
     </script>
   </body>
