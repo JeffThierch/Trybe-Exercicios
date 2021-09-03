@@ -20,8 +20,20 @@
     </section>
   </main>
   <script>
-   let exercico1 = document.getElementById("elementoOndeVoceEsta").parentElement.firstElementChild.innerHTML = "Exercicio 03"
-   console.log(exercico1)
+   let parte1 = document.getElementById("elementoOndeVoceEsta").parentElement.firstElementChild.innerText = "Exercicio 03"
+   console.log(parte1)
+
+   let parte2 = document.getElementById("pai").firstElementChild
+   console.log(parte2)
+
+   let parte3 = document.getElementById("elementoOndeVoceEsta").previousElementSibling
+   console.log(parte3)
+
+   let parte4 = document.getElementById("elementoOndeVoceEsta").nextSibling
+   console.log(parte4)
+
+   let parte5 = document.getElementById("elementoOndeVoceEsta").nextElementSibling
+   console.log(parte5)
 
   </script>
 </body>
