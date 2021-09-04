@@ -57,14 +57,30 @@
   </head>
   <body>
     <script>
+      /* function appendElementoToAnother(elementoPai, elementoFilho){
+        let elemento = document.getElementsByClassName = elementoPai
+        let elementToAppend = document.getElementsByClassName = elementoFilho
+        elemento.appendChild(elementToAppend)
+      } */
+
+      /* Exercicio 1 */
+
       let exercicio1 = document.createElement("h1");
       exercicio1.innerText = "Exercício 5.2 - JavaScript DOM"
       document.body.appendChild(exercicio1)
+      
       /* Exercicio 2 */
 
       let exercicio2 = document.createElement("main")
       exercicio2.className = "main-content"
       document.body.appendChild(exercicio2)
+
+      /* Exercicio 3 */
+
+      let exercicio3 = document.createElement("section")
+      exercicio3.className = "center-content"
+      document.body.lastChild.appendChild(exercicio3)
+
     </script>
   </body>
 </html>
