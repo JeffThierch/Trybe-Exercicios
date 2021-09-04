@@ -104,6 +104,29 @@
       exercicio7.className = "small-image"
       document.body.lastChild.firstChild.nextSibling.appendChild(exercicio7)
 
+      /* Exercicio 8 */
+
+      let exercicio8 = document.createElement("ul")
+      document.body.lastChild.firstChild.nextSibling.nextSibling.appendChild(exercicio8)
+      let listaUl = document.body.lastChild.firstChild.nextSibling.nextSibling.firstChild
+     
+
+      for (let i = 0; i < 10; i += 1){
+        let li = document.createElement("li")
+        listaUl.appendChild(li)
+      }
+
+      let numerosPorExtenso = ["um", "dois", "tres", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"]
+
+      let listaLi = document.body.lastChild.firstChild.nextSibling.nextSibling.firstChild.firstChild
+
+      for (let i = 0; i < numerosPorExtenso.length; i += 1){
+        document.querySelectorAll("li")[i].innerText = numerosPorExtenso[i]
+      }
+
+     
+
+
 
 
 
