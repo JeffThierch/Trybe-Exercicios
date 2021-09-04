@@ -57,76 +57,77 @@
   </head>
   <body>
     <script>
-      /* function appendElementoToAnother(elementoPai, elementoFilho){
-        let elemento = document.getElementsByClassName = elementoPai
-        let elementToAppend = document.getElementsByClassName = elementoFilho
-        elemento.appendChild(elementToAppend)
-      } */
 
       /* Exercicio 1 */
 
       let exercicio1 = document.createElement("h1");
-      exercicio1.innerText = "Exercício 5.2 - JavaScript DOM"
-      document.body.appendChild(exercicio1)
+      exercicio1.innerText = "Exercício 5.2 - JavaScript DOM";
+      document.body.appendChild(exercicio1);
       
       /* Exercicio 2 */
 
-      let exercicio2 = document.createElement("main")
-      exercicio2.className = "main-content"
-      document.body.appendChild(exercicio2)
+      let exercicio2 = document.createElement("main");
+      exercicio2.className = "main-content";
+      document.body.appendChild(exercicio2);
 
       /* Exercicio 3 */
 
-      let exercicio3 = document.createElement("section")
-      exercicio3.className = "center-content"
-      document.body.lastChild.appendChild(exercicio3)
+      let exercicio3 = document.createElement("section");
+      exercicio3.className = "center-content";
+      document.body.lastChild.appendChild(exercicio3);
 
       /* Exercicio 4 */
-      let exercicio4 = document.createElement("p")
-      exercicio4.innerText = "Exercicio 4"
-      document.body.lastChild.firstChild.appendChild(exercicio4)
+      let exercicio4 = document.createElement("p");
+      exercicio4.innerText = "Exercicio 4";
+      document.body.lastChild.firstChild.appendChild(exercicio4);
 
       /* Exercicio 5 */
-      let exercicio5 = document.createElement("section")
-      exercicio5.className = "left-content"
-      document.body.lastChild.appendChild(exercicio5)
+      let exercicio5 = document.createElement("section");
+      exercicio5.className = "left-content";
+      document.body.lastChild.appendChild(exercicio5);
 
       /* Exercicio 6 */
 
       let exercicio6 = document.createElement("section")
-      exercicio6.className = "right-content"
-      document.body.lastChild.appendChild(exercicio6)
+      exercicio6.className = "right-content";
+      document.body.lastChild.appendChild(exercicio6);
       
       /* Exercicio 7 */
 
       let exercicio7 = document.createElement("img")
-      exercicio7.src = "https://picsum.photos/200"
-      exercicio7.className = "small-image"
-      document.body.lastChild.firstChild.nextSibling.appendChild(exercicio7)
+      exercicio7.src = "https://picsum.photos/200";
+      exercicio7.className = "small-image";
+      document.body.lastChild.firstChild.nextSibling.appendChild(exercicio7);
 
       /* Exercicio 8 */
 
       let exercicio8 = document.createElement("ul")
-      document.body.lastChild.firstChild.nextSibling.nextSibling.appendChild(exercicio8)
-      let listaUl = document.body.lastChild.firstChild.nextSibling.nextSibling.firstChild
+      document.body.lastChild.firstChild.nextSibling.nextSibling.appendChild(exercicio8);
+      let listaUl = document.body.lastChild.firstChild.nextSibling.nextSibling.firstChild;
      
-
       for (let i = 0; i < 10; i += 1){
-        let li = document.createElement("li")
-        listaUl.appendChild(li)
+        let li = document.createElement("li");
+        listaUl.appendChild(li);
       }
 
-      let numerosPorExtenso = ["um", "dois", "tres", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"]
+      let numerosPorExtenso = ["um", "dois", "tres", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"];
 
-      let listaLi = document.body.lastChild.firstChild.nextSibling.nextSibling.firstChild.firstChild
+      let listaLi = document.body.lastChild.firstChild.nextSibling.nextSibling.firstChild.firstChild;
 
       for (let i = 0; i < numerosPorExtenso.length; i += 1){
-        document.querySelectorAll("li")[i].innerText = numerosPorExtenso[i]
+        document.querySelectorAll("li")[i].innerText = numerosPorExtenso[i];
       }
 
-     
+      /* Exercicio 9 */
 
+      for (let i = 0; i < 3; i += 1){
+        let h3 = document.createElement("h3");
+        document.body.lastChild.appendChild(h3);
+      }
 
+      console.log(document.body.lastChild)
+
+      
 
 
 
