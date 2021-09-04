@@ -138,7 +138,17 @@
          h3s[i].className = "description"
        }
 
-      
+        /* PARTE II - 03 */
+
+      function removeElementChild(elementoPai, elementoFilho){
+          let dadElement = document.getElementsByClassName(elementoPai)[0];
+          let childElement = document.getElementsByClassName(elementoFilho)[0];
+
+          dadElement.removeChild(childElement)
+    }
+
+    removeElementChild("main-content", "left-content")
+
     </script>
   </body>
 </html>
