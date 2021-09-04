@@ -159,6 +159,16 @@
      let dadElementSelector = document.getElementsByClassName("center-content")[0]
      dadElementSelector.style.backgroundColor = "green"
 
+     /* PARTE II - 06 */
+
+     let ultimoFilho = document.body.lastChild.firstElementChild.nextSibling.firstChild
+     let ulist = document.querySelectorAll("li")
+
+     ultimoFilho.removeChild(ulist[ulist.length - 1])
+     ultimoFilho.removeChild(ulist[ulist.length - 2])
+
+     
+
     </script>
   </body>
 </html>
