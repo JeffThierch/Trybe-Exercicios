@@ -91,3 +91,30 @@ function swapColorOfHolidays(){
 swapColorOfHolidays();
 
 createButtons("Sexta-feira", "btn-friday")
+
+function swapTextOfFridays(){
+  let isChanged = false;
+  let fridayButton = document.querySelector("#btn-friday");
+  fridayButton.addEventListener("click", function(){
+    let fridays = document.querySelectorAll(".friday");
+    let fridayNumber = [4, 11, 18, 25]
+    if(isChanged == false){
+      for (index = 0; index < fridays.length; index += 1){
+        fridays[index].innerText = "Sextou!!";
+      }
+      isChanged = true;
+    }
+    else {
+      for (index = 0; index < fridays.length; index += 1){
+        for(i = 0; i < fridayNumber.length; i += 1){
+          fridays[i].innerText = fridayNumber[i] 
+        } /* Nao e o mais otimizado, porem por hora foi que consegui pensar */
+    }
+    isChanged = false;
+    }
+    
+  })
+  
+}
+
+swapTextOfFridays()
