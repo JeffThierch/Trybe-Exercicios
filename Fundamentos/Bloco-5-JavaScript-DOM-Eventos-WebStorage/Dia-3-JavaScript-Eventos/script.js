@@ -84,9 +84,10 @@ function swapColorOfHolidays(){
         holidays[index].style.color = "#666";
     }
     isChanged = false;
-  }
-  }
-  )
+    }
+  })
 }
 
 swapColorOfHolidays();
+
+createButtons("Sexta-feira", "btn-friday")
