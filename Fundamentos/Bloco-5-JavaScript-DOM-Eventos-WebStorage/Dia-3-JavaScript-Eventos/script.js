@@ -39,16 +39,15 @@ function insertDayInCalendar(arrayDias) {
 8- verificar se e feriado se sim adicionar a classe
 9- verificar se e sexta feira adicionar a classe*/
 
-  for(index = 0; index < dezDaysList.length; index += 1){
+  for(index = 0; index < arrayDias.length; index += 1){
     let listOfDays = document.createElement('li');
-    listOfDays.classList = "day"
-    let days = document.querySelector("#days")
-    days.appendChild(listOfDays)
-    listOfDays.innerText = dezDaysList[index]
+    listOfDays.classList = "day";
+    let days = document.querySelector("#days");
+    days.appendChild(listOfDays);
+    listOfDays.innerText = arrayDias[index];
   
-    addClassHoliday(listOfDays, dezDaysList[index])
-    addClassFriday(listOfDays, dezDaysList[index])
-    
+    addClassHoliday(listOfDays, arrayDias[index]);
+    addClassFriday(listOfDays, arrayDias[index]);
   }
 }
 
