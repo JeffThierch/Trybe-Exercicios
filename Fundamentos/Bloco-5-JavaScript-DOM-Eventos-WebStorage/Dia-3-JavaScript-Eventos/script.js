@@ -15,14 +15,14 @@ createDaysOfTheWeek();
 
 function addClassHoliday(element, day) {
   if (day === 24 || day === 25 || day === 21) {
-    let holiday = element.classList = "day holiday";
+    let holiday = element.classList += " holiday";
     return holiday;
   }
 };
 
 function addClassFriday(element, day) {
   if (day === 4 ||day === 11 ||day === 18 ||day === 25){
-    let friday = element.classList = "day friday";
+    let friday = element.classList += " friday";
     return friday;
   }
 };
@@ -64,3 +64,29 @@ function createButtons(textButton, idButton) {
 }
 
 createButtons("Feriados", "btn-holiday")
+
+
+function swapColorOfHolidays(){
+  let isChanged = false;
+  let holidayButton = document.querySelector("#btn-holiday");
+  holidayButton.addEventListener("click", function(){
+    let holidays = document.querySelectorAll(".holiday");
+    if(isChanged == false){
+      for (index = 0; index < holidays.length; index += 1){
+        holidays[index].style.backgroundColor = "red";
+        holidays[index].style.color = "#fff";
+      }
+      isChanged = true;
+    }
+    else {
+      for (index = 0; index < holidays.length; index += 1){
+        holidays[index].style.backgroundColor = "rgb(238,238,238)";
+        holidays[index].style.color = "#666";
+    }
+    isChanged = false;
+  }
+  }
+  )
+}
+
+swapColorOfHolidays();
