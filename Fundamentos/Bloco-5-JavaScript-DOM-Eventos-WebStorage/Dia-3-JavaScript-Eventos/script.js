@@ -150,6 +150,8 @@ function createATask(stringTask) {
 function addTask(){
   taskButton = document.querySelector("#btn-task");
   taskButton.addEventListener("click", function(event){
+    let color = window.prompt("Qual cor de legenda gostaria de escolher? (Em Ingles)")
+    adicionaLegendas(color)
     let task = window.prompt("Qual tarefa gostaria de adicionar?");
     createATask(task);
   })
@@ -164,8 +166,6 @@ function adicionaLegendas(cor) {
   fatherElement.appendChild(div)
 
 }
-
-adicionaLegendas("red")
 
 function taskSelector() {
   let isSelect = false
