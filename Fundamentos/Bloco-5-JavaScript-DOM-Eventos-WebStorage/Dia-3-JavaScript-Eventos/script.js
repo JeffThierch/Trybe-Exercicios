@@ -112,9 +112,7 @@ function swapTextOfFridays(){
     }
     isChanged = false;
     }
-    
   })
-  
 }
 
 swapTextOfFridays()
