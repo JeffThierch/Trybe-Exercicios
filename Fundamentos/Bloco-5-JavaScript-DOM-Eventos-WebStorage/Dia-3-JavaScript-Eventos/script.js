@@ -141,7 +141,7 @@ zoomOut()
 createButtons("Adicionar Tarefa", "btn-task");
 
 function createATask(stringTask) {
-  task = document.createElement("span");
+  let task = document.createElement("span");
   task.innerHTML = stringTask;
   fatherElement = document.querySelector(".my-tasks");
   fatherElement.appendChild(task);
@@ -150,8 +150,35 @@ function createATask(stringTask) {
 function addTask(){
   taskButton = document.querySelector("#btn-task");
   taskButton.addEventListener("click", function(event){
-    task = window.prompt("Qual tarefa gostaria de adicionar?");
+    let task = window.prompt("Qual tarefa gostaria de adicionar?");
     createATask(task);
   })
 }
 addTask();
+
+function adicionaLegendas(cor) {
+  let div = document.createElement("div");
+  div.className = "task"
+  div.style.backgroundColor = cor
+  let fatherElement = document.querySelector(".my-tasks")
+  fatherElement.appendChild(div)
+
+}
+
+adicionaLegendas("red")
+
+function taskSelector() {
+  let isSelect = false
+  let task = document.querySelector(".task")
+  task.addEventListener("click", function(event){
+    if(isSelect == false){
+      event.target.className = "task selected"
+      isSelect = true
+    }
+    else {
+      event.target.className = "task"
+      isSelect = false
+    }
+  })
+}
+taskSelector()
