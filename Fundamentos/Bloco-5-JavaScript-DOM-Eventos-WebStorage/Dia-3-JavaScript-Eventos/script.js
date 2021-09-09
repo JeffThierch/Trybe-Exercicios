@@ -154,6 +154,8 @@ function addTask(){
     adicionaLegendas(color)
     let task = window.prompt("Qual tarefa gostaria de adicionar?");
     createATask(task);
+    taskSelector()
+    addTaskColorToDay()
   })
 }
 addTask();
@@ -169,16 +171,37 @@ function adicionaLegendas(cor) {
 
 function taskSelector() {
   let isSelect = false
+  let task = document.getElementsByClassName("task")
+  for (let i = 0; i < task.length; i += 1) {
+    task[i].addEventListener("click", function(event){
+      if(isSelect == false){
+        event.target.className = "task selected"
+        isSelect = true
+      }
+      else {
+        event.target.className = "task"
+        isSelect = false
+      }
+    })
+  }
+}
+
+
+function addTaskColorToDay(){ /* Utilizei a logica do gabarito para a conclusao desse exercicio */
+  let taskSelected = document.getElementsByClassName("task selected")
   let task = document.querySelector(".task")
-  task.addEventListener("click", function(event){
-    if(isSelect == false){
-      event.target.className = "task selected"
-      isSelect = true
+  let taskBackground = task.style.backgroundColor;
+  isSelect = false
+  let days = document.querySelector("#days")
+
+  days.addEventListener("click", function(event) {
+    let colorEventTarget = event.target.style.color;
+    if (taskSelected.length > 0 && colorEventTarget != taskBackground) {
+      let color = taskSelected[0].style.backgroundColor;
+      event.target.style.color = color;
     }
-    else {
-      event.target.className = "task"
-      isSelect = false
+    else if (colorEventTarget === taskBackground && taskSelected.length !== 0) {
+      event.target.style.color = 'rgb(119,119,119)';
     }
   })
 }
-taskSelector()
