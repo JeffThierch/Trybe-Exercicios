@@ -116,3 +116,24 @@ function swapTextOfFridays(){
 }
 
 swapTextOfFridays()
+
+function zoomIn() {
+  let day = document.querySelectorAll(".day")
+  for (i = 0; i < day.length; i += 1){
+    day[i].addEventListener("mouseover", function(event) {
+      event.target.style.fontSize = "30px"
+    })
+  }
+}
+
+zoomIn()
+
+function zoomOut() {
+  let day = document.querySelectorAll(".day")
+  for (i = 0; i < day.length; i += 1){
+    day[i].addEventListener("mouseleave", function(event) {
+      event.target.style.fontSize = "20px"
+    })
+  }
+}
+zoomOut()
