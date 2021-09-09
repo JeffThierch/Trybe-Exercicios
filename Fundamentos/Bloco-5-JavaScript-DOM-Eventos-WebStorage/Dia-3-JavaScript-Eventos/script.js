@@ -137,3 +137,21 @@ function zoomOut() {
   }
 }
 zoomOut()
+
+createButtons("Adicionar Tarefa", "btn-task");
+
+function createATask(stringTask) {
+  task = document.createElement("span");
+  task.innerHTML = stringTask;
+  fatherElement = document.querySelector(".my-tasks");
+  fatherElement.appendChild(task);
+}
+
+function addTask(){
+  taskButton = document.querySelector("#btn-task");
+  taskButton.addEventListener("click", function(event){
+    task = window.prompt("Qual tarefa gostaria de adicionar?");
+    createATask(task);
+  })
+}
+addTask();
