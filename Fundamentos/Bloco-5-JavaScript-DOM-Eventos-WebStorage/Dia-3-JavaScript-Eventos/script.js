@@ -205,3 +205,33 @@ function addTaskColorToDay(){ /* Utilizei a logica do gabarito para a conclusao 
     }
   })
 }
+
+function addCompromisso(){
+  let listaCompromisso = document.querySelector(".task-list")
+  let input = document.querySelector("#task-input")
+  let btnAdd = document.querySelector("#btn-add")
+
+  btnAdd.addEventListener("click", function(){
+    if(input.value.length > 0) {
+      let novoComp = document.createElement("li")
+      novoComp.innerText = input.value;
+
+      listaCompromisso.appendChild(novoComp)
+      input.value = ""
+    }
+    else{
+      window.alert("Numero de Caracteres invalido")
+    }
+  })
+  input.addEventListener('keyup', function(event) {
+    if (event.keyCode === 13 && input.value.length > 0) {
+      let novoComp = document.createElement('li');
+      novoComp.innerText = input.value;
+
+      listaCompromisso.appendChild(novoComp);
+      input.value = '';
+    }
+  });
+}
+
+addCompromisso()
