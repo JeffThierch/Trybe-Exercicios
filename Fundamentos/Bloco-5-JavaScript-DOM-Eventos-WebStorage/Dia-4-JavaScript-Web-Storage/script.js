@@ -1,40 +1,39 @@
 window.onload  = function(){
-  let fontStyleSelector = document.querySelector('#font-selector');
-  let fontSize = document.querySelector("#font-size-selector")
-  let lineHeight = document.querySelector("#line-height-selector")
-  let backgroundColor = document.querySelector("#background-selector")
-  let fontColor = document.querySelector("#color-selector")
+  let fontFamilySelector = document.querySelector('#font-selector');
+  let fontSizeSelector = document.querySelector("#font-size-selector")
+  let lineHeightSelector = document.querySelector("#line-height-selector")
+  let backgroundColorSelector = document.querySelector("#background-selector")
+  let fontColorSelector = document.querySelector("#color-selector")
   let textInsertInput = document.querySelector("#text-insert")
   let content = document.querySelector("#content")
   /* Define o tamanho da fonte do conteudo */
-  fontSize.addEventListener("change", function(event){
-    let tamanhoFonte = event.target.value
-    content.style.fontSize = tamanhoFonte.toString() + "px"
+  fontSizeSelector.addEventListener("change", function(event){
+    let fontSizeValue = event.target.value
+    content.style.fontSize = fontSizeValue.toString() + "px"
   })
   /* Define a altura da linha */
-  lineHeight.addEventListener("change", function(event){
-    let alturaLinha = event.target.value
-    content.style.lineHeight = alturaLinha.toString() + "px"
+  lineHeightSelector.addEventListener("change", function(event){
+    let lineHeightValue = event.target.value
+    content.style.lineHeight = lineHeightValue.toString() + "px"
   })
   /* Define BackgroundColor */
-  backgroundColor.addEventListener("change", function(event){
-    let bgColor = event.target.value;
-    document.body.style.backgroundColor = bgColor
+  backgroundColorSelector.addEventListener("change", function(event){
+    let backgroundColorValue = event.target.value;
+    document.body.style.backgroundColor = backgroundColorValue
   })
   /* Define cor da fonte */
-  fontColor.addEventListener("change", function(event){
-    let colorFont = event.target.value;
-    content.style.color = colorFont
+  fontColorSelector.addEventListener("change", function(event){
+    let fontColorValue = event.target.value;
+    content.style.color = fontColorValue
   })
   /* Font Style */
-  fontStyleSelector.addEventListener("change", function(event){
-    let fontStyle = event.target.value
-    content.style.fontFamily = fontStyle
+  fontFamilySelector.addEventListener("change", function(event){
+    let fontFamilyValue = event.target.value
+    content.style.fontFamily = fontFamilyValue
   })
   /* Inserir Texto */
   textInsertInput.addEventListener("change", function(event){
     let text = event.target.value
-    console.log(text)
     content.innerHTML = text
   })
 }
