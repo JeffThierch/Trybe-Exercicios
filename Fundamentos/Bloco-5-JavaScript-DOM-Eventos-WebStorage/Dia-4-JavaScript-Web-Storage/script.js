@@ -4,6 +4,7 @@ window.onload  = function(){
   let lineHeight = document.querySelector("#line-height-selector")
   let backgroundColor = document.querySelector("#background-selector")
   let fontColor = document.querySelector("#color-selector")
+  let textInsertInput = document.querySelector("#text-insert")
   let content = document.querySelector("#content")
   /* Define o tamanho da fonte do conteudo */
   fontSize.addEventListener("change", function(event){
@@ -29,5 +30,11 @@ window.onload  = function(){
   fontStyleSelector.addEventListener("change", function(event){
     let fontStyle = event.target.value
     content.style.fontFamily = fontStyle
+  })
+  /* Inserir Texto */
+  textInsertInput.addEventListener("change", function(event){
+    let text = event.target.value
+    console.log(text)
+    content.innerHTML = text
   })
 }
