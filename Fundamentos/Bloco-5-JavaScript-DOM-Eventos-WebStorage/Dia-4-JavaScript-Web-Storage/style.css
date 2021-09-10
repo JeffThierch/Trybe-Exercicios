@@ -44,6 +44,9 @@ label{
 input{
   width: 8%
 }
+select{
+  width: 8%
+}
 
 .subtitle{
   text-align: center;
@@ -67,4 +70,8 @@ input{
 .footer p{
   text-align: center;
   padding-top:1.2%;
+}
+
+#content{
+  font-family: serif ;
 }
