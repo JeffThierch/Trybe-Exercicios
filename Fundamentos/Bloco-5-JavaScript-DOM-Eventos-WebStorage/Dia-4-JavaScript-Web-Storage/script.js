@@ -13,4 +13,9 @@ window.onload  = function(){
     let alturaLinha = event.target.value
     content.style.lineHeight = alturaLinha.toString() + "px"
   })
+  /* Define BackgroundColor */
+  backgroundColor.addEventListener("change", function(event){
+    let bgColor = event.target.value;
+    document.body.style.backgroundColor = bgColor
+  })
 }
