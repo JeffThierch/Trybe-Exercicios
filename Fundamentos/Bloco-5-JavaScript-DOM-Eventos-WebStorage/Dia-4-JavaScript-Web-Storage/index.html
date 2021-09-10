@@ -24,16 +24,18 @@
       <div class="subtitle-container">
         <h2 class="subtitle">Configuracoes do Texto</h2>
       </div>
-      <label for="font-selector">Estilo da Fonte: </label>
-      <select id="font-selector"type="text" placeholder="Nome da Familia">
+      <label for="font-selector">Familia da Fonte: </label>
+      <input id="font-selector"type="text" placeholder="Nome da Familia" list="fonts">
+      <datalist id="fonts">
         <option value="Arial">Arial</option>
         <option value="Times">Times</option>
         <option value="Courier">Courier</option>
         <option value="Helvetica">Helvetica</option>
         <option value="Verdana">Verdana</option>
-        <option value="Georgia">Georgia</option>
-        <option value="Courier">Courier</option>
-      </select>
+        <option value="Comic Sans Serif">Comic Sans Serif</option>
+        <option value="Trebuchet MS">Trebuchet MS</option>
+      </datalist>
+      </input>
       <label for="color-selector">Cor da fonte: </label>
       <input id="color-selector" type="color" placeholder="Em Ingles">
       <label for="font-size-selector">Tamanho da Fonte: </label>
