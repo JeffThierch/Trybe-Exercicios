@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 6.1</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <form action="#" method="get">
+    <fieldset class ="personal-details">
+      <label for="name-input">Full Name</label>
+      <input id="name-input" type="text" maxlength ="40" required>
+
+      <label for="email-input">Email</label>
+      <input type="email" name="email" id="email-input" maxlength="50" required>
+    
+      <label for="cpf-input">CPF</label>
+      <input type="text" name="cpf" id="cpf-input" maxlength="11" required>
+
+      <label for="address-input">Address</label>
+      <input type="text" name="address" id="address-input" maxlength="200" required>
+
+      <label for="city-input">City</label>
+      <input type="text" name="city" id="city-input" maxlength="28" required>
+
+      <label for="state-select">Estado</label>
+      <select name="state" id="state-select" required>
+      </select>
+
+      <label for="type-residence-input1">Casa</label>
+      <input type="radio" name="residence" id="type-residence-input1" required value="casa" checked>
+      <label for="type-residence-input2">Apartamento</label>
+      <input type="radio" name="residence" id="type-residence-input2" required value="apartamento">
+    </fieldset>
+    <fieldset class="resume-container">
+      <label for="resumeInput">Resume</label>
+      <textarea name="resume" id="resumeInput" cols="50" rows="10" maxlength="1000"></textarea>
+
+      <label for="job-input">Job</label>
+      <input type="text" id="job-input" maxlength="40" required> 
+
+      <label for="job-resume">Job Resume</label>
+      <textarea name="job-resume" id="job-resume" cols="50" rows="10" maxlength="500"></textarea>
+
+      <label for="start-date">Start Date</label>
+      <input type="date" id="start-date" required value="date">
+
+    </fieldset>
+    <button type="submit">Enviar</button>
+  </form>
+  <script src="./script.js"></script>
+</body>
+</html>
