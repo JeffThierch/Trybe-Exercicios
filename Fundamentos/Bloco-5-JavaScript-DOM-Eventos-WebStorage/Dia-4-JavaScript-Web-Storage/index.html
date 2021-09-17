@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>The Reader</title>
+</head>
+<body>
+  <main>
+    <header class="header-container">
+      <nav class="nav">
+        <h1 id="main-title">The Reader</h1>
+        <div>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Configuracoes</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="config-container">
+      <div class="subtitle-container">
+        <h2 class="subtitle">Configuracoes do Texto</h2>
+      </div>
+      <label for="font-selector">Familia da Fonte: </label>
+      <input id="font-selector"type="text" placeholder="Nome da Fonte" list="fonts">
+      <datalist id="fonts">
+        <option value="Arial">Arial</option>
+        <option value="Times">Times</option>
+        <option value="Courier">Courier</option>
+        <option value="Helvetica">Helvetica</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Comic Sans Serif">Comic Sans Serif</option>
+        <option value="Trebuchet MS">Trebuchet MS</option>
+      </datalist>
+      </input>
+      <label for="color-selector">Cor da fonte: </label>
+      <input id="color-selector" type="color" placeholder="Em Ingles">
+      <label for="font-size-selector">Tamanho da Fonte: </label>
+      <input id="font-size-selector" type="number" min="1" value="16">
+      <label for="line-height-selector">Espaçamento entre as linhas: </label>
+      <input id="line-height-selector"type="number" min="1" value="24">
+      <label for="background-selector">Cor de fundo: </label>
+      <input id="background-selector"type="color" placeholder="Ingles ou RGB" >
+    </section>
+    <section class="content-container">
+      <div class="subtitle-container">
+        <h2 class="subtitle">Conteudo</h2>
+      </div>
+      <label for="text-insert">Insira o Texto: </label>
+      <input id="text-insert" type="text"placeholder="Insira o texto">
+      <div class="content-div">
+        <p id="content"></p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>Create by Jeff Thierch</p>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>
