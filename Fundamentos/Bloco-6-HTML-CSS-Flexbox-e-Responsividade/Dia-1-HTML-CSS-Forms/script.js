@@ -90,10 +90,15 @@ const jobResume = document.getElementById('job-resume')
 const days = document.getElementById('days')
 const months = document.getElementById('months')
 const years = document.getElementById('years')
+const sendDataDiv = document.getElementById('dados-enviados')
+const errorDiv = document.getElementById('mensagemErro')
+const error = document.getElementById('error')
+let errorMsg = ''
 
 function isNameInputValid() {
   let control = true;
   if (nameInput.value.trim() === "") {
+    errorMsg += 'Nome Invalido'
     control = false
     return control;
   } else {
@@ -107,6 +112,7 @@ function isEmailInputValid() {
     control = true
     return control
   } else {
+    errorMsg += 'Email Invalido'
    control = false
    return control
   }
@@ -119,9 +125,21 @@ function limitCpfLength() {
 }
 cpfInput.addEventListener('keydown', limitCpfLength)
 
+function isCpfValid() {
+  if (cpfInput.value.trim() === '') {
+    errorMsg += ' CPF invalido'
+    control = false
+    return control
+  } else {
+    control = true
+    return control
+  }
+}
+
 function isAdressInputValid() {
   let control = true
   if (addressInput.value.trim() === "") {
+    errorMsg += ' Endereco Invalido'
     control = false
     return control
   } else {
@@ -133,6 +151,7 @@ function isAdressInputValid() {
 function isResumeInputValid() {
   let control = true
   if (resumeInput.value.trim() === "") {
+    errorMsg += ' Resumo Invalido'
     control = false
     return control
   } else {
@@ -144,6 +163,7 @@ function isResumeInputValid() {
 function isJobInputValid() {
   let control = true
   if (jobInput.value.trim() === "") {
+    errorMsg += ' Insira um Trabalho'
     control = false
     return control
   } else {
@@ -155,6 +175,7 @@ function isJobInputValid() {
 function isJobResumeInputValid() {
   let control = true
   if (jobResume.value.trim() === "") {
+    errorMsg += ' Resumo do trabalho Invalido'
     control = false
     return control
   } else {
@@ -195,33 +216,59 @@ years.addEventListener('change', verifyIfYearIsValid)
 const checkedValue = document.querySelector('input[name="residence"]:checked') 
 
 function createForm() {
-  const divContainer = document.createElement('div')
   const createParagraph = document.createElement('p')
-  document.body.appendChild(divContainer)
+  document.body.appendChild(sendDataDiv)
   const values = [nameInput.value, emailInput.value, cpfInput.value, addressInput.value, cityInput.value, selectInput.value, checkedValue.value,resumeInput.value, jobInput.value, jobResume.value]
   const idValues = ['Nome: ', 'Email: ', 'Cpf: ', 'Address: ', 'City: ', 'State: ', 'Type of Residence: ','Resume: ', 'Job: ', 'Job Description: ']
   for (let i = 0; i < values.length; i += 1) {
     const createParagraph = document.createElement('p')
     createParagraph.innerText = `${idValues[i]}${values[i]}`
-    divContainer.appendChild(createParagraph)
+    sendDataDiv.appendChild(createParagraph)
   }
   createParagraph.innerText = `Date of start: ${days.value}/${month.value}/${years.value}`
-  divContainer.appendChild(createParagraph)
+  sendDataDiv.appendChild(createParagraph)
 }
 
+function clearError() {
+  errorMsg = ''
+}
 
+function deleteErrorDiv() {
+  errorDiv.removeChild(error)
+}
+
+function clearDataDiv() {
+  while (sendDataDiv.firstChild) {
+    sendDataDiv.removeChild(sendDataDiv.lastChild)
+  }
+}
 
 function btnPreventDefault(event) {
   event.preventDefault()
+  clearError()
   let nameValid = isNameInputValid()
   let emailValid = isEmailInputValid()
   let adressValid = isAdressInputValid()
   let resumeValid = isResumeInputValid()
   let jobValid = isJobInputValid()
   let jobResumeValid = isJobResumeInputValid()
+  let cpfValid = isCpfValid()
   if (nameValid === true && emailValid === true && adressValid === true && resumeValid === true
-    && jobValid === true && jobResumeValid === true) {
+    && jobValid === true && jobResumeValid === true && cpfValid === true && sendDataDiv.children.length > 0) {
+    deleteErrorDiv()
+    clearDataDiv()
+    createForm()
+  }
+  else if (nameValid === true && emailValid === true && adressValid === true && resumeValid === true
+    && jobValid === true && jobResumeValid === true && cpfValid === true) {
+      deleteErrorDiv()
       createForm()
+    } else {
+      clearDataDiv()
+      const errorP = document.createElement('p')
+      errorP.id = 'error'
+      errorDiv.appendChild(errorP)
+      errorP.innerText = errorMsg
     }
 }
 
