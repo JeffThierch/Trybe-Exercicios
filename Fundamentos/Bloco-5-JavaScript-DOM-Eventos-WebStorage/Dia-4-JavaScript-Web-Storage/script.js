@@ -9,14 +9,14 @@ window.onload  = function(){
   /* Define o tamanho da fonte do conteudo */
   fontSizeSelector.addEventListener("change", function(event){
     let fontSizeValue = event.target.value
-    content.style.fontSize = fontSizeValue.toString() + "px"
-    localStorage.setItem("fontSize", fontSizeValue)
+    let fontSize = content.style.fontSize = fontSizeValue.toString() + "px"
+    localStorage.setItem("fontSize", fontSize)
   })
   /* Define a altura da linha */
   lineHeightSelector.addEventListener("change", function(event){
     let lineHeightValue = event.target.value
-    content.style.lineHeight = lineHeightValue.toString() + "px"
-    localStorage.setItem("lineHeight", lineHeightValue)
+    let lineHeight = content.style.lineHeight = lineHeightValue.toString() + "px"
+    localStorage.setItem("lineHeight", lineHeight)
   })
   /* Define BackgroundColor */
   backgroundColorSelector.addEventListener("change", function(event){
@@ -46,23 +46,31 @@ window.onload  = function(){
 
   function initialize() {
     let backgroundColor = localStorage.getItem("backgroundColor")
-    if (backgroundColor) setBackgroundColor(backgroundColor)
+    backgroundColorSelector.value = backgroundColor
+    document.body.style.backgroundColor = backgroundColor
+    
 
     let textContent = localStorage.getItem("textContent")
-    if (textContent) setBackgroundColor(backgroundColor)
+   content.innerHTML = textContent
 
 
     let fontColor = localStorage.getItem("fontColor")
-    if (fontColor) setFontColor(fontColor)
+    fontColorSelector.value = fontColor
+    content.style.color = fontColor
 
     let fontSize = localStorage.getItem("fontSize")
-    if (fontSize) setFontSize(fontSize)
+    fontSizeSelector.value = fontSize
+    content.style.fontSize = fontSize
 
     let lineHeight = localStorage.getItem("lineHeight")
-    if (lineHeight) setLineHeight(lineHeight)
+    lineHeightSelector.value = lineHeight
+    content.style.lineHeight = lineHeight
 
     let fontFamily = localStorage.getItem("fontFamily")
-    if (fontFamily) setFontFamily(fontFamily)
+    fontFamilySelector.value = fontFamily
+    content.style.fontFamily = fontFamily
+    
+    
   }
   initialize()
 
