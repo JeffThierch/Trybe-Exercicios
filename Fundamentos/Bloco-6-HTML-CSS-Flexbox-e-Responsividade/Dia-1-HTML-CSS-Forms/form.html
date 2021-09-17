@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 6.1</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <form id="form" action="#" method="get">
+    <fieldset class ="personal-details">
+      <div>
+        <label for="name-input">Full Name</label>
+        <input id="name-input" type="text" maxlength ="40" required>
+      </div>
+      <div>
+        <label for="email-input">Email</label>
+        <input type="email" name="email" id="email-input" maxlength="50" required>
+      </div>
+      <div>
+        <label for="cpf-input">CPF</label>
+        <input type="number" name="cpf" id="cpf-input" required>
+      </div>
+      <div>
+        <label for="address-input">Address</label>
+        <input type="text" name="address" id="address-input" maxlength="200" required>
+      </div>
+      <div>
+        <label for="city-input">City</label>
+        <input type="text" name="city" id="city-input" maxlength="28" required>
+      </div>
+      <div>
+        <label for="state-select">Estado</label>
+        <select name="state" id="state-select" required>
+        </select>
+      </div>
+      <div>
+        <label for="type-residence-input1">Casa</label>
+        <input type="radio" name="residence" id="type-residence-input1" required value="Casa" checked>
+        <label for="type-residence-input2">Apartamento</label>
+        <input type="radio" name="residence" id="type-residence-input2" required value="Apartamento">
+      </div>
+    </fieldset>
+    <fieldset class="resume-container">
+      <div>
+        <label for="resumeInput">Resume</label>
+        <textarea name="resume" id="resumeInput" cols="50" rows="10" maxlength="1000"></textarea>
+      </div>
+      <div>
+        <label for="job-input">Job</label>
+        <input type="text" id="job-input" maxlength="40" required> 
+      </div>
+      <div>
+        <label for="job-resume">Job Resume</label>
+        <textarea name="job-resume" id="job-resume" cols="50" rows="10" maxlength="500"></textarea>
+      </div>
+      <div>
+        <div>
+          <label for="day">Start Date</label>
+          <select name="days" id="days"></select>
+          <select name="months" id="month"></select>
+          <input type="number" id="years" name="year" min="0">
+        </div>
+      </div>
+    </fieldset>
+    <button id="btn-submit" type="submit">Enviar</button>
+    <div id="dados-enviados">
+    </div>
+    <div id="mensagemErro">
+      <p id="error"></p>
+    </div>
+  </form>
+  <script src="./script.js"></script>
+</body>
+</html>
