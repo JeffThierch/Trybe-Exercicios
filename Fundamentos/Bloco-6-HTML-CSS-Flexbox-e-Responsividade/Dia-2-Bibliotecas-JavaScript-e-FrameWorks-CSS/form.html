@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 6.1</title>
+  <link rel="stylesheet" href="./bulma-0.9.3/bulma/css/bulma.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="container">
+    <div class="title-container">
+      <h1 class="title is-2 ">Formulario de curriculo
+      </h1>
+    </div>
+  </header>
+  <form id="form" action="#" method="get">
+    <fieldset class ="personal-details">
+      <div>
+        <label for="name-input">Nome Completo: </label>
+        <input class="input" id="name-input" type="text" maxlength ="40" required>
+      </div>
+      <div>
+        <label for="email-input">Email: </label>
+        <input class="input" type="email" name="email" id="email-input" maxlength="50" required>
+      </div>
+      <div>
+        <label for="cpf-input">CPF: </label>
+        <input class="input" type="number" name="cpf" id="cpf-input" required>
+      </div>
+      <div>
+        <label for="address-input">Endereco: </label>
+        <input class="input" type="text" name="address" id="address-input" maxlength="200" required>
+      </div>
+      <div>
+        <label for="city-input">Cidade: </label>
+        <input class="input" type="text" name="city" id="city-input" maxlength="28" required>
+      </div>
+      <div class="select is-multiple">
+        <label for="state-select">Estado: </label>
+        <select name="state" id="state-select" required>
+        </select>
+      </div>
+      <div class="control radio-container">
+        <label for="residence">Tipo de Residencia: </label>
+        <label class="radio">
+          <input type="radio" name="residence" id="type-residence-input1" required value="Casa" checked>
+          <span>Casa</span>
+        </label>
+        <label class="radio">
+          <input type="radio" name="residence" id="type-residence-input2" required value="Apartamento">
+          <span>Apartamento</span>
+        </label>
+      </div>
+    </fieldset>
+    <fieldset class="resume-container">
+      <div>
+        <label for="resumeInput">Resumo do Curriculo: </label>
+        <textarea class="textarea" name="resume" id="resumeInput" cols="50" rows="10" maxlength="1000"></textarea>
+      </div>
+      <div>
+        <label for="job-input">Trabalho: </label>
+        <input class="input" type="text" id="job-input" maxlength="40" required> 
+      </div>
+      <div>
+        <label for="job-resume">Resumo do Trabalho: </label>
+        <textarea class="textarea" name="job-resume" id="job-resume" cols="50" rows="10" maxlength="500"></textarea>
+      </div>
+      <div>
+        <div>
+          <label for="day">Data de inicio</label>
+          <input class="input" type="text" name="startDate" id="startDate">
+        </div>
+      </div>
+    </fieldset>
+    <div class="container container-btn">
+      <button class="button is-primary" id="btn-submit" type="submit">Enviar</button>
+    </div>
+    <div id="dados-enviados">
+    </div>
+    <div id="mensagemErro">
+    </div>
+  </form>
+  <script src="./script.js"></script>
+</body>
+</html>
