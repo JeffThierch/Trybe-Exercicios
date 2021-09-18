@@ -5,29 +5,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exercicio 6.1</title>
+  <link rel="stylesheet" href="https://www.jsdelivr.com/package/npm/bulma">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <form id="form" action="#" method="get">
     <fieldset class ="personal-details">
       <div>
-        <label for="name-input">Full Name</label>
+        <label for="name-input">Nome Completo: </label>
         <input id="name-input" type="text" maxlength ="40" required>
       </div>
       <div>
-        <label for="email-input">Email</label>
+        <label for="email-input">Email: </label>
         <input type="email" name="email" id="email-input" maxlength="50" required>
       </div>
       <div>
-        <label for="cpf-input">CPF</label>
+        <label for="cpf-input">CPF: </label>
         <input type="number" name="cpf" id="cpf-input" required>
       </div>
       <div>
-        <label for="address-input">Address</label>
+        <label for="address-input">Endereco: </label>
         <input type="text" name="address" id="address-input" maxlength="200" required>
       </div>
       <div>
-        <label for="city-input">City</label>
+        <label for="city-input">Cidade: </label>
         <input type="text" name="city" id="city-input" maxlength="28" required>
       </div>
       <div>
@@ -36,39 +37,38 @@
         </select>
       </div>
       <div>
-        <label for="type-residence-input1">Casa</label>
+        <label for="residence">Tipo de Residencia: </label>
         <input type="radio" name="residence" id="type-residence-input1" required value="Casa" checked>
-        <label for="type-residence-input2">Apartamento</label>
+        <span>Casa</span>
         <input type="radio" name="residence" id="type-residence-input2" required value="Apartamento">
+        <span>Apartamento</span>
       </div>
     </fieldset>
     <fieldset class="resume-container">
       <div>
-        <label for="resumeInput">Resume</label>
+        <label for="resumeInput">Resumo do Curriculo: </label>
         <textarea name="resume" id="resumeInput" cols="50" rows="10" maxlength="1000"></textarea>
       </div>
       <div>
-        <label for="job-input">Job</label>
+        <label for="job-input">Trabalho: </label>
         <input type="text" id="job-input" maxlength="40" required> 
       </div>
       <div>
-        <label for="job-resume">Job Resume</label>
+        <label for="job-resume">Resumo do Trabalho: </label>
         <textarea name="job-resume" id="job-resume" cols="50" rows="10" maxlength="500"></textarea>
       </div>
       <div>
         <div>
-          <label for="day">Start Date</label>
-          <select name="days" id="days"></select>
-          <select name="months" id="month"></select>
-          <input type="number" id="years" name="year" min="0">
+          <label for="day">Data de inicio</label>
+          <input type="text" name="startDate" id="startDate">
         </div>
       </div>
     </fieldset>
     <button id="btn-submit" type="submit">Enviar</button>
+    <button id="btn-clear" type="button">Limpar</button>
     <div id="dados-enviados">
     </div>
     <div id="mensagemErro">
-      <p id="error"></p>
     </div>
   </form>
   <script src="./script.js"></script>
