@@ -1,63 +1,11 @@
 const stateSelect = document.getElementById('state-select');
 
 const statesOfBrazil = [
-'AC - Acre',
-'AL - Alagoas',
-'AP - Amapá',
-'AM - Amazonas',
-'BA - Bahia',
-'CE - Ceará',
-'DF - Distrito Federal',
-'ES - Espírito Santo',
-'GO - Goías',
-'MA - Maranhão',
-'MT - Mato Grosso',
-'MS - Mato Grosso do Sul',
-'MG - Minas Gerais',
-'PA - Pará',
-'PB - Paraíba',
-'PR - Paraná',
-'PE - Pernambuco',
-'PI - Piauí',
-'RJ - Rio de Janeiro',
-'RN - Rio Grande do Norte',
-'RS - Rio Grande do Sul',
-'RO - Rondônia',
-'RR - Roraíma',
-'SC - Santa Catarina',
-'SP - São Paulo',
-'SE - Sergipe',
-'TO - Tocantins'
+'AC - Acre','AL - Alagoas','AP - Amapá','AM - Amazonas','BA - Bahia','CE - Ceará','DF - Distrito Federal','ES - Espírito Santo','GO - Goías','MA - Maranhão','MT - Mato Grosso','MS - Mato Grosso do Sul','MG - Minas Gerais','PA - Pará','PB - Paraíba','PR - Paraná','PE - Pernambuco','PI - Piauí','RJ - Rio de Janeiro','RN - Rio Grande do Norte','RS - Rio Grande do Sul','RO - Rondônia','RR - Roraíma','SC - Santa Catarina','SP - São Paulo','SE - Sergipe','TO - Tocantins'
 ]
 
 const initials = [
-'AC',
-'AL',
-'AP',
-'AM',
-'BA',
-'CE',
-'DF',
-'ES',
-'GO',
-'MA',
-'MS',
-'MT',
-'MG',
-'PA',
-'PB',
-'PR',
-'PE',
-'PI',
-'RJ',
-'RN',
-'RS',
-'RO',
-'RR',
-'SC',
-'SP',
-'SE',
-'TO',
+'AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MS','MT','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO',
 ]
 
 function populateStatesOptions(fatherElement ,arrayStates, initialsArray ) {
@@ -73,9 +21,6 @@ function populateStatesOptions(fatherElement ,arrayStates, initialsArray ) {
 populateStatesOptions(stateSelect, statesOfBrazil, initials);
 
 const submitBtn = document.getElementById('btn-submit')
-
-
-
 const nameInput = document.getElementById('name-input')
 const emailInput = document.getElementById('email-input')
 const cpfInput = document.getElementById('cpf-input')
@@ -87,18 +32,24 @@ const radioSelect2 = document.getElementById('type-residence-input2')
 const resumeInput = document.getElementById('resumeInput')
 const jobInput = document.getElementById('job-input')
 const jobResume = document.getElementById('job-resume')
-const days = document.getElementById('days')
-const months = document.getElementById('months')
-const years = document.getElementById('years')
+const startDate = document.getElementById('startDate')
 const sendDataDiv = document.getElementById('dados-enviados')
 const errorDiv = document.getElementById('mensagemErro')
 const error = document.getElementById('error')
 let errorMsg = ''
 
+function addErrorToDiv(message) {
+  const errorParagraph = document.createElement('p');
+  errorParagraph.className = 'error'
+  errorParagraph.innerText = message;
+  errorDiv.appendChild(errorParagraph);
+  
+}
+
 function isNameInputValid() {
   let control = true;
   if (nameInput.value.trim() === "") {
-    errorMsg += 'Nome Invalido'
+    addErrorToDiv('Nome Invalido')
     control = false
     return control;
   } else {
@@ -112,9 +63,9 @@ function isEmailInputValid() {
     control = true
     return control
   } else {
-    errorMsg += 'Email Invalido'
-   control = false
-   return control
+    addErrorToDiv('Email Invalido')
+    control = false
+    return control
   }
 }
 
@@ -127,7 +78,7 @@ cpfInput.addEventListener('keydown', limitCpfLength)
 
 function isCpfValid() {
   if (cpfInput.value.trim() === '') {
-    errorMsg += ' CPF invalido'
+    addErrorToDiv('CPF invalido')
     control = false
     return control
   } else {
@@ -139,7 +90,7 @@ function isCpfValid() {
 function isAdressInputValid() {
   let control = true
   if (addressInput.value.trim() === "") {
-    errorMsg += ' Endereco Invalido'
+    addErrorToDiv('Endereco Invalido')
     control = false
     return control
   } else {
@@ -151,7 +102,7 @@ function isAdressInputValid() {
 function isResumeInputValid() {
   let control = true
   if (resumeInput.value.trim() === "") {
-    errorMsg += ' Resumo Invalido'
+    addErrorToDiv('Resumo Invalido')
     control = false
     return control
   } else {
@@ -163,7 +114,7 @@ function isResumeInputValid() {
 function isJobInputValid() {
   let control = true
   if (jobInput.value.trim() === "") {
-    errorMsg += ' Insira um Trabalho'
+    addErrorToDiv('Insira um Trabalho')
     control = false
     return control
   } else {
@@ -175,7 +126,7 @@ function isJobInputValid() {
 function isJobResumeInputValid() {
   let control = true
   if (jobResume.value.trim() === "") {
-    errorMsg += ' Resumo do trabalho Invalido'
+    addErrorToDiv('Resumo do trabalho Invalido')
     control = false
     return control
   } else {
@@ -184,36 +135,50 @@ function isJobResumeInputValid() {
   }
 }
 
-function generateDayAndMonth() {
-  /* generate days */
-  for (let i = 1; i <= 31; i += 1) {
-    let dayOption = document.createElement('option')
-    dayOption.value = i
-    dayOption.innerText = i
-    days.appendChild(dayOption)
+const checkedValue = document.querySelector('[name=residence]:checked') 
+
+function dateValidation(){
+  let control = true
+  if(startDate.value.length === 0){
+    control = false
+    addErrorToDiv('A data não foi preenchida!')
+    return control
   }
-  /* generate months */
-  for (let i = 1; i <= 12; i += 1) {
-    let monthOption = document.createElement('option')
-    monthOption.value = i
-    monthOption.innerText = i
-    month.appendChild(monthOption)
+
+  let regex = /^\d\d\/\d\d\/\d\d\d\d$/;
+  
+  if(!regex.test(startDate.value)){
+    control = false
+    addErrorToDiv('Data: Formato inválido')
+    return control
   }
+
+  let splitted = startDate.value.split('/');
+  let day = splitted[0];
+  let month = splitted[1];
+  let year = splitted[2];
+
+  if(day < 0 || day > 30){
+    control = false
+    addErrorToDiv('Dia inválido')
+    return control
+  }
+
+  if(month < 0 || month > 12){
+    control = false
+    addErrorToDiv('Mês inválido')
+    return control
+  }
+
+  if(year < 0) {
+    control = false
+    addErrorToDiv('Ano inválido')
+    return control
+    
+  }
+  control = true
+  return control;
 }
-
-generateDayAndMonth()
-
-function verifyIfYearIsValid() {
-  let yearValue = years.value
-  let yearToNumber = parseInt(yearValue, 10)
-  if (yearToNumber < 0) {
-    yearValue = "0"
-  }
-}
-
-years.addEventListener('change', verifyIfYearIsValid)
-
-const checkedValue = document.querySelector('input[name="residence"]:checked') 
 
 function createForm() {
   const createParagraph = document.createElement('p')
@@ -225,16 +190,14 @@ function createForm() {
     createParagraph.innerText = `${idValues[i]}${values[i]}`
     sendDataDiv.appendChild(createParagraph)
   }
-  createParagraph.innerText = `Date of start: ${days.value}/${month.value}/${years.value}`
+  createParagraph.innerText = `Data de inicio: ${startDate.value}`
   sendDataDiv.appendChild(createParagraph)
 }
 
-function clearError() {
-  errorMsg = ''
-}
-
 function deleteErrorDiv() {
-  errorDiv.removeChild(error)
+  while (errorDiv.firstChild) {
+    errorDiv.removeChild(errorDiv.lastChild)
+  }
 }
 
 function clearDataDiv() {
@@ -245,7 +208,7 @@ function clearDataDiv() {
 
 function btnPreventDefault(event) {
   event.preventDefault()
-  clearError()
+  deleteErrorDiv()
   let nameValid = isNameInputValid()
   let emailValid = isEmailInputValid()
   let adressValid = isAdressInputValid()
@@ -253,22 +216,22 @@ function btnPreventDefault(event) {
   let jobValid = isJobInputValid()
   let jobResumeValid = isJobResumeInputValid()
   let cpfValid = isCpfValid()
-  if (nameValid === true && emailValid === true && adressValid === true && resumeValid === true
-    && jobValid === true && jobResumeValid === true && cpfValid === true && sendDataDiv.children.length > 0) {
-    deleteErrorDiv()
+  let startDateValid = dateValidation()
+  if(nameValid === true && emailValid === true && adressValid === true && resumeValid === true
+    && jobValid === true && jobResumeValid === true && cpfValid === true && startDateValid === true && errorDiv.children.length > 0) {
+      deleteErrorDiv()
+      createForm()
+    }
+  else if (nameValid === true && emailValid === true && adressValid === true && resumeValid === true
+    && jobValid === true && jobResumeValid === true && cpfValid === true && startDateValid === true && sendDataDiv.children.length > 0) {
     clearDataDiv()
     createForm()
   }
   else if (nameValid === true && emailValid === true && adressValid === true && resumeValid === true
-    && jobValid === true && jobResumeValid === true && cpfValid === true) {
-      deleteErrorDiv()
+    && jobValid === true && jobResumeValid === true && cpfValid === true && startDateValid === true) {
       createForm()
     } else {
       clearDataDiv()
-      const errorP = document.createElement('p')
-      errorP.id = 'error'
-      errorDiv.appendChild(errorP)
-      errorP.innerText = errorMsg
     }
 }
 
