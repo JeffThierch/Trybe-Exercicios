@@ -46,6 +46,22 @@ function addErrorToDiv(message) {
   
 }
 
+const btnClear = document.getElementById('btn-clear')
+
+function clearAll() {
+  const inputs = document.getElementsByTagName('input')
+  const textAreas = document.getElementsByTagName('textarea')
+
+  for (let i = 0; i < inputs.length; i += 1 ) {
+    inputs[i].value = ''
+  }
+  for (let i = 0; i < textAreas.length; i += 1) {
+    textAreas[i].value = ''
+  }
+}
+
+btnClear.addEventListener('click', clearAll)
+
 function isNameInputValid() {
   let control = true;
   if (nameInput.value.trim() === "") {
