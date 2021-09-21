@@ -16,3 +16,5 @@ img {
 figure {
     margin-bottom: 30px;
 }
+
+@media screen and (min-width: 800px)
