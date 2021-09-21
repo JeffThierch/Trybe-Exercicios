@@ -32,7 +32,20 @@ figure {
     width: 100%
   }
 
-  img {
-   flex-basis: 50%;
+  figure{
+    flex-basis: 35%;
+  }
+
+}
+
+@media screen and (min-width: 1300px) {
+  body {
+    background-color: grey;
+    font-size: 30px;
+    margin: 30px;
+    max-width: 90%;
+  }
+  h1 {
+    font-size: 40px;
   }
 }
