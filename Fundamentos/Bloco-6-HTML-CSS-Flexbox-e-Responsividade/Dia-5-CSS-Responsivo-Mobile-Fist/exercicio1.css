@@ -17,4 +17,22 @@ figure {
     margin-bottom: 30px;
 }
 
-@media screen and (min-width: 800px)
+@media screen and (min-width: 600px) {
+  body {
+    background-color: red;
+    font-size: 25px;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  main h2 {
+    width: 100%
+  }
+
+  img {
+   flex-basis: 50%;
+  }
+}
