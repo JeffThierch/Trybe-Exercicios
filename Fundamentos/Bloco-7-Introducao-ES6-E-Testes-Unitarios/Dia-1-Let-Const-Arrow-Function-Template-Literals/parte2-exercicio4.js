@@ -7,10 +7,15 @@ const replaceX = (frase, stingTrocada) => {
   } else {
     return console.log('A frase nao possui (x)');
   }
-  console.log(novaSting)
+  return novaSting
 }
-const arraySkills = ['CSS' , 'HTML', 'JS']
+const arraySkills = ['CSS' , 'HTML', 'JS', 'NodeJS', 'React']
 
-replaceX("Tryber x aqui!", Garai)
+const fraseTrocada = replaceX("Tryber x aqui!", 'Garai')
 
 /* Exercio 5 */
+
+const concatSkills = (skills) => `${fraseTrocada} Minhas cinco principais habilidades sao: ${skills.sort()} #goTrybe`
+
+
+console.log(concatSkills(arraySkills))
