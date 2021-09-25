@@ -74,6 +74,10 @@ footer .footer-content {
     width: 90%;
     margin: auto;
   }
+
+  .title-content {
+    font-size: 15px;
+  }
 }
 
 .content {
