@@ -1,0 +1,51 @@
+body {
+  font-size: 20px;
+  margin: 20px;
+}
+h1 {
+  font-size: 25px
+}
+h2 {
+
+}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background-color: red;
+    font-size: 25px;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  main h2 {
+    width: 100%
+  }
+
+  figure{
+    flex-basis: 35%;
+  }
+
+}
+
+@media screen and (min-width: 1300px) {
+  body {
+    background-color: grey;
+    font-size: 30px;
+    margin: 30px;
+    max-width: 90%;
+  }
+  h1 {
+    font-size: 40px;
+  }
+}
