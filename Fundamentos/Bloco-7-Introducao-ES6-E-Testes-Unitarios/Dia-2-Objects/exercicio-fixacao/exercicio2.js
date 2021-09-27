@@ -14,13 +14,11 @@ const student2 = {
 };
 
 const returnKeyValue = (objeto) => {
-
   const keys = Object.keys(objeto);
-
   for (const value in keys) {
-    console.log(`${keys[value]}, Nivel: ${objeto[keys[value]]}`)
+    console.log(`${keys[value]}, Nivel: ${objeto[keys[value]]}`);
   }
 }
 
 
-returnKeyValue(student1)
+returnKeyValue(student1);
