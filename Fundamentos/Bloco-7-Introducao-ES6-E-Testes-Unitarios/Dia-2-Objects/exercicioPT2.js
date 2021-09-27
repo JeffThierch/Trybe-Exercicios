@@ -55,3 +55,8 @@ const totalOfStudents = (object) => {
 }
 
 console.log(totalOfStudents(allLessons))
+
+/* Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto */
+
+const valueInPosition = (object, index) => Object.values(object)[index];
+console.log(valueInPosition(lesson1, 0));
