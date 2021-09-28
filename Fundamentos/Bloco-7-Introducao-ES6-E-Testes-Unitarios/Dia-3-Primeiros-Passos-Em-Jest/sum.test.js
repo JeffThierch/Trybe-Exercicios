@@ -14,4 +14,3 @@ describe('Funcao Sum', () => {
     expect( () => {sum(4, '5')}).toThrowError(new Error ('parameters must be numbers'))
   })
 })
-
