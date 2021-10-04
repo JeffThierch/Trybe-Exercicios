@@ -54,15 +54,15 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [X] 6.2 - Bibliotecas JavaScript e Frameworks CSS
 - [X] 6.3 - Introdução - CSS Flexbox
 - [X] 6.3 - CSS Flexbox - Parte 1
-- [ ] 6.4 - CSS Flexbox - Parte 2
-- [ ] 6.5 - CSS Responsivo - Mobile First
-- [ ] 6.6 - Projeto - Página inicial do Facebook
+- [X] 6.4 - CSS Flexbox - Parte 2
+- [X] 6.5 - CSS Responsivo - Mobile First
+- [X] 6.6 - Projeto - Página inicial do Facebook
 
 ##### Bloco 7: Introdução à JavaScript ES6 e Testes Unitários
-- [ ] 7.1 - JavaScript ES6 - let, const, arrow functions e template literals
-- [ ] 7.2 - JavaScript ES6 - Objects
-- [ ] 7.3 - Testes unitários em JavaScript
-- [ ] 7.4 - Projeto - JavaScript Testes Unitários
+- [X] 7.1 - JavaScript ES6 - let, const, arrow functions e template literals
+- [X] 7.2 - JavaScript ES6 - Objects
+- [X] 7.3 - Testes unitários em JavaScript
+- [X] 7.4 - Projeto - JavaScript Testes Unitários
 
 ##### Bloco 8: Higher Order Functions do JavaScript ES6
 - [ ] 8.1 - JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort
