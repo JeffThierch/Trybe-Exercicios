@@ -79,7 +79,6 @@ function authorUnique() {
 
       if (year1 === year2) {
         control = false;
-        break;
       }
 
     })
