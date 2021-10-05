@@ -7,7 +7,7 @@ const people = [
 ];
 
 people.sort((a, b) => {
-  return b.age - a.age 
+  return b.age - a.age;
 })
 
 console.log(people);
