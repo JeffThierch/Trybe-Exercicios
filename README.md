@@ -7,7 +7,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 
 ## Introducao - Fundamentos do Desenvolvimento Web :hourglass_flowing_sand:
 
-##### Bloco 1: Introdução - _[Unix, Bash e Shell Script]()_
+##### Bloco 1: Introdução - _[Unix, Bash e Shell Script](https://github.com/JeffThierch/Trybe-Exercicios/tree/master/Fundamentos/Bloco-01-Unix-Bash-e-Shell-Script)_
 
 - [X] 1.3 - Fundamentos do Desenvolvimento Web
 - [X] 1.3 - Introdução - Unix & Shell
