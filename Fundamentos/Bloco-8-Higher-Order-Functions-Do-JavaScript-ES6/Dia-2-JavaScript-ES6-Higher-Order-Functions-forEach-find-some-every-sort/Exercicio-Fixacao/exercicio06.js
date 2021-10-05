@@ -7,16 +7,7 @@ const people = [
 ];
 
 const verifyAges = (arr, minimumAge) => {
-  //Adicione seu código aqui
-  let idades = []
-  arr.forEach((value, index) => {
-     idades.push(arr[index].age)
-  })
-  if (idades.every((age) => age >= minimumAge)) {
-    return true;
-  } else {
-    return false;
-  }
+   return arr.every((person) => person.age >= minimumAge)
 }
 
 console.log(verifyAges(people, 17));
