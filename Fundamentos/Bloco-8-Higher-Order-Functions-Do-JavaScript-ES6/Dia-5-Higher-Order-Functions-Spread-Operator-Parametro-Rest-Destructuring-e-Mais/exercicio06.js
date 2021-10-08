@@ -9,7 +9,7 @@ const toObject = ([nome, marca, ano]) => {
     nome,
     marca,
     ano
-  }
+  };
 }
 
 console.log(toObject(palio));
