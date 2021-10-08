@@ -7,5 +7,4 @@ const rectangles = [rectangle1, rectangle2, rectangle3];
 
 rectangles.forEach((rectangle) => {
    console.log(rectangleArea(...rectangle));  // altere a chamada da funcao rectangleArea
-  /* console.log(rectangle[0] * rectangle[1]); */
 });
