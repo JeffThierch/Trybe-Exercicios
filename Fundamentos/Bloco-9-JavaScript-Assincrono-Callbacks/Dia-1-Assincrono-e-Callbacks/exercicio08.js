@@ -31,16 +31,18 @@ function getPokemonDetails(filter, callback) {
   }, 2000);
 }
 
-
-
-getPokemonDetails(({ name: pokemonName }) => pokemonName === 'Charmander', (erro, message) => {
+const callback = (erro, message) => {
   if (erro) {
     console.log(erro);
   } else {
     console.log(message);
   }
-});
+}
+
+const filterPokemon = (pokemon) => ({ name: pokemonName }) => pokemonName === pokemon
+
+getPokemonDetails(filterPokemon('Charmander'), callback);
 
 module.exports = {
-  getPokemonDetails,
+  getPokemonDetails, filterPokemon
 };
