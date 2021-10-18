@@ -3,11 +3,7 @@ const uppercase = (str, callback) => {
     callback(str.toUpperCase());
   }, 500);
 };
-
-uppercase('1', console.log)
-
-
-test('Testa a funcao Uppercase com retorno correto', (done) => {
+it('Testa a funcao Uppercase toBe BLA', (done) => {
   uppercase('bla', (result)  => {
     try {
       expect(result).toBe('BLA');
@@ -19,7 +15,7 @@ test('Testa a funcao Uppercase com retorno correto', (done) => {
   })
 })
 
-test('Testa a funcao Uppercase com retorno de numero', (done) => {
+it('Testa a funcao Uppercase toBe "1" ', (done) => {
   uppercase('1', (result)  => {
     try {
       expect(result).toBe('1');
