@@ -19,7 +19,4 @@ const appendCoins = async (callback) => {
 }
 
 
-window.onload = () => {
-  fetchApi();
-  appendCoins(fetchApi)
-}
+window.onload = appendCoins(fetchApi)
