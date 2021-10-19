@@ -7,14 +7,18 @@ const fetchJoke = () => {
     headers: { 'Accept': 'application/json' }
   };
 
-  fetch(API_URL, myObject)
+  return fetch(API_URL, myObject)
     .then(response => response.json())
-    .then(({ joke }) => {
-      const jokeContainer = document.getElementById('jokeContainer');
-      jokeContainer.innerHTML = joke
-    })
+    .then(({ joke }) => joke)
+    .catch(error => console.log(error));
 };
+
+const appendJoke = async (callback) => {
+  const jokeContainer = document.getElementById('jokeContainer');
+  jokeContainer.innerHTML = await callback()
+}
 
 window.onload = () => {
   fetchJoke()
+  appendJoke(fetchJoke)
 }
