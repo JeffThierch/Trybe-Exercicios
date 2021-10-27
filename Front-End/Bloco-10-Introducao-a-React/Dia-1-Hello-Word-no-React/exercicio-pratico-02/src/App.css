@@ -1,3 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header-container {
+  @apply sticky top-0 flex justify-center  w-full bg-green-500 shadow-2xl;
+}
+
+.title {
+  @apply text-4xl p-3;
+}
+
+.mainContent {
+  @apply mt-10 flex justify-around flex-wrap items-center h-96;
+}
+
+.card-content {
+  @apply  rounded-md text-center text-gray-700 bg-red-400 shadow-2xl h-3/4 w-64 justify-center items-center flex flex-col;
+}
+
+.footer-container {
+  @apply fixed bottom-0 bg-green-500 w-full flex justify-center shadow-2xl;
+}
+
+.footer-content {
+  @apply p-3 text-xl;
+}
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .App {
   text-align: center;
 }
