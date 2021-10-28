@@ -25,12 +25,12 @@ class App extends React.Component {
     }]
 
     return (
-      orders.map(order => (
       <div className="App">
-        <h1> Orders recently created </h1>
-         <Order order={order} />
+      <h1> Orders recently created </h1>
+      {orders.map(order => (
+         <Order key={order.id} order={order} />
+      ))}
       </div>
-      ))
     );
   }
 }
