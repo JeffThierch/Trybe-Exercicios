@@ -10,10 +10,18 @@ class Button extends Component {
     }
   }
 
-  handleClick = () => {
+  handleClick(event) {
     this.setState((prevState, _props) => ({
       clicks: prevState.clicks + 1
     }))
+
+    if (this.state.clicks % 2 !== 0) {
+      console.log(event.target.style.backgroundColor)
+      event.target.style.backgroundColor = 'green'
+    } else {
+      console.log(event.target.style.backgroundColor)
+      event.target.style.backgroundColor = 'white'
+    }
   }
   render() {
     return (
