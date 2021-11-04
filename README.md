@@ -5,7 +5,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 
 "A Trybe é uma escola do futuro para qualquer pessoa que queira melhorar de vida e construir uma carreira de sucesso em tecnologia, onde a pessoa só paga quando conseguir um bom trabalho."
 
-## Introducao - Fundamentos do Desenvolvimento Web :hourglass_flowing_sand:
+## Introducao - Fundamentos do Desenvolvimento Web :heavy_check_mark:
 
 ##### Bloco 1: Introdução - _[Unix, Bash e Shell Script](https://github.com/JeffThierch/Trybe-Exercicios/tree/master/Fundamentos/Bloco-01-Unix-Bash-e-Shell-Script)_
 
@@ -74,29 +74,29 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 
 ##### Bloco 9: JavaScript Assíncrono e Promises
 - [X] 9.1 - JavaScript Assíncrono e Callbacks
-- [ ] 9.2 - JavaScript Assincrono
-- [ ] 9.3 - Jest - Testes Assíncronos
-- [ ] 9.4 - Projeto - Carrinho de Compras
+- [X] 9.2 - JavaScript Assincrono
+- [X] 9.3 - Jest - Testes Assíncronos
+- [X] 9.4 - Projeto - Carrinho de Compras
 
 ##### Bloco 10: Testes automatizados com Jest
-- [ ] 10.1 - Primeiros passos no Jest
-- [ ] 10.2 - Jest - Testes Assíncronos
-- [ ] 10.3 - Jest - Simulando comportamentos
-- [ ] 10.4 - Projeto - Jest Assíncrono e Mocking
+- [X] 10.1 - Primeiros passos no Jest
+- [X] 10.2 - Jest - Testes Assíncronos
+- [X] 10.3 - Jest - Simulando comportamentos
+- [X] 10.4 - Projeto - Jest Assíncrono e Mocking
 
 ## Desenvolvimento Front-end :hourglass_flowing_sand:
 
 ##### Bloco 11: Introdução à React
-- [ ] 11.1 - Introdução - Front-end
-- [ ] 11.1 - Introdução - React
-- [ ] 11.1 - 'Hello, world!' no React!
-- [ ] 11.2 - Componentes React
-- [ ] 11.3 - Projeto - Movie Cards Library
+- [X] 11.1 - Introdução - Front-end
+- [X] 11.1 - Introdução - React
+- [X] 11.1 - 'Hello, world!' no React!
+- [X] 11.2 - Componentes React
+- [X] 11.3 - Projeto - Solar System 
 
 ##### Bloco 12: Componentes com Estado, Eventos e Formulários com React
-- [ ] 12.1 - Componentes com estado e eventos
-- [ ] 12.2 - Formulários no React
-- [ ] 12.3 - Projeto - Movie Cards Library Stateful
+- [X] 12.1 - Componentes com estado e eventos
+- [X] 12.2 - Formulários no React
+- [ ] 12.3 - Projeto - Tryunfo
 
 ##### Bloco 13: Ciclo de Vida de Componentes e React Router
 - [ ] 13.1 - Ciclo de vida de componentes
