@@ -1,3 +1,4 @@
+const { expect } = require('@jest/globals')
 const { it } = require('jest-circus')
 const {generateRandonNumber} = require('./services')
 
@@ -19,5 +20,30 @@ describe('Com a funcao GenerateRandonNumber impelente a funcionalidade de dividi
     const generateRandonNumber = jest.fn().mockImplementationOnce((a,b) => a / b)
     expect(generateRandonNumber(4, 2)).toBe(2)
     expect(generateRandonNumber(4,2)).not.toBe(2)
+    expect(generateRandonNumber).toHaveBeenCalled()
+    expect(generateRandonNumber).toHaveBeenCalledTimes(2)
+  })
+})
+
+describe('Com a funcao GenerateRandonNumber implemente a funcionalidade de Multiplicar 3 Numeros e Dobrar', () => {
+  test('Testa se as funcionaliades novas estao corretas', () => {
+    let generateRandonNumber = jest.fn().mockImplementation((a, b, c) => a * b * c)
+
+    expect(generateRandonNumber(2, 2, 2)).toBe(8)
+    generateRandonNumber(1,2,3)
+    expect(generateRandonNumber).toHaveBeenCalled()
+    expect(generateRandonNumber).toHaveBeenCalledTimes(2)
+    expect(generateRandonNumber).toHaveBeenCalledWith(1,2,3)
+
+    generateRandonNumber.mockReset()
+
+    generateRandonNumber = jest.fn().mockImplementation((number) => number * 2)
+
+    expect(generateRandonNumber(2)).toBe(4)
+    generateRandonNumber(2)
+    expect(generateRandonNumber).toHaveBeenCalled()
+    expect(generateRandonNumber).toHaveBeenCalledTimes(2)
+    expect(generateRandonNumber).toHaveBeenCalledWith(2)
+
   })
 })
