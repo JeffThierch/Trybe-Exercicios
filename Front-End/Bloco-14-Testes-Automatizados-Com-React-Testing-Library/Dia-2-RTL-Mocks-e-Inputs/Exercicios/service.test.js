@@ -13,3 +13,11 @@ describe('Testa a funcao GenerateRandonNumber', () => {
     expect(generateRandonNumber).toHaveBeenCalledTimes(1)
   })
 })
+
+describe('Com a funcao GenerateRandonNumber impelente a funcionalidade de dividir os numeros', () => {
+  test('Testa se as funcionaliades novas estao corretas', () => {
+    const generateRandonNumber = jest.fn().mockImplementationOnce((a,b) => a / b)
+    expect(generateRandonNumber(4, 2)).toBe(2)
+    expect(generateRandonNumber(4,2)).not.toBe(2)
+  })
+})
