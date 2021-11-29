@@ -1,6 +1,4 @@
-const { expect } = require('@jest/globals')
-const { it } = require('jest-circus')
-const {generateRandonNumber} = require('./services')
+const {generateRandonNumber, concatTwoStings, stringFistLetter, toUpperSting} = require('./services')
 
 describe('Testa a funcao GenerateRandonNumber', () => {
   test('Testa se o retorna da funcao esta correto', () => {
@@ -44,6 +42,15 @@ describe('Com a funcao GenerateRandonNumber implemente a funcionalidade de Multi
     expect(generateRandonNumber).toHaveBeenCalled()
     expect(generateRandonNumber).toHaveBeenCalledTimes(2)
     expect(generateRandonNumber).toHaveBeenCalledWith(2)
+
+  })
+})
+
+describe('Testa os mocks criados para as novas funcoes dando-lhes novas funcionalidades ', () => {
+  test('Testa se as funcionaliades novas estao corretas', () => {
+    const toUpperSting = jest.fn().mockImplementation((string) => (string.toLowerCase()))
+    const stringFistLetter = jest.fn().mockImplementation((string) => (string[string.length - 1]))
+    const concatTwoStings = jest.fn().mockImplementation((stringA, stringB, stringC) => (stringA +stringB + stringC))
 
   })
 })
