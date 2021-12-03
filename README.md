@@ -61,7 +61,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 ##### Bloco 7: [Introdução à JavaScript ES6 e Testes Unitários](https://github.com/JeffThierch/Trybe-Exercicios/tree/master/Fundamentos/Bloco-7-Introducao-ES6-E-Testes-Unitarios)
 - [X] 7.1 - JavaScript ES6 - let, const, arrow functions e template literals
 - [X] 7.2 - JavaScript ES6 - Objects
-- [X] 7.3 - Testes unitários em JavaScript
+- [X] 7.3 - Primeiros passos em Jest
 - [X] 7.4 - Projeto - JavaScript Testes Unitários
 
 ##### Bloco 8: [Higher Order Functions do JavaScript ES6](https://github.com/JeffThierch/Trybe-Exercicios/tree/master/Fundamentos/Bloco-8-Higher-Order-Functions-Do-JavaScript-ES6/Dia-1-Introducao-A-Higher-Order-Functions)
@@ -72,101 +72,100 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [X] 8.5 - JavaScript ES6 - spread operator, parâmetro rest, destructuring e mais
 - [X] 8.6 - Projeto - Zoo functions
 
-##### Bloco 9: JavaScript Assíncrono e Promises
+##### Bloco 09: JavaScript Assíncrono e Promises
 - [X] 9.1 - JavaScript Assíncrono e Callbacks
-- [X] 9.2 - JavaScript Assincrono
+- [X] 9.2 - JavaScript Assincrono - Fetch API e async/await
 - [X] 9.3 - Jest - Testes Assíncronos
 - [X] 9.4 - Projeto - Carrinho de Compras
 
-##### Bloco 10: Testes automatizados com Jest
-- [X] 10.1 - Primeiros passos no Jest
-- [X] 10.2 - Jest - Testes Assíncronos
-- [X] 10.3 - Jest - Simulando comportamentos
-- [X] 10.4 - Projeto - Jest Assíncrono e Mocking
-
 ## Desenvolvimento Front-end :hourglass_flowing_sand:
 
-##### Bloco 11: Introdução à React
-- [X] 11.1 - Introdução - Front-end
-- [X] 11.1 - Introdução - React
-- [X] 11.1 - 'Hello, world!' no React!
-- [X] 11.2 - Componentes React
-- [X] 11.3 - Projeto - Solar System 
+##### Bloco 10: Introdução à React
+- [X] 10.1 - Introdução - Front-end
+- [X] 10.1 - Introdução - React
+- [X] 10.1 - 'Hello, world!' no React!
+- [X] 10.2 - Componentes React
+- [X] 10.3 - Projeto - Solar System 
 
-##### Bloco 12: Componentes com Estado, Eventos e Formulários com React
-- [X] 12.1 - Componentes com estado e eventos
-- [X] 12.2 - Formulários no React
-- [X] 12.3 - Projeto - Tryunfo
+##### Bloco 11: Componentes com Estado, Eventos e Formulários com React
+- [X] 11.1 - Componentes com estado e eventos
+- [X] 11.2 - Formulários no React
+- [X] 11.3 - Projeto - Tryunfo
 
-##### Bloco 13: Ciclo de Vida de Componentes e React Router
-- [X] 13.1 - Ciclo de vida de componentes
-- [X] 13.2 - React Router
-- [X] 13.3 - Projeto - Trybetunes
+##### Bloco 12: Ciclo de Vida de Componentes e React Router
+- [X] 12.1 - Ciclo de vida de componentes
+- [X] 12.2 - React Router
+- [X] 12.3 - Projeto - Trybetunes
 
-##### Bloco 14: Metodologias Ágeis
-- [X] 14.1 - Metodologias Ágeis
-- [X] 14.2 - Projeto - Frontend Online Store
+##### Bloco 13: Metodologias Ágeis
+- [X] 13.1 - Metodologias Ágeis
+- [X] 13.2 - Projeto - Frontend Online Store
 
-##### Bloco 15: Testes automatizados com React Testing Library
-- [X] 15.1 - RTL - Primeiros passos
-- [X] 15.2 - RTL - Mocks e Inputs
-- [X] 15.3 - RTL - Testando React Router
-- [X] 15.4 - Projeto - React Testing Library
+##### Bloco 14: Testes automatizados com React Testing Library
+- [X] 14.1 - RTL - Primeiros passos
+- [X] 14.2 - RTL - Mocks e Inputs
+- [X] 14.3 - RTL - Testando React Router
+- [X] 14.4 - Projeto - React Testing Library
 
-##### Bloco 16: Gerenciamento de estado com Redux
-- [ ] 16.1 - Introdução ao Redux - O estado global da aplicação
-- [ ] 16.2 - Usando o Redux no React
-- [ ] 16.3 - Usando o Redux no React - Prática
-- [ ] 16.4 - Usando o Redux no React - Actions Assíncronas
-- [ ] 16.5 - Testes síncronos com React-Redux
-- [ ] 16.6 - Projeto - Tabela com filtros de dados
+##### Bloco 15: Gerenciamento de estado com Redux
+- [ ] 15.1 - Introdução ao Redux - O estado global da aplicação
+- [ ] 15.2 - Usando o Redux no React
+- [ ] 15.3 - Usando o Redux no React - Prática
+- [ ] 15.4 - Usando o Redux no React - Actions Assíncronas
+- [ ] 15.5 - Testes síncronos com React-Redux
+- [ ] 15.6 - Projeto - Trybe Wallet
 
-##### Bloco 17: Projeto Jogo de Trivia
-- [] 17.1 - Projeto - Jogo de Trivia
+##### Bloco 16: Projeto Jogo de Trivia
+- [] 16.1 - Projeto - Jogo de Trivia
 
-##### Bloco 18: Context API e React Hooks
-- [ ] 18.1 - Context API do React
-- [ ] 18.2 - React Hooks - useState e useContext
-- [ ] 18.3 - React Hooks - useEffect e Hooks customizados
-- [ ] 18.4 - Projeto - StarWars Datatable com Context API e Hooks
+##### Bloco 17: Context API e React Hooks
+- [ ] 17.1 - Context API do React
+- [ ] 17.2 - React Hooks - useState e useContext
+- [ ] 17.3 - React Hooks - useEffect e Hooks customizados
+- [ ] 17.4 - Projeto - StarWars Datatable com Context API e Hooks
 
-##### Bloco 19: Projeto App de Receitas
-- [ ] 19.1 - Projeto - App de Receitas
+##### Bloco 18: Projeto App de Receitas
+- [ ] 18.1 - Projeto - App de Receitas
 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
-##### Bloco 20: Introdução à SQL
-- [ ] 20.1 - Introdução - Back-end
-- [ ] 20.1 - Introdução - Bancos de dados relacionais
+##### Bloco 19: Docker: Utilizando Containers
+- [ ] 19.1 - Introdução - Back-end
+- [ ] 19.1 - Utilizando Containers - Docker
+- [ ] 19.2 - Manipulação e Criação de Imagens no Docker
+- [ ] 19.3 - Orquestrando Containers com Docker Compose
+- [ ] 19.4 - Projeto - Docker Todo-List
+
+##### Bloco 20: Introdução â SQL
+- [ ] 20.1 - Introdução - Banco de dados relacionais
 - [ ] 20.1 - Banco de dados SQL
 - [ ] 20.2 - Encontrando dados em um banco de dados
-- [ ] 20.3 - Filtrando dados de forma específica
+- [ ] 20.3 - Filtando dados de forma especifica
 - [ ] 20.4 - Manipulando tabelas
 - [ ] 20.5 - Projeto - All For One
 
-##### Bloco 21: Funções SQL, Joins e Subqueries
+##### Bloco 21: Funções SQL, JOINs e Normalização
 - [ ] 21.1 - Funções mais usadas no SQL
-- [ ] 21.2 - Descomplicando JOINs e UNIONs
-- [ ] 21.3 - Stored Routines & Subqueries
-- [ ] 21.4 - Projeto - Vocabulary Booster
+- [ ] 21.2 - Descomplicando JOINs
+- [ ] 21.3 - Transformando ideias em um modelo de banco de dados
+- [ ] 21.4 - Aula ao vivo + Projeto - One For All
 
-##### Bloco 22: Normalização e Modelagem de Banco de Dados
-- [ ] 22.1 - Transformando ideias em um modelo de banco de dados
-- [ ] 22.2 - Normalização, Formas Normais e Dumps
-- [ ] 22.3 - Transformando ideias em um modelo de banco de dados - Parte 2
-- [ ] 22.4 - Projeto - One For All
+##### Bloco 22: Introdução ao desenvolvimento Web com Node.js
+- [ ] 22.1 - Introdução - Node.js
+- [ ] 23.1 - Node.js - Um motor JavaScript
+- [ ] 22.2 - Node.js - Fluxo Assincrono
+- [ ] 22.3 - Mocha, Chai, Sinon - Testes de Back-end com Node.js
+- [ ] 22.4 - Express - HTTP com Node.js
+- [ ] 22.5 - Express - Middlewares
+- [ ] 22.6 - Express - Talker Manager
 
-##### Bloco 23: Introdução ao MongoDB
-- [ ] 23.1 - Introdução - NoSQL
-- [ ] 23.1 - MongoDB - Introdução
-- [ ] 23.2 - Filter Operators
-- [ ] 23.3 - Projeto - Data Flights
-
-##### Bloco 24: MongoDB: Updates Simples e Complexos
-- [ ] 24.1 - Updates Simples
-- [ ] 24.2 - Updates Complexos - Arrays - Parte 1
-- [ ] 24.3 - Updates Complexos - Arrays - Parte 2
-- [ ] 24.4 - Projeto - Commerce
+##### Bloco 23: Node.js: Camada de Serviço e Arquitetura Rest e Restful
+- [ ] 23.1 - Introdução - Arquitetura de Software
+- [ ] 23.1 - Arquitetura de Software - Camada de Model
+- [ ] 23.2 - Arquitetura de Software - Camada de Controller e Service
+- [ ] 23.3 - Arquitetura Web - Rest e Restful
+- [ ] 23.4 - Arquitetura de Software - Testando as Camadas
+- [ ] 23.5 - Projeto - Store Manager --- Atualizando 
 
 ##### Bloco 25: MongoDB: Aggregation Framework
 - [ ] 25.1 - Aggregation Framework - Parte 1
