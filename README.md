@@ -165,96 +165,100 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [ ] 23.2 - Arquitetura de Software - Camada de Controller e Service
 - [ ] 23.3 - Arquitetura Web - Rest e Restful
 - [ ] 23.4 - Arquitetura de Software - Testando as Camadas
-- [ ] 23.5 - Projeto - Store Manager --- Atualizando 
+- [ ] 23.5 - Projeto - Store Manager
 
-##### Bloco 25: MongoDB: Aggregation Framework
-- [ ] 25.1 - Aggregation Framework - Parte 1
-- [ ] 25.2 - Aggregation Framework - Parte 2
-- [ ] 25.3 - Projeto - Aggregations
+##### Bloco 24: Node.js: ORM e Autenticação
+- [ ] 24.1 - Introdução - Node.js: ORM e Autenticação
+- [ ] 24.1 - ORM -  Interface da aplicação com o banco de dados 
+- [ ] 24.2 - ORM - Associations
+- [ ] 24.3 - JWT - (JSON Web Token)
+- [ ] 24.4 - Testando APIs com Testes de Integração
+- [ ] 24.5 - Projeto - API de Blogs
 
-##### Bloco 26: Introdução ao desenvolvimento Web com NodeJS
-- [ ] 26.1 - Intro - NodeJS
-- [ ] 26.1 - NodeJS - Introdução
-- [ ] 26.2 - NodeJS - Fluxo Assíncrono
-- [ ] 26.3 - Testes com NodeJS
-- [ ] 26.4 - Express: HTTP com Node.js
-- [ ] 26.5 - Praticando Express
-- [ ] 26.6 - Projeto - Talker manager
+##### Bloco 25: Deployment
+- [ ] 25.1 - Introdução - Deploy
+- [ ] 25.1 - Infraestrutura - Deploy com Heroku
+- [ ] 25.2 - Deploy Docker & Heroku
+- [ ] 25.3 - Projeto - Stranger Things
 
-##### Bloco 27: NodeJS: Camada de Serviço e Arquitetura Rest e Restful
-- [ ] 27.1 - Introdução - Arquitetura de Software
-- [ ] 27.1 - Arquitetura de Software - Camada de Model
-- [ ] 27.2 - Arquitetura de Software - Camada de Controller e Service
-- [ ] 27.3 - Arquitetura Web - Rest e Restful
-- [ ] 27.4 - Arquitetura de Software - Testando as Camadas
-- [ ] 27.5 - Projeto - Store Manager
 
-##### Bloco 28: Autenticação e Upload de Arquivos
-- [ ] 28.1 - NodeJS - JWT - (JSON Web Token)
-- [ ] 28.2 - NodeJS - Upload de arquivos com Multer
-- [ ] 28.3 - NodeJS - Testando APIs com Testes de Integração
-- [ ] 28.4 - Projeto - Cookmaster
+##### Bloco 26: TypeScript
+- [ ] 26.1 - Introdução - TypeScript
+- [ ] 26.1 - Introdução - TypeScript
+- [ ] 26.2 - Tipagem Estatica e Generics
+- [ ] 26.3 - Express com TypeScript
+- [ ] 26.4 - Projeto - Trybe Smith
 
-##### Bloco 29: Deployment
-- [ ] 29.1 - Introdução - Deploy
-- [ ] 29.1 - Infraestrutura - Deploy com Heroku
-- [ ] 29.2 - Deploy - Gerenciadores de Processos
-- [ ] 29.3 - Projeto - Stranger Things
+##### Bloco 27: Programação Orientada a Objetos (POO) e SOLID
+- [ ] 27.1 - Introdução a Orientação a Objetos
+- [ ] 27.2 - Herança e Interfaces
+- [ ] 27.3 - Polimorfismo
+- [ ] 27.4 - SOLID - Introdução
+- [ ] 27.5 - SOLID - Continuação
+- [ ] 27.6 - Projeto - Trybers and Dragons
 
-##### Bloco 30: Arquitetura: SOLID e ORM
-- [ ] 30.1 - Arquitetura - Princípios SOLID
-- [ ] 30.2 - ORM - Interface da aplicação com o banco de dados
-- [ ] 30.3 - ORM - Associations
-- [ ] 30.4 - Boas práticas na escrita de testes
-- [ ] 30.5 - Projeto - API de Blogs
+##### Bloco 28: Projeto - TFC - Trybe Futebol Clube
+- [ ] Projeto - TFC - Trybe Futebol Clube
 
-##### Bloco 31: Sockets
-- [ ] 31.1 - Sockets - TCP/UDP & NET
-- [ ] 31.2 - Sockets - Socket.io
-- [ ] 31.3 - Projeto - Webchat
+##### Bloco 29: Intrudução ao MongoDB
+- [ ] 29.1 - Intrudução - NoSQL
+- [ ] 29.1 - MongoDB - Introdução
+- [ ] 29.2 - Filter Operators
+- [ ] 29.3 - Projeto - Data Flights
 
-##### Bloco 32: Projeto Trybeer II
-- [ ] 32.1 - Projeto - Trybeer v2
+##### Bloco 30: MongoDB: Updates Simples e Complexos
+- [ ] 30.1 - Updates Simples
+- [ ] 30.2 - Updates Complexos - Arrays - Parte 1
+- [ ] 30.3 - Updates Complexos - Arrays - Parte 2
+- [ ] 30.4 - Projeto - Commerce
+
+##### Bloco 31: MasterClass - VPS, CI/CD
+- [ ] 31.1 - Dia 1
+- [ ] 31.2 - Dia 2
+
+##### Bloco 32: Projeto - App de Delivery
+- [ ] 32.1 - Projeto - App de Delivery
 
 ## Ciência da Computação :hourglass_flowing_sand:
 
-##### Bloco 33: Arquitetura de Computadores e Redes
+##### Bloco 33: Introdução à Python
 - [ ] 33.1 - Introdução - Ciência da Computação
-- [ ] 33.2 - Arquitetura de Computadores
-- [ ] 33.3 - Arquitetura de redes
-- [ ] 33.4 - Redes de computadores, ferramentas e segurança
-- [ ] 33.5 - Projeto - Explorando os protocolos
+- [ ] 33.1 - Aprendendo Python
+- [ ] 33.2 - Entrada e Saída de dados
+- [ ] 33.3 - Testes
+- [ ] 33.4 - Projeto - Job Insights
 
-##### Bloco 34: Introdução à Python e Raspagem de Dados da Web
-- [ ] 34.1 - Aprendendo Python
-- [ ] 34.2 - Entrada e Saída de dados
-- [ ] 34.3 - Raspagem de Dados
-- [ ] 34.4 - Testes
-- [ ] 34.5 - Projeto - Tech news
+##### Bloco 34: Programação Orientada a Objetos e Padrões de Projeto
+- [ ] 34.1 - Introdução à programação orientada a objetos
+- [ ] 34.2 - Herança, Composição e Interfaces
+- [ ] 34.3 - Padrões de projeto
+- [ ] 34.4 - Projeto - Relatórios de Estoque
 
-##### Bloco 35: Programação Orientada a Objetos e Padrões de Projeto
-- [ ] 35.1 - Introdução à programação orientada a objetos
-- [ ] 35.2 - Herança, Composição e Interfaces
-- [ ] 35.3 - Padrões de projeto
-- [ ] 35.4 - Projeto - Relatórios de Estoque
+##### Bloco 35: Redes e Raspagem de Dados
 
-##### Bloco 36: Algoritmos e Estrutura de Dados
+- [ ] 35.1 - Arquitetura de redes
+- [ ] 35.2 - Redes de computadores, ferramentas e segurança
+- [ ] 35.3 - Raspagem de Dados
+- [ ] 35.4 - Projeto - Tech News
+
+
+##### Bloco 36: Algoritmos
 - [ ] 36.1 - Complexidade de Algoritmos
 - [ ] 36.2 - Recursividade e Estratégias para solução de problemas
 - [ ] 36.3 - Algoritmos de ordenação e busca
 - [ ] 36.4 - Projeto - Algoritmos
 
-##### Bloco 37: Estrutura de Dados: Hash e Set
-- [ ] 37.1 - Arrays
-- [ ] 37.2 - Hashmap e Dict
-- [ ] 37.3 - Set
-- [ ] 37.4 - Projeto - Restaurant Orders
+##### Bloco 37: Estrutura de Dados I: Arrays, Hashmaps e Sets
+- [ ] 37.1 - Arquitetura de Computadores
+- [ ] 37.2 - Arrays
+- [ ] 37.3 - Hashmap e Dict
+- [ ] 37.4 - Set
+- [ ] 37.5 - Projeto - Restaurant Orders
 
-##### Bloco 38: Estrutura de Dados: Pilhas, Filas e Listas
+##### Bloco 38: Estrutura de Dados II: Listas, Filas e Pilhas
 - [ ] 38.1 - Nó e Listas Encadeadas
-- [ ] 38.2 - Deque
-- [ ] 38.3 - Pilhas
-- [ ] 38.4 - Projeto - TING - Trybe Is Not Google
+- [ ] 38.2 - Pilhas e Filas
+- [ ] 38.3 - Projeto - TING - Trybe Is Not Google
 
 
 
