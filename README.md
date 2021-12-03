@@ -96,22 +96,22 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 ##### Bloco 12: Componentes com Estado, Eventos e Formulários com React
 - [X] 12.1 - Componentes com estado e eventos
 - [X] 12.2 - Formulários no React
-- [ ] 12.3 - Projeto - Tryunfo
+- [X] 12.3 - Projeto - Tryunfo
 
 ##### Bloco 13: Ciclo de Vida de Componentes e React Router
-- [ ] 13.1 - Ciclo de vida de componentes
-- [ ] 13.2 - React Router
-- [ ] 13.3 - Projeto - Movie Cards Library CRUD
+- [X] 13.1 - Ciclo de vida de componentes
+- [X] 13.2 - React Router
+- [X] 13.3 - Projeto - Trybetunes
 
 ##### Bloco 14: Metodologias Ágeis
-- [ ] 14.1 - Metodologias Ágeis
-- [ ] 14.2 - Projeto - Frontend Online Store
+- [X] 14.1 - Metodologias Ágeis
+- [X] 14.2 - Projeto - Frontend Online Store
 
 ##### Bloco 15: Testes automatizados com React Testing Library
-- [ ] 15.1 - RTL - Primeiros passos
-- [ ] 15.2 - RTL - Mocks e Inputs
-- [ ] 15.3 - RTL - Testando React Router
-- [ ] 15.4 - Projeto - Testes em React
+- [X] 15.1 - RTL - Primeiros passos
+- [X] 15.2 - RTL - Mocks e Inputs
+- [X] 15.3 - RTL - Testando React Router
+- [X] 15.4 - Projeto - React Testing Library
 
 ##### Bloco 16: Gerenciamento de estado com Redux
 - [ ] 16.1 - Introdução ao Redux - O estado global da aplicação
