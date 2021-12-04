@@ -1,5 +1,5 @@
 const functions = require('./services')
-const {generateRandonNumber, concatTwoStings, stringFistLetter, toUpperSting} = functions
+const {generateRandonNumber, concatTwoStings, stringFistLetter, toUpperSting, fetchAPIDogsPictutes} = functions
 
 describe('Testa a funcao GenerateRandonNumber', () => {
   test('Testa se o retorna da funcao esta correto', () => {
@@ -80,4 +80,27 @@ describe('Testa os mocks criados para as novas funcoes dando-lhes novas funciona
     expect(concatTwoStings('A', 'B')).toBe('AB')
 
   })
+
 })
+describe("testando a requisição", () => {
+  fetchAPIDogsPictutes = jest.fn();
+  afterEach(fetchAPIDogsPictutes.mockReset);
+
+  test("testando requisição caso a promisse resolva", async () => {
+    fetchAPIDogsPictutes.mockResolvedValue("request sucess");
+
+    fetchAPIDogsPictutes();
+    expect(fetchAPIDogsPictutes).toHaveBeenCalled();
+    expect(fetchAPIDogsPictutes).toHaveBeenCalledTimes(1);
+    await expect(fetchAPIDogsPictutes()).resolves.toBe("request sucess");
+    expect(fetchAPIDogsPictutes).toHaveBeenCalledTimes(2);
+  });
+
+  test("testando requisição caso a promisse seja rejeitada", async () => {
+    fetchAPIDogsPictutes.mockRejectedValue("request failed");
+
+    expect(fetchAPIDogsPictutes).toHaveBeenCalledTimes(0);
+    await expect(fetchAPIDogsPictutes()).rejects.toMatch("request failed");
+    expect(fetchAPIDogsPictutes).toHaveBeenCalledTimes(1);
+  });
+});

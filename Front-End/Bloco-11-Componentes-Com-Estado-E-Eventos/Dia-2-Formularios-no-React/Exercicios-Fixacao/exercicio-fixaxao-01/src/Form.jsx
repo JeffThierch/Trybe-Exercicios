@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Input from './Input';
+import Select from './Select';
 
 class Form extends Component {
   constructor () {
@@ -7,53 +9,81 @@ class Form extends Component {
       nome: '',
       email: '',
       comidaFavorita: '',
-      sobre: ''
+      sobre: '',
+      ePalmeirense: false,
+      formularioComErros: true
     }
-    this.handleNameChange = this.handleNameChange.bind(this);
-    this.handleEmailChange = this.handleEmailChange.bind(this);
-    this.handleFavoriteFoodChange = this.handleFavoriteFoodChange.bind(this);
-    this.handleAboutChange = this.handleAboutChange.bind(this);
+    this.handleChanges = this.handleChanges.bind(this);
+    this.handleError = this.handleError.bind(this);
+    this.fileInput = React.createRef()
   }
 
-  handleNameChange(event) {
+  handleChanges({ target }) {
+    const { name } = target
+    const value = target.type === 'checkbox' ? target.checked : target.value
     this.setState({
-      nome: event.target.value
-    })
+      [name]: value
+    }, () => { this.handleError(); });
   }
 
-  handleEmailChange(event) {
+  handleError() {
+    const { nome, email, comidaFavorita } = this.state
+    const errorCases = [
+      !nome.length,
+      !email.length,
+      !comidaFavorita.length
+    ]
+
+    const completedForm = errorCases.every((error) => error !== true)
+
+    console.log(!completedForm)
+
     this.setState({
-      email: event.target.value
+      formularioComErros: !completedForm
     })
+
   }
 
-  handleFavoriteFoodChange (event) {
-    this.setState({
-      comidaFavorita: event.target.value
-    })
-  }
-
-  handleAboutChange (event) {
-    this.setState({
-      sobre: event.target.value
-    })
-  }
 
   render() {
+    const { nome, email, comidaFavorita, sobre } = this.state
     return (
       <form className="form">
-        <label for="nome">Nome</label>
-        <input type="text" id="nome" onChange={this.handleNameChange} value={this.state.nome}></input>
-        <label for="email">Email</label>
-        <input id="email" type="email" onChange={this.handleEmailChange} value={this.state.email}></input>
-        <label for="comida-favorita">Comida Favorita</label>
-        <select id="comida-favorita" onChange={this.handleFavoriteFoodChange} value={this.state.comidaFavorita}>
-          <option>Escolha uma: </option>
-          <option>Hamburger</option>
-          <option>Pizza</option>
-          <option>Lasanha</option>
-        </select>
-        <textarea placeholder="Fale um pouco sobre voce" onChange={this.handleAboutChange} value={this.state.sobre}></textarea>
+
+        <Input
+          label="Nome:"
+          type="text"
+          id="nome"
+          onChange={ this.handleChanges }
+          value={ nome }
+          handleError = { this.handleError }
+        />
+
+        <Input
+          label="Email:"
+          type="email"
+          id="email"
+          onChange={ this.handleChanges }
+          value={ email }
+        />
+
+        <Select 
+          label="Comida Favorita: "
+          id="comidaFavorita"
+          onChange={ this.handleChanges }
+          value={ comidaFavorita }
+        />  
+
+        <label for="checkbox-input">
+          E palmeirense? 
+          <input type="checkbox" id="checkbox-input" name="ePalmeirense" onChange={this.handleChanges}></input>
+        </label>
+        <label for="input-file">
+          Insira uma foto:
+          <input type="file"  id="input-file" ref={this.fileInput}/>
+        </label>
+
+        <textarea placeholder="Fale um pouco sobre voce" name="sobre" onChange={this.handleChanges} value={ sobre }></textarea>
     </form>
     )
   }
