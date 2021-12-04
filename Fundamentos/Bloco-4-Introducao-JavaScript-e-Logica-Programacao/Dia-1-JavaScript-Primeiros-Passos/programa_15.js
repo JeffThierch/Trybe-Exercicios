@@ -1,26 +1,30 @@
-const salarioBruto = 20000;
+const salarioBruto = 4173.08;
 
 function calculaINSS(salarioBruto){
 /* Calculando INSS  */
 
 let valorINSS;
 
-if(salarioBruto <= 1556.94){
-  aliquota = 8 / 100;
+if(salarioBruto <= 1100.00){
+  aliquota = 7.5 / 100;
   valorINSS = salarioBruto * aliquota;
 }
-else if (salarioBruto >= 1556.96 && salarioBruto <= 2594.92){
+else if (salarioBruto >= 1100.01 && salarioBruto <= 2203.48){
   aliquota = 9 / 100;
-  valorINSS = salarioBruto * aliquota;
+  valorINSS = (salarioBruto - 1100.01) * aliquota + 82.50;
   
 }
-else if (salarioBruto >= 2594.93 && salarioBruto <= 5189.82){
-  aliquota = 11 / 100;
-  valorINSS = salarioBruto * aliquota;
+else if (salarioBruto >= 2203.49 && salarioBruto <= 3305.22){
+  aliquota = 12 / 100;
+  valorINSS = (salarioBruto - 2203.49) * aliquota + 82.50 + 99.31;
   
+}
+else if (salarioBruto >= 3305.23 && salarioBruto <= 6433.57) {
+  aliquota = 14 / 100;
+  valorINSS = (salarioBruto - 3305.23) * aliquota + 82.50 + 99.31 + 132.20;
 }
 else{
-  valorINSS = 570.88
+  valorINSS = 751.99
   
 }
 
@@ -28,13 +32,14 @@ return valorINSS;
 
 }
 
+console.log(calculaINSS(salarioBruto))
 
 function calculandoIR(salarioBruto ,valorINSS){
-  let salarioBase = salarioBruto - valorINSS;
+  let salarioBase = (salarioBruto - valorINSS);
 
   let impostoRenda;
   
-  if(salarioBase < 1903.38){
+  if(salarioBase < 1903.98){
     impostoRenda = 0
   }
   else if (salarioBase >= 1903.99 && salarioBase <= 2826.65){
@@ -62,5 +67,6 @@ function calculandoIR(salarioBruto ,valorINSS){
 let valorINSS = calculaINSS(salarioBruto)
 
 calculandoIR(salarioBruto, valorINSS)
+
 
 
