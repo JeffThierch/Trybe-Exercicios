@@ -1,0 +1,64 @@
+.Login-page-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Login-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+  width: 80%;
+  padding: 2rem 1rem;
+  border-radius: 2px;
+  background: rgb(238, 236, 236);
+  box-shadow: 1px 1px 1px 1px rgba(192, 191, 192, 0.671)
+}
+
+.Login-form {
+  width: 80%;
+}
+
+.Login-login-title {
+  font-size: 1.5rem;
+  color: rgb(165, 27, 219)
+}
+
+.Login-form-input {
+  padding: .5rem;
+  margin: 5px;
+  width: 100%;
+  border: none;
+  border-radius: 2px;
+}
+
+input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+  }
+
+.Form-submit-btn {
+  width: 50%;
+  border: none;
+  padding: .4rem;
+  border-radius: 2px;
+  background: rgb(172, 18, 233);
+  color: white;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.Form-submit-btn:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.Form-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom'
 import {authUser} from '../actions/index'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types';
+import '../styles/Login.css'
 
 class Login extends Component {
 
@@ -48,26 +49,34 @@ class Login extends Component {
     }  
     return (
       <>
-        <h1>Login</h1>
-        <section>
-          <form>
-            <div>
-              <input 
-              type="email" 
-              name='userEmail' 
-              onChange={this.changeInputFieldsEvent} 
-              placeholder='Email'/>
-            </div>
-            <div>
-              <input 
-              type="password" 
-              name='passwordLenght' 
-              onChange={this.changeInputFieldsEvent} 
-              placeholder='Senha' 
-              autoComplete='true'/>
-            </div>
-            <button type='button' disabled={haveErrors} onClick={changeAuthStatus}>Logar</button>
-          </form>
+        <section className='Login-page-container'>
+          <div className='Login-form-container'>
+            <h1 className='Login-login-title'>Login</h1>
+            <form className='Login-form'>
+              <div>
+                <input 
+                type="email" 
+                name='userEmail' 
+                className='Login-form-input'
+                onChange={this.changeInputFieldsEvent} 
+                placeholder='Email'/>
+              </div>
+              <div>
+                <input 
+                type="password" 
+                name='passwordLenght' 
+                onChange={this.changeInputFieldsEvent}
+                className='Login-form-input'
+                placeholder='Senha' 
+                autoComplete='true'/>
+              </div>
+            </form>
+            <button 
+              type='button' 
+              disabled={haveErrors} 
+              onClick={changeAuthStatus}
+              className='Form-submit-btn'>Logar</button>
+          </div>
         </section>
       </>
     )
