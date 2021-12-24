@@ -44,18 +44,22 @@ class App extends Component {
     }
 
     return (
-      posts.map(({ title, id, url }) => (
-        <li key={id} className="post-list-item">
-          <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="post-link"
-          >
-            {title}
-          </a>
-        </li>
-      ))
+      <ul className="ul-container">
+        {
+          posts.map(({ title, id, url }) => (
+            <li key={id} className="post-list-item">
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="post-link"
+              >
+                {title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
     );
   };
 
@@ -63,14 +67,16 @@ class App extends Component {
     const { isLoading } = this.props;
     return (
       <main className="App">
-        <h1>Tryddit</h1>
-        <section>
-          <select name="inputSelect" onChange={this.handleChange}>
-            <option value="reactjs">Reactjs</option>
-            <option value="frontend">Frontend</option>
-          </select>
-        </section>
-        <section>
+        <div className="title-seach-container">
+          <h1>Tryddit</h1>
+          <section>
+            <select className="post-select" name="inputSelect" onChange={this.handleChange}>
+              <option value="reactjs">Reactjs</option>
+              <option value="frontend">Frontend</option>
+            </select>
+          </section>
+        </div>
+        <section className="post-list-container">
           {isLoading ? 'Carregando...' : this.renderPosts()}
 
         </section>
