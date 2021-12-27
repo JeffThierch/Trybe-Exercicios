@@ -1,0 +1,9 @@
+.dog-image-container {
+  height: 20rem;
+  width: 25rem;
+}
+
+.dog-image {
+  height: 100%;
+  width: 100%;
+}

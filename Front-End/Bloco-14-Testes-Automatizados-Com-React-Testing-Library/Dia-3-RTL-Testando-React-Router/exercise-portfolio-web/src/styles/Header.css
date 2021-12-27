@@ -1,0 +1,40 @@
+main {
+  position: relative;
+}
+
+.header-container {
+  background-color:rgb(0, 0, 0);
+  padding: 1rem;
+}
+
+.header-itens {
+  display: flex;
+  justify-content: space-evenly
+}
+
+.header-itens a {
+  position: relative;
+  text-decoration: none;
+  color: rgb(218, 214, 214);
+  transition: all 0.3s ease;
+}
+
+.header-itens a::after {
+  position: absolute;
+  content: '';
+  height: 1px;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  background: white;
+  transition: 0.4s ease-out;
+}
+
+.header-itens a:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.header-itens a:hover {
+  opacity: 0.7
+}

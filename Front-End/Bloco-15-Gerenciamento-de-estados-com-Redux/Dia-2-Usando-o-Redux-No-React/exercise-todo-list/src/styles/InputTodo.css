@@ -1,0 +1,33 @@
+.InputTodo {
+  margin: 1rem 0;
+}
+
+#btnAdd {
+  margin-right: 15px;
+  padding: 7px 20px;
+  border: none;
+  border-radius: 3px;
+  background: #7032d3;
+  opacity: 0.8;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+#btnAdd:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.InputTodo-todo-input {
+  padding: 6px;
+  margin: 0 5px;
+  border-radius: 3px;
+  border: 1px solid rgb(212, 211, 211)
+}
+
+#filter-select {
+  padding: 4px;
+  border-radius: 3px;
+  border: 1px solid rgb(212, 211, 211);
+  background-color: white
+}
