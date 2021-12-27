@@ -1,0 +1,114 @@
+.Home-video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  z-index: -1;
+  background-color: rgba(41, 40, 40, 0.76);
+}
+
+.Home-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 92vh;
+}
+
+.Home-section-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 2rem 0;
+  color: white;
+}
+
+.Home-section-title-container h2 {
+  text-decoration: underline;
+  font-weight: 800;
+ 
+}
+
+.Home-section-title-container h1, .Home-section-title-container h2 {
+  font-size: 2em;
+  opacity: 0;
+}
+
+.Home-infos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.Home-infos-container h3 {
+  font-size: 1.5em;
+  color: white;
+  opacity: 0;
+}
+
+.Home-trybe-link {
+  margin-left: 0.5rem;
+}
+
+.Home-animation {
+  animation: opacityEffect 2.5s ease-in-out both, showEffect 2.5s ease both;
+}
+
+
+
+.Home-trybe-link:first-child {
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.Home-trybe-link:first-child:hover {
+  color: rgb(46,192,140)
+}
+
+.Home-infos-container a {
+  text-decoration: none;
+  color: white;
+  margin-right: 1rem;
+}
+
+.Home-social-media-contaner {
+  margin-top: 1rem;
+}
+
+.Home-social-media-icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.Home-linkedin:hover {
+  color: rgb(11, 90, 238);
+}
+
+.Home-github:hover {
+  color: rgb(241,81,50);
+}
+
+@keyframes showEffect {
+  from {
+    transform: translateX(-200px)
+  }
+  to {
+    transform: translateX(0)
+  }
+}
+
+@keyframes opacityEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

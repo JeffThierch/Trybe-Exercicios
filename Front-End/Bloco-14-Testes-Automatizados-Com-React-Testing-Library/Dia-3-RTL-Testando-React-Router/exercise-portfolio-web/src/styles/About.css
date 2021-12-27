@@ -1,0 +1,165 @@
+.About-about-me-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+.About-my-img-container {
+  margin: 1.5rem 0;
+  height: 15rem;
+  width: 14rem;
+  border-radius: 50%;
+  transition: all 0.7s ease;
+}
+
+.About-my-img-container:hover {
+  box-shadow: 2.5px 1px 1px 2px  rgb(241,81,50),
+  -3px -1px 1px 2px  rgb(13, 110, 221);
+}
+
+.About-about-me-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.About-about-me-text {
+  width: 90%;
+  line-height: 1.5;
+  color: white;
+  text-align: center;
+  margin-bottom: .8rem;
+}
+
+.About-hab-section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  margin-bottom: 2.3rem;
+}
+
+.About-hab-section-container h3, h2, li {
+  color: white;
+}
+
+.About-section-title {
+  position: relative;
+  margin-top: 1rem;
+  font-size: 1.7rem
+}
+
+.About-section-title::after {
+  content: '';
+  width: 0%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background: white;
+  transition: all 0.3s ease-out;
+}
+
+.About-section-title:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.About-hab-container {
+  width: 100%;
+}
+
+.About-hab-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr ;
+  gap: 1rem;
+}
+
+.About-study-section-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.About-study-section-container p  {
+  text-align: center;
+  width: 95%;
+  color: white;
+  margin: .5rem auto;
+  font-size: 1.2rem;
+}
+
+.hab-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 1px rgba(90, 89, 89, 0.76);
+  background: rgba(63, 63, 62, 0.281);
+  opacity: 0.8;
+  width: 90%;
+  margin: auto;
+  transition: all 0.3s ease;
+}
+
+.hab-card-container:hover {
+  opacity: 1;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px 1px rgba(216, 26, 184, 0.863);
+}
+
+.hab-card-container h4 {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.hab-card-container img {
+  width: 8.5rem;
+}
+
+.hab-card-container p {
+  margin-bottom: 6px;
+}
+
+.soft-card-container {
+  transition: all 0.3s ease;
+  opacity: 0.8;
+  width: 95%;
+  margin: auto;
+  box-shadow: 1px 1px 1px 1px rgba(90, 89, 89, 0.76);
+  background: rgba(63, 63, 62, 0.281);
+  padding: 1rem;
+  border-radius: 3px;
+}
+
+.soft-card-container:hover {
+  opacity: 1;
+  box-shadow: 1px 1px 1px 1px rgba(216, 26, 184, 0.863);
+}
+
+.soft-card-container h4 {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.soft-skill-image {
+  width: 20rem;
+}
+
+.About-hab-title-container {
+  margin: 1rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .About-hab-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .About-about-me-container div {
+    border-left: 2px solid #c0bebe;
+    width: 90%;
+  }
+}
