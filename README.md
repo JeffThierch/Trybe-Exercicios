@@ -112,7 +112,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [X] 15.2 - Usando o Redux no React
 - [X] 15.3 - Usando o Redux no React - Prática
 - [X] 15.4 - Usando o Redux no React - Actions Assíncronas
-- [ ] 15.5 - Testes síncronos com React-Redux
+- [X] 15.5 - Testes síncronos com React-Redux
 - [ ] 15.6 - Projeto - Trybe Wallet
 
 ##### Bloco 16: Projeto Jogo de Trivia
