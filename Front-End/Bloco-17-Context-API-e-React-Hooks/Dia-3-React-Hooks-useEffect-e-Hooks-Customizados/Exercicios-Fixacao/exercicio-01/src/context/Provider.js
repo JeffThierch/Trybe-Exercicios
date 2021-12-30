@@ -24,14 +24,6 @@ function Provider({children}) {
     setTimer(10)
   }
 
-  const handleCorrect = (number) => {
-    if (number % 3 === 0 && number % 5 === 0) {
-      setCorrect(true)
-    } else {
-      setCorrect(false)
-    }
-  }
-
   const handleMessageTimer = () => {
     setMessageTimer(timerMessage => timerMessage - 1)
     if(timerMessage === 0) {
@@ -45,7 +37,14 @@ function Provider({children}) {
   }
 
 
-  const CONTEXT_VALUE = {randomNumber, handleNumber, timer, handleTimer, resetTimer, isCorrect, handleCorrect, handleMessageTimer, timerMessage}
+  const CONTEXT_VALUE = {
+    randomNumber,
+    timer,
+    handleTimer,
+    isCorrect,
+    setCorrect,
+    handleMessageTimer, 
+  }
   return (
     <AplicationContext.Provider value={CONTEXT_VALUE}>
       {children}

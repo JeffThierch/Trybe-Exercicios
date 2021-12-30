@@ -7,32 +7,50 @@ function App() {
       timer,
       handleTimer,
       isCorrect,
-      handleCorrect, 
+      setCorrect,
       handleMessageTimer, 
     } = useContext(AplicationContext)
 
 
     useEffect(() => {
-      const interval =  setInterval(() => {
+
+      const numberInterval =  setInterval(() => {
         handleTimer()
       }, 1000)
+
       return () => {
-        clearInterval(interval);}
+        clearInterval(numberInterval)
+      }
+
     }, [handleTimer]);
 
     useEffect(() => {
-        handleCorrect(randomNumber)
-    }, [])
+
+      const handleCorrect = (number) => {
+        if (number % 3 === 0 && number % 5 === 0) {
+          setCorrect(true)
+        } else {
+          setCorrect(false)
+        }
+      }
+
+      handleCorrect(randomNumber)
+
+    }, [randomNumber, setCorrect])
 
     useEffect(() => {
+
       if(isCorrect) {
         const intervalMessage = setInterval(() => {
           handleMessageTimer()
         }, 1000)
+
         return () => {
           clearInterval(intervalMessage)
         }
+
       }
+
     })
 
 
