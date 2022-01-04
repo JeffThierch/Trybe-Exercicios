@@ -120,8 +120,8 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 
 ##### Bloco 17: Context API e React Hooks
 - [X] 17.1 - Context API do React
-- [ ] 17.2 - React Hooks - useState e useContext
-- [ ] 17.3 - React Hooks - useEffect e Hooks customizados
+- [X] 17.2 - React Hooks - useState e useContext
+- [X] 17.3 - React Hooks - useEffect e Hooks customizados
 - [ ] 17.4 - Projeto - StarWars Datatable com Context API e Hooks
 
 ##### Bloco 18: Projeto App de Receitas
@@ -130,9 +130,9 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
 ##### Bloco 19: Docker: Utilizando Containers
-- [ ] 19.1 - Introdução - Back-end
-- [ ] 19.1 - Utilizando Containers - Docker
-- [ ] 19.2 - Manipulação e Criação de Imagens no Docker
+- [X] 19.1 - Introdução - Back-end
+- [X] 19.1 - Utilizando Containers - Docker
+- [X] 19.2 - Manipulação e Criação de Imagens no Docker
 - [ ] 19.3 - Orquestrando Containers com Docker Compose
 - [ ] 19.4 - Projeto - Docker Todo-List
 
