@@ -20,6 +20,7 @@ services:
     image: mysql:5.7
     environment:
       - MYSQL_ROOT_PASSWORD=1234
+    restart: always
     volumes:
       - db-volume:/var/lib/mysql
     networks: 
