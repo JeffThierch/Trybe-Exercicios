@@ -133,7 +133,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [X] 19.1 - Introdução - Back-end
 - [X] 19.1 - Utilizando Containers - Docker
 - [X] 19.2 - Manipulação e Criação de Imagens no Docker
-- [ ] 19.3 - Orquestrando Containers com Docker Compose
+- [X] 19.3 - Orquestrando Containers com Docker Compose
 - [ ] 19.4 - Projeto - Docker Todo-List
 
 ##### Bloco 20: Introdução â SQL
