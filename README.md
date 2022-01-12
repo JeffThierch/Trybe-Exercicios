@@ -113,7 +113,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [X] 15.3 - Usando o Redux no React - Prática
 - [X] 15.4 - Usando o Redux no React - Actions Assíncronas
 - [X] 15.5 - Testes síncronos com React-Redux
-- [ ] 15.6 - Projeto - Trybe Wallet
+- [X] 15.6 - Projeto - Trybe Wallet
 
 ##### Bloco 16: Projeto Jogo de Trivia
 - [ ] 16.1 - Projeto - Jogo de Trivia
@@ -137,10 +137,10 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [ ] 19.4 - Projeto - Docker Todo-List
 
 ##### Bloco 20: Introdução â SQL
-- [ ] 20.1 - Introdução - Banco de dados relacionais
-- [ ] 20.1 - Banco de dados SQL
-- [ ] 20.2 - Encontrando dados em um banco de dados
-- [ ] 20.3 - Filtando dados de forma especifica
+- [X] 20.1 - Introdução - Banco de dados relacionais
+- [X] 20.1 - Banco de dados SQL
+- [X] 20.2 - Encontrando dados em um banco de dados
+- [X] 20.3 - Filtando dados de forma especifica
 - [ ] 20.4 - Manipulando tabelas
 - [ ] 20.5 - Projeto - All For One
 
