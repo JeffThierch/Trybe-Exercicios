@@ -17,3 +17,8 @@ WHERE Project IN('AeH3', 'Ast3', 'Che1');
 SELECT * FROM Projects
 WHERE Hours BETWEEN 250 AND 800
 ORDER BY Hours;
+
+SELECT Code, Name FROM Projects
+WHERE Name NOT LIKE 'A%'
+ORDER BY Name;
+
