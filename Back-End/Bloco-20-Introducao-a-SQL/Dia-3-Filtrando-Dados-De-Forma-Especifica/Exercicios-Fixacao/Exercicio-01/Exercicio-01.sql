@@ -23,5 +23,10 @@ WHERE store_id = 1  AND active IS TRUE;
 SELECT * FROM customer
 WHERE store_id = 1 AND active IS FALSE;
 
+SELECT * FROM film
+WHERE (rating = 'NC-17')
+ORDER BY rental_rate, title
+LIMIT 50;
+
 
 
