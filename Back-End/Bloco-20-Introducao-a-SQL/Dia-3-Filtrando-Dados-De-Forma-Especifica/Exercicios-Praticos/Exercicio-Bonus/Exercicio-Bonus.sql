@@ -15,5 +15,5 @@ SELECT * FROM AssignedTo
 WHERE Project IN('AeH3', 'Ast3', 'Che1');
 
 SELECT * FROM Projects
-WHERE Hours >= 500
+WHERE Hours BETWEEN 250 AND 800
 ORDER BY Hours;
