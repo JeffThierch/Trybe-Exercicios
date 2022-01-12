@@ -16,3 +16,8 @@ ORDER BY name DESC;
 
 SELECT * FROM Fornecedores
 WHERE code LIKE '%F%';
+
+SELECT * FROM Fornecimentos
+WHERE Preco 
+BETWEEN 15 AND 40
+ORDER BY Preco;
