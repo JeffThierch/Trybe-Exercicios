@@ -5,5 +5,5 @@ WHERE last_name IN ('hicks', 'crawford', 'henry', 'boyd', 'mason', 'morales', 'k
 ORDER BY first_name;
 
 SELECT email FROM customer
-WHERE address_id IN (172, 173, 174, 175, 176)
+WHERE address_id BETWEEN 172 AND 176
 ORDER BY email;
