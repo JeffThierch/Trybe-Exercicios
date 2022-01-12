@@ -20,5 +20,8 @@ LIMIT 100;
 SELECT Count(*) FROM customer
 WHERE store_id = 1  AND active IS TRUE;
 
+SELECT * FROM customer
+WHERE store_id = 1 AND active IS FALSE;
+
 
 
