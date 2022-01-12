@@ -13,3 +13,6 @@ WHERE Fornecedor LIKE '%N%';
 SELECT * FROM Fornecedores
 WHERE name LIKE '%LTDA'
 ORDER BY name DESC;
+
+SELECT * FROM Fornecedores
+WHERE code LIKE '%F%';
