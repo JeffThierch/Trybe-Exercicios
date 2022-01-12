@@ -22,3 +22,7 @@ SELECT Code, Name FROM Projects
 WHERE Name NOT LIKE 'A%'
 ORDER BY Name;
 
+SELECT Name FROM Projects
+WHERE Code LIKE '%H%'
+ORDER BY Name;
+
