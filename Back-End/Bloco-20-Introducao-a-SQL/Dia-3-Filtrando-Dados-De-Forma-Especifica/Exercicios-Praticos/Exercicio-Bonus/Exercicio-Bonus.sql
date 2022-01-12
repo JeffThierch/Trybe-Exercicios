@@ -13,3 +13,7 @@ ORDER BY Name;
 
 SELECT * FROM AssignedTo
 WHERE Project IN('AeH3', 'Ast3', 'Che1');
+
+SELECT * FROM Projects
+WHERE Hours >= 500
+ORDER BY Hours;
