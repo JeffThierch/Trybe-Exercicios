@@ -17,5 +17,8 @@ AND replacement_cost >= 18
 ORDER BY replacement_cost DESC, title ASC
 LIMIT 100;
 
+SELECT Count(*) FROM customer
+WHERE store_id = 1  AND active IS TRUE;
+
 
 
