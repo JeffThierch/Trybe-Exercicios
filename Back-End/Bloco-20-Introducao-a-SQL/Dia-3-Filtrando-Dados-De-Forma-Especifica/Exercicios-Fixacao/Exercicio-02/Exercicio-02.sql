@@ -20,3 +20,7 @@ AND description LIKE '%Documentary%';
 SELECT * FROM film 
 WHERE title LIKE '%academy'
 OR title LIKE 'mosquito%';
+
+SELECT * FROM film
+WHERE description LIKE '%monkey%'
+AND description LIKE '%sumo%';
