@@ -12,3 +12,7 @@ AND title LIKE '%lord';
 
 SELECT * FROM film
 WHERE title LIKE '___gon%';
+
+SELECT * FROM film
+WHERE title LIKE '___gon%'
+AND description LIKE '%Documentary%';
