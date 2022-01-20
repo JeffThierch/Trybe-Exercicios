@@ -141,7 +141,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [X] 20.1 - Banco de dados SQL
 - [X] 20.2 - Encontrando dados em um banco de dados
 - [X] 20.3 - Filtando dados de forma especifica
-- [ ] 20.4 - Manipulando tabelas
+- [X] 20.4 - Manipulando tabelas
 - [ ] 20.5 - Projeto - All For One
 
 ##### Bloco 21: Funções SQL, JOINs e Normalização
