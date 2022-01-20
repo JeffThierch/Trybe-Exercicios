@@ -116,7 +116,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [X] 15.6 - Projeto - Trybe Wallet
 
 ##### Bloco 16: Projeto Jogo de Trivia
-- [ ] 16.1 - Projeto - Jogo de Trivia
+- [X] 16.1 - Projeto - Jogo de Trivia
 
 ##### Bloco 17: Context API e React Hooks
 - [X] 17.1 - Context API do React
