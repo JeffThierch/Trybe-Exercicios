@@ -1,3 +1,4 @@
 USE sakila;
-SELECT COUNT(title) AS 'Filmes Registrados' 
+SELECT COUNT(title) 
+AS 'Filmes Registrados' 
 FROM film;

@@ -1,2 +1,4 @@
 USE sakila;
-SELECT MIN(length) FROM film;
+SELECT MIN(length) 
+AS 'Duração Mínima'
+FROM film;

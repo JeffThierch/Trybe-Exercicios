@@ -1,2 +1,4 @@
 USE sakila;
-SELECT MAX(length) FROM film;
+SELECT MAX(length)
+AS 'Duração Máxima'
+FROM film;

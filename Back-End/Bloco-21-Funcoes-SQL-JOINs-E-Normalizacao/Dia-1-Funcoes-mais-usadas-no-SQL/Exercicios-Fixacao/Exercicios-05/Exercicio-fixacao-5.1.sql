@@ -1,2 +1,4 @@
 USE sakila;
-SELECT AVG(length) FROM film;
+SELECT AVG(length) 
+AS 'Média de Duração'
+FROM film;
