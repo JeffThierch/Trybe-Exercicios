@@ -1,0 +1,4 @@
+USE hr;
+
+SELECT * FROM employees
+WHERE CHAR_LENGTH(FIRST_NAME) >= 8;
