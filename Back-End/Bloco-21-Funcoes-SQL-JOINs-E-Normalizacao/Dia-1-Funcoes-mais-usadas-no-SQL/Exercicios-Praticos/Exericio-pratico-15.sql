@@ -1,0 +1,6 @@
+USE hr;
+
+SELECT EMPLOYEE_ID,
+FIRST_NAME,
+MONTH(HIRE_DATE) AS 'Mes Contratacao' 
+FROM employees;

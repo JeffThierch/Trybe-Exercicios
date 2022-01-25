@@ -1,0 +1,5 @@
+USE hr;
+
+SELECT JOB_ID, AVG(SALARY) AS 'Media Salarial' FROM employees
+GROUP BY JOB_ID
+ORDER BY AVG(SALARY) DESC;
