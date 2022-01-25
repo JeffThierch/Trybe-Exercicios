@@ -2,5 +2,5 @@ USE hr;
 
 SELECT EMPLOYEE_ID,
 FIRST_NAME,
-DAY(HIRE_DATE) AS 'Dia Contratacao' 
+YEAR(HIRE_DATE) AS 'Ano Contratacao' 
 FROM employees;
