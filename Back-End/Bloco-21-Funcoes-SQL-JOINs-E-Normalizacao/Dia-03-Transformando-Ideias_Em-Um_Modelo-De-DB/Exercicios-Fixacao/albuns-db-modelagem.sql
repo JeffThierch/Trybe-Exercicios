@@ -1,5 +1,7 @@
 CREATE DATABASE IF NOT EXISTS albuns;
 
+USE albuns;
+
 CREATE TABLE EstilosMusicais (
 	Estilo_id INT PRIMARY KEY AUTO_INCREMENT,
     Estilo_name VARCHAR(100) NOT NULL
