@@ -8,6 +8,7 @@
     "imc": "node imc_calc.js",
     "velocidade": "node velocidade.js",
     "sorteio": "node sorteio.js",
+    "fatorial": "node fatorial.js",
     "start": "node index.js"
   },
   "author": "",
