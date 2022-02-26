@@ -1,6 +1,6 @@
 const readlineSync = require('readline-sync');
 
-const userOptions = ['Calculadora IMC', 'Calculo de Velocidade Media', 'Jogo Adivinho (Numeros)']
+const userOptions = ['Calculadora IMC', 'Calculo de Velocidade Media', 'Jogo Adivinho (Numeros)', 'Calculadora Fatorial']
 
 const userAnsewer = readlineSync.keyInSelect(userOptions, 'Qual script voce deseja?')
 
@@ -12,6 +12,8 @@ const runScript = (userAnsewer) => {
       return require('./velocidade')
     case 2:
         return require('./sorteio')
+    case 3:
+        return require('./fatorial')
     default:
         return console.log('Ate logo!')
   }
