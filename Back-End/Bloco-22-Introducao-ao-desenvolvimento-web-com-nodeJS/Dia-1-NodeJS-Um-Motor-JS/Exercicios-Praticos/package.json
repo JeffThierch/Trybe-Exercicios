@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "imc": "node imc_calc.js"
+    "imc": "node imc_calc.js",
+    "velocidade": "node velocidade.js"
   },
   "author": "",
   "license": "ISC",
