@@ -122,10 +122,10 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [X] 17.1 - Context API do React
 - [X] 17.2 - React Hooks - useState e useContext
 - [X] 17.3 - React Hooks - useEffect e Hooks customizados
-- [ ] 17.4 - Projeto - StarWars Datatable com Context API e Hooks
+- [X] 17.4 - Projeto - StarWars Datatable com Context API e Hooks
 
 ##### Bloco 18: Projeto App de Receitas
-- [ ] 18.1 - Projeto - App de Receitas
+- [X] 18.1 - Projeto - App de Receitas
 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
@@ -134,7 +134,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [X] 19.1 - Utilizando Containers - Docker
 - [X] 19.2 - Manipulação e Criação de Imagens no Docker
 - [X] 19.3 - Orquestrando Containers com Docker Compose
-- [ ] 19.4 - Projeto - Docker Todo-List
+- [X] 19.4 - Projeto - Docker Todo-List
 
 ##### Bloco 20: Introdução â SQL
 - [X] 20.1 - Introdução - Banco de dados relacionais
@@ -142,17 +142,17 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [X] 20.2 - Encontrando dados em um banco de dados
 - [X] 20.3 - Filtando dados de forma especifica
 - [X] 20.4 - Manipulando tabelas
-- [ ] 20.5 - Projeto - All For One
+- [X] 20.5 - Projeto - All For One
 
 ##### Bloco 21: Funções SQL, JOINs e Normalização
 - [X] 21.1 - Funções mais usadas no SQL
-- [ ] 21.2 - Descomplicando JOINs
-- [ ] 21.3 - Transformando ideias em um modelo de banco de dados
+- [X] 21.2 - Descomplicando JOINs
+- [X] 21.3 - Transformando ideias em um modelo de banco de dados
 - [ ] 21.4 - Aula ao vivo + Projeto - One For All
 
 ##### Bloco 22: Introdução ao desenvolvimento Web com Node.js
-- [ ] 22.1 - Introdução - Node.js
-- [ ] 23.1 - Node.js - Um motor JavaScript
+- [X] 22.1 - Introdução - Node.js
+- [X] 23.1 - Node.js - Um motor JavaScript
 - [ ] 22.2 - Node.js - Fluxo Assincrono
 - [ ] 22.3 - Mocha, Chai, Sinon - Testes de Back-end com Node.js
 - [ ] 22.4 - Express - HTTP com Node.js
