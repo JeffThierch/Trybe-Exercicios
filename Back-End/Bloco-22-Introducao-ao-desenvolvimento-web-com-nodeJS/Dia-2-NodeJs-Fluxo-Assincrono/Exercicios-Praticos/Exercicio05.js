@@ -19,4 +19,6 @@ const returnCharacterInfos = (characterID) => {
   return promise
 }
 
-returnCharacterInfos('1').then((data) => console.log(data))
+returnCharacterInfos('1')
+  .then((data) => console.log(data))
+  .catch((err) => console.error(err.message))
