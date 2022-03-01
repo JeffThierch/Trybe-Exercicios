@@ -12,3 +12,13 @@ try {
   console.log(`Erro ao ler o arquivo: ${err.path}`)
   console.log(err);
 }
+
+// ou
+
+/* try {
+  const data = fs.readFileSync('./my-file.txt')
+  console.log(data)
+} catch (err) {
+  console.log(`Erro ao ler o arquivo: ${err.path}`)
+  console.log(err);
+} */
