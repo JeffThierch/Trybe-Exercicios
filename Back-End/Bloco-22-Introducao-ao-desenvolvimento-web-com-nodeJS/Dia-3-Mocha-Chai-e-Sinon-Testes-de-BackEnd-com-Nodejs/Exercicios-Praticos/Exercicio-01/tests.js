@@ -1,7 +1,9 @@
 const {expect} = require('chai');
+const fs = require('fs');
 const sinon = require('sinon');
 
 const verifyNumberValue = require('./verifyNumberValue');
+const writeAFile = require('./writeAFile')
 
 describe('verifyNumberValue', () => {
   describe('Quando o numero for', () => {
@@ -39,3 +41,31 @@ describe('verifyNumberValue', () => {
     })
   })
 });
+
+describe('writeAFile', () => {
+
+  const RETURN_VALUE = 'xablau'
+  
+  describe('Quando os parametros forem', () => {
+
+    before(() => {
+      sinon.stub(fs, 'writeFileSync').returns(RETURN_VALUE)
+    })
+  
+    after(() => {
+      fs.writeFileSync.restore()
+    })
+
+    it('"texto-01.txt" e "xablau", deve retornar "ok" ', () => {
+      const returnedValue = writeAFile('texto-01.txt', 'xablau')
+
+      expect(returnedValue).to.be.equals('ok')
+    })
+
+    it('A funcao do writeFileSync deve ter o retorno correto', () => {
+      expect(fs.writeFileSync('test.txt', 'abc')).to.be.equals(RETURN_VALUE)
+    })
+
+  })
+
+})
