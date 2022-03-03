@@ -1,4 +1,4 @@
-const {expect} = request('chai');
+const {expect} = require('chai');
 const sinon = require('sinon');
 
 const verifyNumberValue = require('./verifyNumberValue');
@@ -30,4 +30,12 @@ describe('verifyNumberValue', () => {
     });
 
   });
+  
+  describe('Caso nao seja um numero', () => {
+    it('deve retornar a menssagem "informe apenas numeros" ', () => {
+      const returnedValue = verifyNumberValue('xablau')
+      
+      expect(returnedValue).to.be.equals('informe apenas numeros')
+    })
+  })
 });
