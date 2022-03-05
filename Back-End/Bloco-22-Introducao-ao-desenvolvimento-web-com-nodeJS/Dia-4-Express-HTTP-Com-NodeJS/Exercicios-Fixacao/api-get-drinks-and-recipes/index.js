@@ -64,10 +64,40 @@ app.get('/recipes/:id', (req, res) => {
   const recipe = recipes.find((recipe) => recipe.id === parseInt(id))
 
   if(!recipe) {
-    return res.status(404).json({message: 'recipe not found!'})
+    return res.status(404).json({message: 'Recipe not found!'})
   }
 
   res.status(200).json(recipe)
+})
+
+app.put('/recipes/:id', (req, res) => {
+  const { id } = req.params
+
+  const indexOfRecipe = recipes.findIndex((r) => r.id === parseInt(id))
+
+  if(indexOfRecipe === -1 ) {
+    return res.status(404).json({message: 'Recipe not found!'})
+  }
+
+  recipes[indexOfRecipe] = {...recipes[indexOfRecipe], ...req.body}
+
+  res.status(204).end();
+
+})
+
+app.delete('/recipes/:id', (req, res) => {
+  const { id } = req.params
+
+  const indexOfRecipe = recipes.findIndex((r) => r.id === parseInt(id))
+
+  if(indexOfRecipe === -1 ) {
+    return res.status(404).json({message: 'Recipe not found!'})
+  }
+
+  recipes.splice(indexOfRecipe, 1)
+
+  res.status(204).end()
+
 })
 
 app.get('/drinks', (_req, res) => {
@@ -103,6 +133,36 @@ app.get('/drinks/:id', (req, res) => {
   }
 
   res.status(200).json(drink)
+})
+
+app.put('/drinks/:id', (req, res) => {
+  const { id } = req.params
+
+  const indexOfDrink = drinks.findIndex((d) => d.id === parseInt(id))
+
+  if(indexOfDrink === -1 ) {
+    return res.status(404).json({message: 'Drink not found!'})
+  }
+
+  drinks[indexOfDrink] = {...drinks[indexOfDrink], ...req.body}
+
+  res.status(204).end();
+
+})
+
+app.delete('/drinks/:id', (req, res) => {
+  const { id } = req.params
+
+  const indexOfDrink = drinks.findIndex((d) => d.id === parseInt(id))
+
+  if(indexOfDrink === -1 ) {
+    return res.status(404).json({message: 'Drink not found!'})
+  }
+
+  drinks.splice(indexOfDrink, 1)
+
+  res.status(204).end()
+
 })
 
 app.get('/tokenValidation', (req, res) => {
