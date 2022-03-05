@@ -39,9 +39,15 @@ app.get('/recipes', (_req, res) => {
   res.json(recipes.sort(sortByNameValue))
 })
 
-app.get('/drinks', (_req, res) => {
-  res.json(drinks.sort(sortByNameValue))
-});
+app.get('/recipes/search', (req, res) => {
+  const {name, maxPrice} = req.query;
+
+  const filteredRecipes = recipes.filter(
+    (recipe) => recipe.name.includes(name) && recipe.price <= maxPrice
+  )
+
+  res.status(200).json(filteredRecipes);
+})
 
 app.get('/recipes/:id', (req, res) => {
   const { id } = req.params;
@@ -53,6 +59,20 @@ app.get('/recipes/:id', (req, res) => {
   }
 
   res.status(200).json(recipe)
+})
+
+app.get('/drinks', (_req, res) => {
+  res.json(drinks.sort(sortByNameValue))
+});
+
+app.get('/drinks/search', (req, res) => {
+  const {name, maxPrice} = req.query;
+
+  const filteredDrinks = drinks.filter(
+    (drink) => drink.name.includes(name) && drink.price <= maxPrice
+  )
+  
+  res.status(200).json(filteredDrinks)
 })
 
 app.get('/drinks/:id', (req, res) => {
