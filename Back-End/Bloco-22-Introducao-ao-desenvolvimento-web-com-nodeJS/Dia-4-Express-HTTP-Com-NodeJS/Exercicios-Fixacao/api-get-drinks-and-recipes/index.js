@@ -8,7 +8,7 @@ app.listen(3001, () => {
   console.log('App rodando na porta 3001');
 });
 
-app.use(cors(), bodyParser());
+app.use(cors(), bodyParser.json());
 
 const drinks = [
   { id: 1, name: 'Refrigerante Lata', price: 5.0 },
