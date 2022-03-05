@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const res = require('express/lib/response');
+const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -8,7 +8,7 @@ app.listen(3001, () => {
   console.log('App rodando na porta 3001');
 });
 
-app.use(cors());
+app.use(cors(), bodyParser());
 
 const drinks = [
   { id: 1, name: 'Refrigerante Lata', price: 5.0 },
@@ -49,6 +49,15 @@ app.get('/recipes/search', (req, res) => {
   res.status(200).json(filteredRecipes);
 })
 
+app.post('/recipes', (req, res) => {
+  const {id, name, price, waitTime} = req.body;
+  
+  recipes.push({id, name, price, waitTime})
+
+  res.status(201).json({message: 'Recipe create successfully'})
+
+})
+
 app.get('/recipes/:id', (req, res) => {
   const { id } = req.params;
 
@@ -75,6 +84,15 @@ app.get('/drinks/search', (req, res) => {
   res.status(200).json(filteredDrinks)
 })
 
+app.post('/drinks', (req, res) => {
+  const {id, name, price} = req.body;
+  
+  drinks.push({id, name, price})
+
+  res.status(201).json({message: 'Drink create successfully'})
+
+})
+
 app.get('/drinks/:id', (req, res) => {
   const { id } = req.params;
 
@@ -85,4 +103,14 @@ app.get('/drinks/:id', (req, res) => {
   }
 
   res.status(200).json(drink)
+})
+
+app.get('/tokenValidation', (req, res) => {
+  const token = req.headers.authorization;
+
+  if(token.length !== 16) {
+    return res.status(401).json({message: 'Invalid token!'})
+  }
+
+  res.status(200).json({message: 'Valid token!'})
 })
