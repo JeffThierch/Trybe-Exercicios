@@ -174,3 +174,7 @@ app.get('/tokenValidation', (req, res) => {
 
   res.status(200).json({message: 'Valid token!'})
 })
+
+app.all('*', (req, res) => {
+  return res.status(404).json({message: `A rota ${req.path}, nao existe!`})
+})
