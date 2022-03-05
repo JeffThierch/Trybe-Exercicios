@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const res = require('express/lib/response');
 
 const app = express();
 
@@ -41,3 +42,27 @@ app.get('/recipes', (_req, res) => {
 app.get('/drinks', (_req, res) => {
   res.json(drinks.sort(sortByNameValue))
 });
+
+app.get('/recipes/:id', (req, res) => {
+  const { id } = req.params;
+
+  const recipe = recipes.find((recipe) => recipe.id === parseInt(id))
+
+  if(!recipe) {
+    return res.status(404).json({message: 'recipe not found!'})
+  }
+
+  res.status(200).json(recipe)
+})
+
+app.get('/drinks/:id', (req, res) => {
+  const { id } = req.params;
+
+  const drink = drinks.find((drink) => drink.id === parseInt(id))
+
+  if(!drink) {
+    return res.status(404).json({message: 'drink not found!'})
+  }
+
+  res.status(200).json(drink)
+})
