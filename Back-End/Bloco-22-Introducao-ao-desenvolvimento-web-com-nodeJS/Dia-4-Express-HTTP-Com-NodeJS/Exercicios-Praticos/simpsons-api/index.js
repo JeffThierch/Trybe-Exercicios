@@ -1,6 +1,7 @@
 const fs = require('fs');
 const app = require('express')();
 const bodyParser = require('body-parser');
+const crypto = require('crypto');
 
 const PORT = 3001;
 
@@ -10,8 +11,34 @@ app.listen(PORT, () => {
 
 app.use(bodyParser.json());
 
-app.get('/simpsons', (_req, res) => {
+const generateToken = () => {
+  return crypto.randomBytes(8).toString('hex')
+}
+
+app.post('/signup', (req, res) => {
+  const { email, password, firstName, phone } = req.body;
+
+  const fields = [email, password, firstName, phone]
+
+  const isSomeFildInvalid = fields.some((field) => field === undefined || field.length === 0)
+
+  if(isSomeFildInvalid) {
+    return res.status(401).json({ message: 'missing fields' });
+  }
+
+  const token = generateToken();
+
+  res.status(200).json({ token })
+})
+
+app.get('/simpsons', (req, res) => {
   try {
+    const token = req.headers.authorization
+
+    if (token === undefined || token.length !== 16 ) {
+      return res.status(401).json({message: 'Token invalido!'})
+    }
+
     const simpsons = fs.readFileSync('./simpsons.json', 'utf8')
 
     return res.status(200).json(JSON.parse(simpsons))
@@ -25,6 +52,12 @@ app.post('/simpsons', (req, res) => {
   try {
 
     const { id, name } = req.body;
+
+    const token = req.headers.authorization
+
+    if (token === undefined || token.length !== 16 ) {
+      return res.status(401).json({message: 'Token invalido!'})
+    }
 
     const simpsons = fs.readFileSync('./simpsons.json', 'utf8');
 
@@ -51,6 +84,12 @@ app.post('/simpsons', (req, res) => {
 app.get('/simpsons/:id', (req, res) => {
   try {
     const { id } = req.params;
+
+    const token = req.headers.authorization
+
+    if (token === undefined || token.length !== 16 ) {
+      return res.status(401).json({message: 'Token invalido!'})
+    }
   
     const simpsons = fs.readFileSync('./simpsons.json', 'utf8');
   
