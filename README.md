@@ -78,7 +78,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [X] 9.3 - Jest - Testes Assíncronos
 - [X] 9.4 - Projeto - Carrinho de Compras
 
-## Desenvolvimento Front-end :hourglass_flowing_sand:
+## Desenvolvimento Front-end :heavy_check_mark:
 
 ##### Bloco 10: Introdução à React
 - [X] 10.1 - Introdução - Front-end
@@ -153,9 +153,9 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 ##### Bloco 22: Introdução ao desenvolvimento Web com Node.js
 - [X] 22.1 - Introdução - Node.js
 - [X] 23.1 - Node.js - Um motor JavaScript
-- [ ] 22.2 - Node.js - Fluxo Assincrono
-- [ ] 22.3 - Mocha, Chai, Sinon - Testes de Back-end com Node.js
-- [ ] 22.4 - Express - HTTP com Node.js
+- [X] 22.2 - Node.js - Fluxo Assincrono
+- [X] 22.3 - Mocha, Chai, Sinon - Testes de Back-end com Node.js
+- [X] 22.4 - Express - HTTP com Node.js
 - [ ] 22.5 - Express - Middlewares
 - [ ] 22.6 - Express - Talker Manager
 
