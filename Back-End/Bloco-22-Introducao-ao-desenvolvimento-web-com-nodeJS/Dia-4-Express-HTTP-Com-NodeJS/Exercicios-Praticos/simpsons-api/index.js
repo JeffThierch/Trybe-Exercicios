@@ -21,6 +21,33 @@ app.get('/simpsons', (_req, res) => {
   }
 })
 
+app.post('/simpsons', (req, res) => {
+  try {
+
+    const { id, name } = req.body;
+
+    const simpsons = fs.readFileSync('./simpsons.json', 'utf8');
+
+    const parsedData = JSON.parse(simpsons)
+
+    const simpsonExist = parsedData.some((simpson) => simpson.id === id)
+
+    if(simpsonExist) {
+      return res.status(409).json({message: 'id already exists'})
+    }
+
+    fs.writeFileSync('./simpsons.json', JSON.stringify([
+      ...parsedData,
+      {id, name}
+    ]))
+
+    res.status(204).end()
+  }
+  catch (err) {
+    return res.status(500).json({message: 'Ocorreu um erro tente novamente!'})
+  }
+})
+
 app.get('/simpsons/:id', (req, res) => {
   try {
     const { id } = req.params;
