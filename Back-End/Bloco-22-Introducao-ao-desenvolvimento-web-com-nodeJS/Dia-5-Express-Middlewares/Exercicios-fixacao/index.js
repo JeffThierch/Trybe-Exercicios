@@ -10,7 +10,17 @@ const recipes = [
   { id: 3, name: 'Macarrão com molho branco', price: 35.0, waitTime: 25 },
 ];
 
-app.get('/recipes', function (req, res) {
+const validatePrice = (req, res, next) => {
+  const { price } = req.body;
+
+  if(!price || price === '') {
+    return res.status(400).json({message: 'O preco precisa ser definido!'})
+  }
+
+  next();
+}
+
+app.get('/recipes', function (_req, res) {
   res.status(200).json(recipes);
 });
 
@@ -37,14 +47,14 @@ app.post('/recipes',function (req, res, next) {
     return res.status(400).json({message: 'Invalid data!'})
   }
 
-  next();
-}, function (req, res) {
+  next(); // sem o next o proximo middleware nao sera executado
+}, validatePrice, function (req, res) {
   const { id, name, price, waitTime } = req.body;
   recipes.push({ id, name, price, waitTime});
   res.status(201).json({ message: 'Recipe created successfully!'});
 });
 
-app.put('/recipes/:id', function (req, res) {
+app.put('/recipes/:id', validatePrice ,function (req, res) {
   const { id } = req.params;
   const { name, price, waitTime } = req.body;
   const recipeIndex = recipes.findIndex((r) => r.id === parseInt(id));
