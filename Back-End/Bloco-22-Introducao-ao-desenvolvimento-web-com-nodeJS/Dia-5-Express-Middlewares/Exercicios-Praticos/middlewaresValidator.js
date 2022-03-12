@@ -37,6 +37,17 @@ const validateRegister = (req, res, next) => {
   next();
 }
 
+const validateLogin = (req, res, next) => {
+  const { email, password } = req.body;
+
+  if(!validatePassword(password) || !validateEmail(email)) {
+    return res.status(400).json({message: 'email or password is incorrect'})
+  }
+
+  next();
+}
+
 module.exports = {
-  validateRegister
+  validateRegister,
+  validateLogin
 }
