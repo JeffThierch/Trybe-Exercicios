@@ -9,13 +9,19 @@ router.get('/:id', (req, res) => {
 
   const postById = posts.findIndex((post) => post.id === parseInt(id))
 
-  console.log(id, postById);
-
   if(!id || postById === -1) {
     return res.status(404).json({message: 'post not found'})
   }
 
   res.status(200).json(posts[postById])
+})
+
+router.get('/', (_req, res) => {
+
+  if (posts.length === 0) {
+    return res.status(200).json({posts})
+  }
+  res.status(200).json(posts)
 })
 
 module.exports = router

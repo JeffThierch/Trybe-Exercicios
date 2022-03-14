@@ -1,5 +1,6 @@
 const express = require ('express');
 const bodyParser = require('body-parser');
+const { validateRoute } = require('./middlewaresValidator')
 
 const app = express();
 
@@ -22,6 +23,8 @@ app.use('/posts', postsRouter);
 app.use((err, _req, res, _next) => {
   res.status(500).json({error: `Erro: ${err.message}`});
 });
+
+app.all('*', validateRoute)
 
 
 app.listen(PORT, () => {

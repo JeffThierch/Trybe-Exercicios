@@ -62,9 +62,14 @@ const validateLogin = (req, res, next) => {
   next();
 }
 
+const validateRoute = (_req, res, _next) => {
+  res.status(404).json({message: 'Opsss, route not found!'})
+}
+
 
 module.exports = {
   validateRegister,
   validateLogin,
-  validateToken
+  validateToken,
+  validateRoute
 }
