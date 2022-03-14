@@ -1,7 +1,27 @@
 const res = require("express/lib/response")
 
-const validateUsername = (username) => {
-  return username.length > 3
+const validateUsernameLength = (username, minLength) => {
+  return username.length > minLength
+}
+
+const validateInitials = (initials, maxLength) => {
+  const regexInitials = /[A-Z]/g
+
+  const isInitialsInUpperCase = regexInitials.test(initials)
+
+  if (!initials || !isInitialsInUpperCase || initials.length > maxLength) {
+    return false
+  }
+
+  return true
+}
+
+const validadeCountryLength = (country, minLength) => {
+  if(!country || country.length < minLength) {
+    return false
+  }
+
+  return true
 }
 
 const validateEmail = (email) => {
@@ -45,7 +65,7 @@ const validateToken = (req, res, next) => {
 const validateRegister = (req, res, next) => {
   const { username, email, password } = req.body;
 
-  if(!validateUsername(username) || !validateEmail(email) || !validatePassword(password)) {
+  if(!validateUsernameLength(username, 3) || !validateEmail(email) || !validatePassword(password)) {
     return res.status(400).json({message: 'invalid data'})
   }
 
@@ -62,7 +82,29 @@ const validateLogin = (req, res, next) => {
   next();
 }
 
-const validateRoute = (_req, res, _next) => {
+const validadeTeamsInfo = (req, res, next) => {
+  const { name, initials, country, league } = req.body;
+
+  const testCases = [
+    validateUsernameLength(name, 5),
+    validateInitials(initials, 3),
+    validadeCountryLength(country, 3)
+  ]
+
+  const isSomeInputInvalid = testCases.some((test) => test === false)
+
+  if(isSomeInputInvalid) {
+    return res.status(400).json({message: 'Invalid data!'})
+  }
+
+  if(!league) {
+    req.body.league = ''
+  }
+
+  next();
+}
+
+const invalidRoute = (_req, res, _next) => {
   res.status(404).json({message: 'Opsss, route not found!'})
 }
 
@@ -71,5 +113,6 @@ module.exports = {
   validateRegister,
   validateLogin,
   validateToken,
-  validateRoute
+  invalidRoute,
+  validadeTeamsInfo
 }

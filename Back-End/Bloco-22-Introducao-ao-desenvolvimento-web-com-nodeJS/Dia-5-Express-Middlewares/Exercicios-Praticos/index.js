@@ -1,6 +1,6 @@
 const express = require ('express');
 const bodyParser = require('body-parser');
-const { validateRoute } = require('./middlewaresValidator')
+const { invalidRoute } = require('./middlewaresValidator')
 
 const app = express();
 
@@ -20,12 +20,16 @@ const postsRouter = require('./routes/postsRouter');
 
 app.use('/posts', postsRouter);
 
+const teamsRouter = require('./routes/teamsRouter')
+
+app.use('/teams', teamsRouter)
+
+
+app.all('*', invalidRoute);
+
 app.use((err, _req, res, _next) => {
   res.status(500).json({error: `Erro: ${err.message}`});
 });
-
-app.all('*', validateRoute)
-
 
 app.listen(PORT, () => {
   console.log(`Rodando na porta: ${PORT}`);
