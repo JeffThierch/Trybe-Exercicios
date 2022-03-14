@@ -1,3 +1,5 @@
+const res = require("express/lib/response")
+
 const validateUsername = (username) => {
   return username.length > 3
 }
@@ -27,6 +29,19 @@ const validatePassword = (password) => {
 
 }
 
+const validateToken = (req, res, next) => {
+  const tokenRegex = /[A-Za-z0-9]/g
+  const token = req.headers.authorization
+
+  const isTokenFormatValid = tokenRegex.test(token)
+
+  if (!token || !isTokenFormatValid || token.length !== 12) {
+    return res.status(401).json({message: 'Invalid token!'})
+  }
+
+  next()
+}
+
 const validateRegister = (req, res, next) => {
   const { username, email, password } = req.body;
 
@@ -47,7 +62,9 @@ const validateLogin = (req, res, next) => {
   next();
 }
 
+
 module.exports = {
   validateRegister,
-  validateLogin
+  validateLogin,
+  validateToken
 }

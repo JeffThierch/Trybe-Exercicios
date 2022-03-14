@@ -1,6 +1,6 @@
 const express = require ('express');
-const { validateRegister, validateLogin } = require('./middlewaresValidator')
-const {tokenGenerator} = require('./tokenGenerator')
+const { validateRegister, validateLogin } = require('../middlewaresValidator')
+const {tokenGenerator} = require('../tokenGenerator')
 
 const router = express.Router();
 
