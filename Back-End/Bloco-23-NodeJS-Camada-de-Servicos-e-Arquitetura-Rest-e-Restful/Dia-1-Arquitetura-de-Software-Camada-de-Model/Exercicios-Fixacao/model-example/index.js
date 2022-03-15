@@ -6,14 +6,20 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-app.get('/authors', async (req, res) => {
+app.get('/authors', async (_req, res) => {
   const authorsData = await Author.getAll();
 
   res.status(200).json(authorsData)
 })
 
 app.get('/books', async (req, res) => {
-  const booksData = await Book.getAll();
+  const { id } = req.query
+
+  const booksData = await Book.getByAuthorId(id);
+
+  if(!booksData) {
+    return res.status(404).json({message: 'Not found! =('})
+  }
 
   res.status(200).json(booksData)
 })
