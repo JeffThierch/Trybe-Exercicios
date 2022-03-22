@@ -148,7 +148,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [X] 21.1 - Funções mais usadas no SQL
 - [X] 21.2 - Descomplicando JOINs
 - [X] 21.3 - Transformando ideias em um modelo de banco de dados
-- [ ] 21.4 - Aula ao vivo + Projeto - One For All
+- [X] 21.4 - Aula ao vivo + Projeto - One For All
 
 ##### Bloco 22: Introdução ao desenvolvimento Web com Node.js
 - [X] 22.1 - Introdução - Node.js
@@ -156,13 +156,13 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [X] 22.2 - Node.js - Fluxo Assincrono
 - [X] 22.3 - Mocha, Chai, Sinon - Testes de Back-end com Node.js
 - [X] 22.4 - Express - HTTP com Node.js
-- [ ] 22.5 - Express - Middlewares
-- [ ] 22.6 - Express - Talker Manager
+- [X] 22.5 - Express - Middlewares
+- [X] 22.6 - Express - Talker Manager
 
 ##### Bloco 23: Node.js: Camada de Serviço e Arquitetura Rest e Restful
-- [ ] 23.1 - Introdução - Arquitetura de Software
-- [ ] 23.1 - Arquitetura de Software - Camada de Model
-- [ ] 23.2 - Arquitetura de Software - Camada de Controller e Service
+- [X] 23.1 - Introdução - Arquitetura de Software
+- [X] 23.1 - Arquitetura de Software - Camada de Model
+- [X] 23.2 - Arquitetura de Software - Camada de Controller e Service
 - [ ] 23.3 - Arquitetura Web - Rest e Restful
 - [ ] 23.4 - Arquitetura de Software - Testando as Camadas
 - [ ] 23.5 - Projeto - Store Manager
