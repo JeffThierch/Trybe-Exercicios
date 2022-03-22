@@ -19,7 +19,19 @@ const getAll = () => {
   return {code: 200, message: allUsers}
 };
 
+const getById = (id) => {
+
+  const user = userModel.getById(id);
+
+  if (!user) {
+    return {error: { code: 404, message: 'Usuário não encontrado' }}
+  }
+
+  return {code: 200, message: user};
+}
+
 module.exports = {
   createUser,
-  getAll
+  getAll,
+  getById
 }

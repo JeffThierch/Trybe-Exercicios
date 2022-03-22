@@ -18,8 +18,21 @@ const getAll = (_req, res) => {
   return res.status(allUsers.code).json(allUsers.message)
 }
 
+const getById = (req, res, next) => {
+  const { id } = req.params;
+
+  const user = userServices.getById(id)
+
+  if(user.error) {
+    return next(user.error);
+  }
+
+  return res.status(user.code).json(user.message);
+
+}
 
 module.exports = {
   createUser,
-  getAll
+  getAll,
+  getById
 }
