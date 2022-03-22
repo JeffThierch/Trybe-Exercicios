@@ -18,6 +18,33 @@ const getByCep = async (cep) => {
 
 }
 
+const createCep = async (cep, logradouro, bairro, localidade, uf ) => {
+  const CEP_OBJ = {
+    cep, 
+    logradouro, 
+    bairro, 
+    localidade, 
+    uf,
+  };
+
+  const isCepInfosValid = cepSchemas.validateCepInfos(CEP_OBJ)
+
+  if(isCepInfosValid.error) {
+    return isCepInfosValid;
+  }
+
+  const cepAlreadyExists = await cepModels.getByCep(cep);
+
+  if(cepAlreadyExists.length !== 0) {
+    return {error: {code: 409, message: 'CEP já existente'}}
+  };
+
+  const createdCepInfos = await cepModels.createCep(CEP_OBJ);
+
+  return {code: 201, message: createdCepInfos};
+}
+
 module.exports = {
-  getByCep
+  getByCep,
+  createCep
 }

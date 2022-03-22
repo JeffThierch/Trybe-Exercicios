@@ -1,3 +1,4 @@
+const Joi = require('joi');
 const { generateErrorObj } = require('./helpers')
 
 const errors = {
@@ -23,6 +24,26 @@ const validateCep = (cep) => {
   
 }
 
+const validateCepInfos = (cepInfosObj) => {
+  const schema = Joi.object({
+    cep: Joi.string().regex(/\d{5}-\d{3}/).required(),
+    logradouro: Joi.string().max(50).required(),
+    bairro: Joi.string().max(20).required(),
+    localidade: Joi.string().max(20).required(),
+    uf: Joi.string().max(2).required()
+  })
+
+  const isValid = schema.validate(cepInfosObj);
+
+  if(isValid.error) {
+    return generateErrorObj({code: 400, message: isValid.error.details[0].message})
+  };
+
+  return true
+
+}
+
 module.exports = {
-  validateCep
+  validateCep,
+  validateCepInfos
 }
