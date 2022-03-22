@@ -13,6 +13,9 @@ const createUser = (firstName, lastName, email, password) => {
   return USER_MODEL;
 };
 
+const getAll = () => USERS_DB
+
 module.exports = {
-  createUser
+  createUser,
+  getAll
 }

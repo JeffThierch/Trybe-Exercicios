@@ -13,6 +13,13 @@ const createUser = (firstName, lastName, email, password) => {
   return { code: 201, message: userCreted };
 }
 
+const getAll = () => {
+  const allUsers = userModel.getAll();
+
+  return {code: 200, message: allUsers}
+};
+
 module.exports = {
   createUser,
+  getAll
 }

@@ -12,7 +12,14 @@ const createUser = (req, res, next) => {
   return res.status(createdUser.code).json(createdUser.message);
 }
 
+const getAll = (_req, res) => {
+  const allUsers = userServices.getAll();
+
+  return res.status(allUsers.code).json(allUsers.message)
+}
+
 
 module.exports = {
   createUser,
+  getAll
 }
