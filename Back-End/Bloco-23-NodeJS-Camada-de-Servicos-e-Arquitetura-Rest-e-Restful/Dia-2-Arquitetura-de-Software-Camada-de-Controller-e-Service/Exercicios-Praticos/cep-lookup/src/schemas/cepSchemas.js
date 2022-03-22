@@ -6,7 +6,7 @@ const errors = {
 }
 
 const validateCepFormat = (cep) => {
-  const cepRegex = /\d{5}-?\d{3}/
+  const cepRegex = /\d{5}-\d{3}/
 
   const isValid = cepRegex.test(cep);
 

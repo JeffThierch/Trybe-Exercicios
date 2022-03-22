@@ -1,4 +1,5 @@
-const connection = require('./connection')
+const connection = require('./connection');
+const Axios = require('axios').default
 
 const getByCep = async (cep) => {
   const query = 'SELECT * FROM cep_lookup.ceps WHERE cep = ?';
@@ -16,7 +17,23 @@ const createCep = async ({cep, logradouro, bairro, localidade, uf} = {}) => {
   return {cep, logradouro, bairro, localidade, uf}
 }
 
+const getCepInfosFromViaCep = async (cep) => {
+  const { data } = await Axios.get(`https://viacep.com.br/ws/${cep}/json/`);
+
+  
+  if(data.erro) {
+    return null
+  }
+
+  const {cep: newCep, logradouro, bairro, localidade, uf} = data
+
+  const cepInfos = await createCep({cep: newCep, logradouro, bairro, localidade, uf})
+
+  return cepInfos
+}
+
 module.exports = {
   getByCep,
-  createCep
+  createCep,
+  getCepInfosFromViaCep
 }
