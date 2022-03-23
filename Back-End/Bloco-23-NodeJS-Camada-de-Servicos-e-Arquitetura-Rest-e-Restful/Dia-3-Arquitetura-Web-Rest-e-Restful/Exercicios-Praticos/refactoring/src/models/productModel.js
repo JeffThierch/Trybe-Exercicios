@@ -2,7 +2,8 @@ const connection = require('./connection');
 
 const addProduct = async (name, brand) => {
   try {
-    const [result] = await connection.query(`INSERT INTO products (name, brand) VALUES (?, ?);`,[name, brand]);
+    const query = 'INSERT INTO products (name, brand) VALUES (?, ?);'
+    const [result] = await connection.query(query, [name, brand]);
 
     return { id: result.insertId, name, brand };
   } catch (err) {
@@ -14,7 +15,8 @@ const addProduct = async (name, brand) => {
 
 const getAll = async () => {
   try {
-    const [rows] = await connection.query('SELECT * FROM products');
+    const query = 'SELECT * FROM products'
+    const [rows] = await connection.query(query);
 
     return rows;
   } catch (err) {
@@ -26,14 +28,15 @@ const getAll = async () => {
 
 const getById = async (id) => {
   try {
-    const [result] = await connection.query('SELECT * FROM products WHERE id = ?', [id]);
+    const query = 'SELECT * FROM products WHERE id = ?'
+    const [result] = await connection.query(query, [id]);
 
     if (!result.length) return null
 
     return result[0];
   } catch (err) {
     console.error(err);
-    
+
     return process.exit(1);
   }
 };
@@ -44,7 +47,9 @@ const updateProduct = async (id, name, brand) => {
 
     if (!product) return {};
 
-    await connection.query('UPDATE products SET name = ?, brand = ? WHERE id = ?', [name, brand, id])
+    const query = 'UPDATE products SET name = ?, brand = ? WHERE id = ?'
+
+    await connection.query(query, [name, brand, id])
 
     return true;
   } catch (err) {
@@ -60,7 +65,9 @@ const excludeProduct = async (id) => {
 
     if (!product) return {};
 
-    await connection.query('DELETE FROM products WHERE id = ?', [id])
+    const query = 'DELETE FROM products WHERE id = ?'
+
+    await connection.query(query, [id])
 
     return product;
   } catch (err) {
