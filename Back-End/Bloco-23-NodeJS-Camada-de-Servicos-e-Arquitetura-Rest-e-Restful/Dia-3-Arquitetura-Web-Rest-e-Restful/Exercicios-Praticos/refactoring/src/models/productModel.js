@@ -30,8 +30,7 @@ const getById = async (id) => {
   try {
     const query = 'SELECT * FROM products WHERE id = ?'
     const [result] = await connection.query(query, [id]);
-
-    if (!result.length) return null
+    if (result.length === 0) return null
 
     return result[0];
   } catch (err) {
