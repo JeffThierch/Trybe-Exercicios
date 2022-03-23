@@ -46,10 +46,10 @@ const editProduct = async (req, res, next) => {
   const { name, brand } = req.body;
   const { id } = req.params
 
-  const products = await ProductService.updateProduct(id, name, brand);
+  const product = await ProductService.updateProduct(id, name, brand);
 
-  if(products.error) {
-    return next(products.error);
+  if(product.error) {
+    return next(product.error);
   }
 
   return res.status(204).json();

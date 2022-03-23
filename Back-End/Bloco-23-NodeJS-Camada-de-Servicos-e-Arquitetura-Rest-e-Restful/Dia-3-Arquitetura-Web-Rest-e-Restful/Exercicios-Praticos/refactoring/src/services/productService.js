@@ -46,6 +46,8 @@ const updateProduct = async (id, name, brand) => {
   if(!updatedProduct) {
     return {error: {code: 404, message: 'Product not found!'}}
   }
+
+  return {}
 }
 
 module.exports = {
