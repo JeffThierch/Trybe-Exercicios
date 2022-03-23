@@ -12,39 +12,47 @@ const getById = async (req, res, next) => {
   const product = await ProductService.getById(id);
 
   if(product.error) {
-    return product.error;
+    return next(product.error);
   }
 
   return res.status(200).json(product);
 };
 
-const addProduct = async (req, res) => {
+const addProduct = async (req, res, next) => {
   const { name, brand } = req.body;
 
   const newProduct = await ProductService.addProduct(name, brand);
 
   if(newProduct.error) {
-    return newProduct.error;
+    return next(newProduct.error);
   }
 
   return res.status(201).json(newProduct);
 };
 
-const deleteProduct = async (req, res) => {
+const deleteProduct = async (req, res, next) => {
   const { id } = req.params;
 
   const products = await ProductService.excludeProduct(id);
 
+  if(products.error) {
+    return next(products.error);
+  }
+
   return res.status(200).json(products);
 };
 
-const editProduct = async (req, res) => {
+const editProduct = async (req, res, next) => {
   const { name, brand } = req.body;
   const { id } = req.params
 
   const products = await ProductService.updateProduct(id, name, brand);
 
-  return res.status(200).json(products);
+  if(products.error) {
+    return next(products.error);
+  }
+
+  return res.status(204).json();
 };
 
 module.exports = {
