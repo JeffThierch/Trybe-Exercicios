@@ -40,7 +40,7 @@ describe('Insere um novo filme no BD', () => {
 describe('Busca um filme pelo seu ID', () => {
   describe('Quando encontrado', () => {
 
-    before(() => {
+    before(async () => {
       const execute = [{
         id: 1, 
         title: 'Laranja mecanica',
@@ -51,14 +51,21 @@ describe('Busca um filme pelo seu ID', () => {
       sinon.stub(connection, 'execute').resolves(execute);
     })
 
-    after(() => {
+    after(async () => {
       connection.execute.restore();
     })
 
-    it('Retorna um array', async () => {
-      const response = MoviesModel.getById(1);
+    it('Retorna um Objeto', async () => {
+      const response = await MoviesModel.getById(1);
 
-      expect(response).to.be.a('array');
+      expect(response).to.be.a('object');
+    })
+
+    it('Esse objeto tem a propriedade "id" e que ela tenha o valor "1"', async () => {
+      const response = await MoviesModel.getById(1);
+
+      expect(response).to.haveOwnProperty('id');
+      expect(response.id).to.be.equal(1);
     })
 
   });
@@ -74,10 +81,10 @@ describe('Busca um filme pelo seu ID', () => {
       connection.execute.restore();
     })
 
-    it('Retorna um array vazio', async () => {
+    it('Retorna "null"', async () => {
       const response = await MoviesModel.getById(99);
 
-      expect(response).to.have.length(0);
+      expect(response).to.be.null;
     })
   });
 })
