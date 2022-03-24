@@ -42,6 +42,7 @@ describe('Ao chamar o controller de create', () => {
   describe('quando é inserido com sucesso', async () => {
     const response = {};
     const request = {};
+    
 
     before(() => {
       request.body = {
@@ -77,3 +78,82 @@ describe('Ao chamar o controller de create', () => {
 
   });
 });
+
+describe('Ao chamar o controller getById', () => {
+  describe('Quando o id existir', () => {
+
+    const request = {};
+    const response = {};
+    const next = {}
+
+    const FILM_MODEL = {
+      id: 1, 
+      title: 'Laranja mecanica',
+      directedBy: 'Stanley Kubrick',
+      releaseYear: 1972,
+    }
+
+    before(() => {
+      
+      sinon.stub(MoviesService, 'getById').returns(FILM_MODEL)
+
+      request.params = {
+        id : 1
+      }
+
+      response.status = sinon.stub().returns(response);
+      response.json = sinon.stub().returns();
+    })
+    
+    after(() => {
+      MoviesService.getById.restore()
+    })
+
+    it('E chamado o "status" com codigo "200"', async () => {
+      await MoviesController.getById(request, response, next)
+
+      expect(response.status.calledWith(200)).to.be.equal(true);
+    })
+
+    it('E chamado o "json" com o objeto do filme', async () => {
+
+      await MoviesController.getById(request, response, next);
+
+      expect(response.json.calledWith(FILM_MODEL)).to.be.equal(true);
+    })
+  })
+
+  describe('Quando o "id" nao for encontrado', () => {
+
+    const request = {};
+    const response = {};
+
+    before(() => {
+      
+      sinon.stub(MoviesService, 'getById').returns({error: {code: 404, message: 'Filme não encontrado'}})
+
+      request.params = {
+        id : 99
+      }
+
+      response.status = sinon.stub().returns(response);
+      response.json = sinon.stub().returns();
+    })
+    
+    after(() => {
+      MoviesService.getById.restore()
+    })
+
+    it('E chamado o com o "code" 404 ', async () => {
+      await MoviesController.getById(request, response) 
+
+      expect(response.status.calledWith(404)).to.be.equal(true);
+    })
+
+    it('E chamado com o "json" contendo a "message" igual "Filme não encontrado"', async () => {
+      await MoviesController.getById(request, response) 
+
+      expect(response.json.calledWith({message: 'Filme não encontrado'})).to.be.equal(true);
+    })
+  })
+})
