@@ -33,4 +33,5 @@ const getById = async (id) => {
 
 module.exports = {
   create,
+  getById
 };
