@@ -36,3 +36,48 @@ describe('Insere um novo filme no BD', () => {
 
   });
 });
+
+describe('Busca um filme pelo seu ID', () => {
+  describe('Quando encontrado', () => {
+
+    before(() => {
+      const execute = [{
+        id: 1, 
+        title: 'Laranja mecanica',
+        directedBy: 'Stanley Kubrick',
+        releaseYear: 1972,
+      }]
+
+      sinon.stub(connection, 'execute').resolves(execute);
+    })
+
+    after(() => {
+      connection.execute.restore();
+    })
+
+    it('Retorna um array', async () => {
+      const response = MoviesModel.getById(1);
+
+      expect(response).to.be.a('array');
+    })
+
+  });
+
+  describe('Quando nao encontrado', () => {
+    before(() => {
+      const execute = []
+
+      sinon.stub(connection, 'execute').resolves(execute);
+    })
+
+    after(() => {
+      connection.execute.restore();
+    })
+
+    it('Retorna um array vazio', async () => {
+      const response = await MoviesModel.getById(99);
+
+      expect(response).to.have.length(0);
+    })
+  });
+})
