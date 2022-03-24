@@ -8,6 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.post('/movies', MovieController.create);
+app.get('/movies/:id', MovieController.getById);
 
 const PORT = process.env.PORT || 3000;
 

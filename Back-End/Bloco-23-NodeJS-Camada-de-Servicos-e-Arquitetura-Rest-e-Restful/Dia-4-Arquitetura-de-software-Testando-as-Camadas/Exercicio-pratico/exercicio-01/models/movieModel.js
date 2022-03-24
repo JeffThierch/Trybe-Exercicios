@@ -1,4 +1,3 @@
-const { query } = require('./connection');
 const connection = require('./connection');
 
 const create = async ({ title, directedBy, releaseYear }) => {
@@ -14,10 +13,10 @@ const create = async ({ title, directedBy, releaseYear }) => {
 };
 
 const getById = async (id) => {
-
   const query = 'SELECT * FROM model_example.movies WHERE id = ?'
+  
   const [film] = await connection.execute(query, [id])
-
+ 
   if(!film) {
     return null
   }
