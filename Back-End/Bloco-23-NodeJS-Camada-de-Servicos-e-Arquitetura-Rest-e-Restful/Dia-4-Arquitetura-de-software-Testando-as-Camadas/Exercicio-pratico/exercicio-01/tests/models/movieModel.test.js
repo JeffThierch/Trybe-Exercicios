@@ -69,7 +69,6 @@ describe('Busca um filme pelo seu ID', () => {
     })
 
   });
-
   describe('Quando nao encontrado', () => {
     before(() => {
       const execute = []
