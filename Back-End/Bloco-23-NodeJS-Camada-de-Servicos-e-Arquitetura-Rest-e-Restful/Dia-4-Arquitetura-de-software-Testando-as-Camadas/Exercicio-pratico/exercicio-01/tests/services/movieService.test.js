@@ -79,11 +79,13 @@ describe('Busca um filme pelo seu "id"', () => {
       expect(response).to.be.a('object')
     })
 
-    it('Esse objeto tem que possuir a propriedade "id" e ela tem q ter o valor "1"')
+    it('Esse objeto tem que possuir a propriedade "id" e ela tem q ter o valor "1"', 
+    async () => {
       const response = await MoviesService.getById(1);
 
       expect(response).to.haveOwnProperty('id')
       expect(response.id).to.be.equal(1);
+    })
   })
 
   describe('Quando nao encontrado', () => {
