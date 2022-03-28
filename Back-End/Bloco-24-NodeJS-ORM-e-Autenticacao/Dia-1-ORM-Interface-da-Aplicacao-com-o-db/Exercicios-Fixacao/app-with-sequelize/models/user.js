@@ -3,6 +3,9 @@ const User = (sequelize, DataTypes) => {
     fullName: DataTypes.STRING,
     email: DataTypes.STRING,
     phone_num: DataTypes.STRING
+  }, {
+    underscore: true,
+    tableName: 'Users'
   })
 
   return User;
