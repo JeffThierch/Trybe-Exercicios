@@ -1,17 +1,18 @@
 module.exports = (sequelize, DataTypes) => {
   const Employee = sequelize.define('Employee', {
+    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
     age: DataTypes.INTEGER
   }, {
-    timestamp: false,
-    underscore: true,
+    timestamps: false,
+    underscored: true,
     tableName: 'Employees'
   })
 
   Employee.associate = (models) => {
-    Employee.hasOne(models.Addresse, 
-      {foreingKey: 'employeeId', as: 'addresses'});
+    Employee.hasOne(models.Address, 
+      {foreignKey: 'employeeId', as: 'addresses'});
   };
 
   return Employee
