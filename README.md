@@ -163,13 +163,13 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [X] 23.1 - Introdução - Arquitetura de Software
 - [X] 23.1 - Arquitetura de Software - Camada de Model
 - [X] 23.2 - Arquitetura de Software - Camada de Controller e Service
-- [ ] 23.3 - Arquitetura Web - Rest e Restful
-- [ ] 23.4 - Arquitetura de Software - Testando as Camadas
+- [X] 23.3 - Arquitetura Web - Rest e Restful
+- [X] 23.4 - Arquitetura de Software - Testando as Camadas
 - [ ] 23.5 - Projeto - Store Manager
 
 ##### Bloco 24: Node.js: ORM e Autenticação
-- [ ] 24.1 - Introdução - Node.js: ORM e Autenticação
-- [ ] 24.1 - ORM -  Interface da aplicação com o banco de dados 
+- [X] 24.1 - Introdução - Node.js: ORM e Autenticação
+- [X] 24.1 - ORM -  Interface da aplicação com o banco de dados 
 - [ ] 24.2 - ORM - Associations
 - [ ] 24.3 - JWT - (JSON Web Token)
 - [ ] 24.4 - Testando APIs com Testes de Integração
