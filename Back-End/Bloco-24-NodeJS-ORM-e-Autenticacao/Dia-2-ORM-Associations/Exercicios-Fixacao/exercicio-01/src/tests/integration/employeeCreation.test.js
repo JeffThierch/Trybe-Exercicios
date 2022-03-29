@@ -9,9 +9,9 @@ const { expect } = chai;
 const app = require('../../index');
 
 // omitir os `console.log`s dos testes gerando um `stub` pra função
-const consoleLogStub = stub(console, 'log');
+/* const consoleLogStub = stub(console, 'log');
 before(()=> consoleLogStub.returns(true));
-after(()=> consoleLogStub.restore());
+after(()=> consoleLogStub.restore()); */
 
 describe('Rota POST /employees', () => {
   describe('quando os dados do `body` são válidos', () => {
@@ -34,7 +34,7 @@ describe('Rota POST /employees', () => {
         const { body : { id } } = postEmployee;
 
         getEmployee = await chai.request(app)
-          .get(`/employees/${id}`);
+          .get(`/employees/${id}?includeAddresses=true`);
       } catch (error) {
         console.error(error.message);
       }
@@ -60,7 +60,7 @@ describe('Rota POST /employees', () => {
 
     it('é possível consultar a pessoa criada através do `id` retornado', async () => {
       const { body: { id: postId } } = postEmployee;
-      const { body: { id: getId } } = getEmployee;
+      const { body: {employee: {id: getId  }}  } = getEmployee;
 
       expect(postId).to.be.equals(getId);
     });
