@@ -20,12 +20,12 @@ const getById = async (id) => {
 
 const replaceById = async ({id, title, author, pageQuantity}) => {
 
-  const newBook = await Book.update(
+  const [bookId] = await Book.update(
     { title, author, pageQuantity },
     { where: { id } }
   );
 
-  return newBook;
+  return { id: bookId, title, author, pageQuantity };
   
 };
 
