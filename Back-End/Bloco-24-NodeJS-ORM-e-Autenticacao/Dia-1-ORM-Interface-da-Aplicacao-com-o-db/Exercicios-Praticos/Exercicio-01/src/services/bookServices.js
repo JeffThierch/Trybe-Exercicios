@@ -4,15 +4,26 @@ const { validateBookFields } = require('./validations/bookValidations')
 
 const getAll = async (authorName) => {
   if (authorName) {
-    const allBooksByAuthor = await Book.findAll({where: {
-      author: {
-        [Op.like]: `%${authorName}%`
-      }
-    }})
+    const allBooksByAuthor = await Book.findAll({
+      where: {
+        author: {
+          [Op.like]: `%${authorName}%`
+        }
+      },
+      order: [
+        ['title', 'ASC'],
+        ['created_at', 'ASC'],
+    ],
+  })
 
     return allBooksByAuthor
   }
-  const allBooks = await Book.findAll();
+  const allBooks = await Book.findAll({
+    order: [
+      ['title', 'ASC'],
+      ['created_at', 'ASC'],
+  ],
+  });
 
   return allBooks;
 };
