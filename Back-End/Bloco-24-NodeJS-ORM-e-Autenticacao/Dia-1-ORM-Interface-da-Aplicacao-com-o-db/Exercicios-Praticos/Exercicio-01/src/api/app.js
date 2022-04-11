@@ -10,4 +10,7 @@ app.get('/', bookController.getAll);
 const bookRoutes = require('../routes/bookRoutes');
 app.use('/book', bookRoutes);
 
+const errorController = require('../controllers/errorController');
+app.use(errorController);
+
 module.exports = app
