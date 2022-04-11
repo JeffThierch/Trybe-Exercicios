@@ -1,4 +1,5 @@
 const { Book } = require('../models')
+const { validateBookFields } = require('./validations/bookValidations')
 
 const getAll = async () => {
   const allBooks = await Book.findAll();
@@ -6,7 +7,9 @@ const getAll = async () => {
   return allBooks;
 };
 
-const create = async ({title, author, pageQuantity}) => {
+const create = async ({ title, author, pageQuantity }) => {
+  validateBookFields({ title, author });
+
   const newBook = await Book.create({title, author, pageQuantity});
 
   return newBook;
@@ -19,6 +22,14 @@ const getById = async (id) => {
 };
 
 const replaceById = async ({id, title, author, pageQuantity}) => {
+
+  const bookExist = await Book.findOne({where: {id}});
+
+  validateBookFields({ title, author });
+
+  if(!bookExist) {
+    throw new Error('BOOK_NOT_FOUND')
+  }
 
   const [bookId] = await Book.update(
     { title, author, pageQuantity },
