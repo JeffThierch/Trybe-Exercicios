@@ -1,8 +1,10 @@
 const bookServices = require('../services/bookServices')
 
-const getAll = async (_req, res, next) => {
+const getAll = async (req, res, next) => {
   try {
-    const allBooks = await bookServices.getAll();
+    const {authorName} = req.query
+
+    const allBooks = await bookServices.getAll(authorName);
 
     return res.status(200).json(allBooks);
     
@@ -71,10 +73,11 @@ const deleteBook = async (req, res, next) => {
   }
 };
 
+
 module.exports = {
   getAll,
   getById,
   create,
   replaceById,
-  deleteBook
+  deleteBook,
 }

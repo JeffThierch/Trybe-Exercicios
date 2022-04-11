@@ -1,7 +1,17 @@
 const { Book } = require('../models')
+const { Op } = require("sequelize");    
 const { validateBookFields } = require('./validations/bookValidations')
 
-const getAll = async () => {
+const getAll = async (authorName) => {
+  if (authorName) {
+    const allBooksByAuthor = await Book.findAll({where: {
+      author: {
+        [Op.like]: `%${authorName}%`
+      }
+    }})
+
+    return allBooksByAuthor
+  }
   const allBooks = await Book.findAll();
 
   return allBooks;
