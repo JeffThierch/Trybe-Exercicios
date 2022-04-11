@@ -1,0 +1,12 @@
+const express = require('express');
+const bookController = require('../controllers/bookController')
+
+const router = express.Router();
+
+router
+  .post('/', bookController.create)
+  .get('/:id', bookController.getById)
+  .post('/:id', bookController.replaceById)
+  .delete('/:id', bookController.deleteBook)
+
+module.exports = router;
