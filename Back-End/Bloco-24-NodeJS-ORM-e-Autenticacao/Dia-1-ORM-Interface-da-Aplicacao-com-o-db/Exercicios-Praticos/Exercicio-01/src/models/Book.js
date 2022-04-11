@@ -1,11 +1,11 @@
 const User =(sequelize, DataTypes) => {
-  const User = sequelize.define('User', {
+  const User = sequelize.define('Book', {
     title: DataTypes.STRING,
     author: DataTypes.STRING,
     pageQuantity: DataTypes.INTEGER
   }, {
     undescored: true,
-    tableName: 'Users'
+    tableName: 'Books'
   })
 
   return User
