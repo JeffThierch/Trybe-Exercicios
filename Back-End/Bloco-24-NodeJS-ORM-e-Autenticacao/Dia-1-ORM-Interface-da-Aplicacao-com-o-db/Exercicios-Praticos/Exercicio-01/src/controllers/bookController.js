@@ -1,3 +1,5 @@
+const bookServices = require('../services/bookServices')
+
 const getAll = async (_req, res, next) => {
   try {
     const allBooks = await bookServices.getAll();
