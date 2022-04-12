@@ -165,19 +165,19 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [X] 23.2 - Arquitetura de Software - Camada de Controller e Service
 - [X] 23.3 - Arquitetura Web - Rest e Restful
 - [X] 23.4 - Arquitetura de Software - Testando as Camadas
-- [ ] 23.5 - Projeto - Store Manager
+- [X] 23.5 - Projeto - Store Manager
 
 ##### Bloco 24: Node.js: ORM e Autenticação
 - [X] 24.1 - Introdução - Node.js: ORM e Autenticação
 - [X] 24.1 - ORM -  Interface da aplicação com o banco de dados 
-- [ ] 24.2 - ORM - Associations
-- [ ] 24.3 - JWT - (JSON Web Token)
-- [ ] 24.4 - Testando APIs com Testes de Integração
+- [X] 24.2 - ORM - Associations
+- [x] 24.3 - JWT - (JSON Web Token)
+- [x] 24.4 - Testando APIs com Testes de Integração
 - [ ] 24.5 - Projeto - API de Blogs
 
 ##### Bloco 25: Deployment
-- [ ] 25.1 - Introdução - Deploy
-- [ ] 25.1 - Infraestrutura - Deploy com Heroku
+- [x] 25.1 - Introdução - Deploy
+- [x] 25.1 - Infraestrutura - Deploy com Heroku
 - [ ] 25.2 - Deploy Docker & Heroku
 - [ ] 25.3 - Projeto - Stranger Things
 
