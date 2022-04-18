@@ -6,8 +6,6 @@ const validateJwt = ({ token }) => {
 
   const { payload } = validateToken({ token });
 
-  console.log(payload);
-
   return payload;
 };
 
