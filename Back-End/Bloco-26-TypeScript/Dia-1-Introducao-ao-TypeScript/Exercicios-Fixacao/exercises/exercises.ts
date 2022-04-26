@@ -26,3 +26,6 @@ export function rectangle(base: number, height: number): number {
   return base * height;
 };
 
+export function rhombus(majorDiagonal: number, minorDiagonal: number): number {
+  return (majorDiagonal * minorDiagonal) / 2
+}
