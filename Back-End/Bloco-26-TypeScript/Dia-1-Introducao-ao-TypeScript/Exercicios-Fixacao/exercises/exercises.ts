@@ -33,3 +33,9 @@ export function rhombus(majorDiagonal: number, minorDiagonal: number): number {
 export function trapezium(height: number, majorBase: number, minorBase: number): number {
   return ((majorBase + minorBase) * height) / 2
 };
+
+export function circle(radius: number): number {
+  const PI_VALUE = 3.1415926
+
+  return PI_VALUE * (radius ** 2);
+}

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.trapezium = exports.rhombus = exports.rectangle = exports.square = exports.triangle = exports.sumArray = exports.add = exports.personAge = exports.greeter = void 0;
+exports.circle = exports.trapezium = exports.rhombus = exports.rectangle = exports.square = exports.triangle = exports.sumArray = exports.add = exports.personAge = exports.greeter = void 0;
 function greeter(name) {
     return `Ola ${name}!`;
 }
@@ -46,3 +46,8 @@ function trapezium(height, majorBase, minorBase) {
 }
 exports.trapezium = trapezium;
 ;
+function circle(radius) {
+    const PI_VALUE = 3.1415926;
+    return PI_VALUE * (radius ** 2);
+}
+exports.circle = circle;

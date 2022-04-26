@@ -42,3 +42,6 @@ console.log(`A area do losango de diagonal maior 75cm e diagonal menor 25cm: ${E
 console.log(`A area do trapezio de altura 50cm, base maior: 100cm e base manor 70cm e: ${Exercise.trapezium(50, 100, 70)}cm²`);
 console.log(`A area do trapezio de altura 35cm, base maior: 75cm e base manor 50cm e: ${Exercise.trapezium(35, 75, 50)}cm²`);
 console.log(`A area do trapezio de altura 80cm, base maior: 150cm e base manor 120cm e: ${Exercise.trapezium(80, 150, 120)}cm²`);
+console.log(`A area do circulo de raio 25cm e de: ${Exercise.circle(25)}cm²`);
+console.log(`A area do circulo de raio 100cm e de: ${Exercise.circle(100)}cm²`);
+console.log(`A area do circulo de raio 12.5cm e de: ${Exercise.circle(12.5)}cm²`);
