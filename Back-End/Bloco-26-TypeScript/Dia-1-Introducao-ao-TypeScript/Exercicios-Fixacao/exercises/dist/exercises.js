@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.rhombus = exports.rectangle = exports.square = exports.triangle = exports.sumArray = exports.add = exports.personAge = exports.greeter = void 0;
+exports.trapezium = exports.rhombus = exports.rectangle = exports.square = exports.triangle = exports.sumArray = exports.add = exports.personAge = exports.greeter = void 0;
 function greeter(name) {
     return `Ola ${name}!`;
 }
@@ -40,3 +40,9 @@ function rhombus(majorDiagonal, minorDiagonal) {
     return (majorDiagonal * minorDiagonal) / 2;
 }
 exports.rhombus = rhombus;
+;
+function trapezium(height, majorBase, minorBase) {
+    return ((majorBase + minorBase) * height) / 2;
+}
+exports.trapezium = trapezium;
+;

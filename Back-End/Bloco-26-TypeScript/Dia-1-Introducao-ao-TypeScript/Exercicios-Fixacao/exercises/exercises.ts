@@ -27,5 +27,9 @@ export function rectangle(base: number, height: number): number {
 };
 
 export function rhombus(majorDiagonal: number, minorDiagonal: number): number {
-  return (majorDiagonal * minorDiagonal) / 2
-}
+  return (majorDiagonal * minorDiagonal) / 2;
+};
+
+export function trapezium(height: number, majorBase: number, minorBase: number): number {
+  return ((majorBase + minorBase) * height) / 2
+};

@@ -39,3 +39,6 @@ console.log(`Retângulo de base 100cm e altura 200cm: ${Exercise.rectangle(100, 
 console.log(`A area do losango de diagonal maior 32cm e diagonal menor 18cm: ${Exercise.rhombus(32, 18)}cm²`);
 console.log(`A area do losango de diagonal maior 200cm e diagonal menor 50cm: ${Exercise.rhombus(200, 50)}cm²`);
 console.log(`A area do losango de diagonal maior 75cm e diagonal menor 25cm: ${Exercise.rhombus(75, 25)}cm²`);
+console.log(`A area do trapezio de altura 50cm, base maior: 100cm e base manor 70cm e: ${Exercise.trapezium(50, 100, 70)}cm²`);
+console.log(`A area do trapezio de altura 35cm, base maior: 75cm e base manor 50cm e: ${Exercise.trapezium(35, 75, 50)}cm²`);
+console.log(`A area do trapezio de altura 80cm, base maior: 150cm e base manor 120cm e: ${Exercise.trapezium(80, 150, 120)}cm²`);
