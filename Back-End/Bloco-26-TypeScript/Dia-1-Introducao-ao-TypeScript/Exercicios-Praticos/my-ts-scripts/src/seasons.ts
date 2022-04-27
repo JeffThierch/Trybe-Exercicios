@@ -1,14 +1,21 @@
 enum YearMonths {
-  janeiro = 1,
-  fevereiro,
-  março,
-  abril,
-  maio,
-  junho,
-  julho,
-  agosto,
-  setembro,
-  outubro,
-  novembro,
-  dezembro,
+  Janeiro = 1,
+  Fevereiro,
+  Março,
+  Abril,
+  Maio,
+  Junho,
+  Julho,
+  Agosto,
+  Setembro,
+  Outubro,
+  Novembro,
+  Dezembro,
+}
+
+enum SeasonsOfTheYear {
+  Outono,
+  Inverno,
+  Primaveira,
+  Verão
 }
