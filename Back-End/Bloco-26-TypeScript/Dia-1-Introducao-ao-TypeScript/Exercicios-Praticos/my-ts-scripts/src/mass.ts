@@ -1,3 +1,5 @@
+import readlineSync from 'readline-sync';
+
 enum ConversionValuesInGrams {
   kg = 1000,
   hg = 100,
@@ -15,3 +17,17 @@ export function convert (value: number, baseUnity: MassUnits, convertUnity: Mass
 
   return `${convertedValue} ${convertUnity}`;
 };
+
+function exec(): void {
+  const avalibleUnits: MassUnits[] = ["kg", "hg", "dag", "g", "dg", "cg", "mg"];
+
+  const value = readlineSync.questionFloat('Enter a value: ');
+  const baseUnity = readlineSync.keyInSelect(avalibleUnits, 'Chose the base unity:');
+  const convertUnity = readlineSync.keyInSelect(avalibleUnits, 'Chose the convert unity:');
+  
+  const convertedValue = convert(value, avalibleUnits[baseUnity] , avalibleUnits[convertUnity]);
+
+  console.log(`${value}${avalibleUnits[baseUnity]} e igual a ${convertedValue}`);
+}
+
+exec()
