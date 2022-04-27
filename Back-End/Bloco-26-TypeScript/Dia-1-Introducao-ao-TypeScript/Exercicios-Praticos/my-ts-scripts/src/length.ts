@@ -8,9 +8,9 @@ enum ConversionValuesInMeters {
   mm = 0.001,
 }
 
-type Units = "km" | "hm" | "dam" | "m" | 'dm' | 'cm' | 'mm'
+type DistanceUnits = "km" | "hm" | "dam" | "m" | 'dm' | 'cm' | 'mm'
 
-function convert (value: number, baseUnity: Units, convertUnity: Units ): string {
+export function convert (value: number, baseUnity: DistanceUnits, convertUnity: DistanceUnits ): string {
   const convertedValue = (value * ConversionValuesInMeters[baseUnity]) / ConversionValuesInMeters[convertUnity];
 
   return `${convertedValue} ${convertUnity}`;
