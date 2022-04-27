@@ -1,6 +1,9 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.convert = void 0;
+const readline_sync_1 = __importDefault(require("readline-sync"));
 var ConversionValuesInCubicValues;
 (function (ConversionValuesInCubicValues) {
     ConversionValuesInCubicValues[ConversionValuesInCubicValues["km"] = 1000000000] = "km";
@@ -15,5 +18,14 @@ function convert(value, baseUnity, convertUnity) {
     const convertedValue = (value * ConversionValuesInCubicValues[baseUnity]) / ConversionValuesInCubicValues[convertUnity];
     return `${convertedValue} ${convertUnity}³`;
 }
-exports.convert = convert;
 ;
+function exec() {
+    const avalibleUnits = ["km", "hm", "dam", "m", 'dm', 'cm', 'mm'];
+    const value = readline_sync_1.default.questionFloat('Enter a value: ');
+    const baseUnity = readline_sync_1.default.keyInSelect(avalibleUnits, 'Chose the base unity:');
+    const convertUnity = readline_sync_1.default.keyInSelect(avalibleUnits, 'Chose the convert unity:');
+    const convertedValue = convert(value, avalibleUnits[baseUnity], avalibleUnits[convertUnity]);
+    console.log(`${value}${avalibleUnits[baseUnity]}³ e igual a ${convertedValue}`);
+}
+;
+exec();

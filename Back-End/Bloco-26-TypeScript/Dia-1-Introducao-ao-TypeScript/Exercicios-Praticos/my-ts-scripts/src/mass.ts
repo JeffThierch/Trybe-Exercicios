@@ -12,7 +12,7 @@ enum ConversionValuesInGrams {
 
 type MassUnits = "kg" | "hg" | "dag" | "g" | "dg" | "cg" | "mg"
 
-export function convert (value: number, baseUnity: MassUnits, convertUnity: MassUnits): string {
+function convert (value: number, baseUnity: MassUnits, convertUnity: MassUnits): string {
   const convertedValue = (value / ConversionValuesInGrams[baseUnity]) * ConversionValuesInGrams[convertUnity];
 
   return `${convertedValue} ${convertUnity}`;
@@ -28,6 +28,6 @@ function exec(): void {
   const convertedValue = convert(value, avalibleUnits[baseUnity] , avalibleUnits[convertUnity]);
 
   console.log(`${value}${avalibleUnits[baseUnity]} e igual a ${convertedValue}`);
-}
+};
 
-exec()
+exec();

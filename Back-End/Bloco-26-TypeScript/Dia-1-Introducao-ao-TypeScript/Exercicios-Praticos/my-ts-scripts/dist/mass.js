@@ -3,7 +3,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.convert = void 0;
 const readline_sync_1 = __importDefault(require("readline-sync"));
 var ConversionValuesInGrams;
 (function (ConversionValuesInGrams) {
@@ -19,7 +18,6 @@ function convert(value, baseUnity, convertUnity) {
     const convertedValue = (value / ConversionValuesInGrams[baseUnity]) * ConversionValuesInGrams[convertUnity];
     return `${convertedValue} ${convertUnity}`;
 }
-exports.convert = convert;
 ;
 function exec() {
     const avalibleUnits = ["kg", "hg", "dag", "g", "dg", "cg", "mg"];
@@ -29,4 +27,5 @@ function exec() {
     const convertedValue = convert(value, avalibleUnits[baseUnity], avalibleUnits[convertUnity]);
     console.log(`${value}${avalibleUnits[baseUnity]} e igual a ${convertedValue}`);
 }
+;
 exec();

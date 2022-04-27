@@ -3,7 +3,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.convert = void 0;
 const readline_sync_1 = __importDefault(require("readline-sync"));
 var ConversionValuesInMeters;
 (function (ConversionValuesInMeters) {
@@ -19,7 +18,6 @@ function convert(value, baseUnity, convertUnity) {
     const convertedValue = (value * ConversionValuesInMeters[baseUnity]) / ConversionValuesInMeters[convertUnity];
     return `${convertedValue} ${convertUnity}`;
 }
-exports.convert = convert;
 function exec() {
     const avalibleUnits = ["km", "hm", "dam", "m", 'dm', 'cm', 'mm'];
     const value = readline_sync_1.default.questionFloat('Enter a value: ');
