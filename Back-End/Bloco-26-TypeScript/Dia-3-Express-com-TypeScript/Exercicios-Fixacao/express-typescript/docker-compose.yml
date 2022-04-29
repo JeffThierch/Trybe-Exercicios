@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  db:
+    image: mysql:5.7
+    restart: unless-stopped
+    ports:
+      - $DB_PORT:$DB_PORT
+    env_file:
+      - ./.env
+    environment:
+      - MYSQL_ROOT_PASSWORD=$DB_PASSWORD
+    volumes:
+      - db:/var/lib/mysql
+
+volumes:
+  db:
