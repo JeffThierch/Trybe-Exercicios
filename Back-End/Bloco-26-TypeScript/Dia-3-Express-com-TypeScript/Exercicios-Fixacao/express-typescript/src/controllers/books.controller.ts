@@ -16,7 +16,39 @@ class BooksController {
 
     const newBook = await this.bookService.create({title, author, price, isbn});
 
-    res.status(StatusCodes.CREATED).json(newBook);
+    return res.status(StatusCodes.CREATED).json(newBook);
+  }
+
+  public getById = async (req: Request, res: Response) => {
+    const { id } = req.params
+
+    const intID = parseInt(id, 10);
+
+    const book = await this.bookService.getById(intID);
+
+   return res.status(StatusCodes.OK).json(book);
+  }
+
+  public update = async (req: Request, res: Response) => {
+    const { id } = req.params;
+
+    const {title, price, author, isbn} = req.body
+
+    const intID = parseInt(id, 10);
+
+    const newBook = await this.bookService.update(intID, {title, price, author, isbn});
+
+    return res.status(StatusCodes.OK).json(newBook)
+  }
+
+  public remove = async (req: Request, res: Response) => {
+    const { id } = req.params;
+
+    const intID = parseInt(id, 10);
+
+    await this.bookService.remove(intID);
+
+    return res.status(StatusCodes.OK).json({ message: 'Book deleted successfully' });
   }
 }
 
