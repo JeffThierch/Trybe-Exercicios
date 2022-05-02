@@ -9,7 +9,7 @@ export default class UserModel {
   }
 
   public async getAll(): Promise<User[]> {
-    const query = 'SELECT * FROM Users';
+    const query = 'SELECT id, name, email FROM Users';
 
     const [users] = await this.connection.execute(query);
 
@@ -17,7 +17,7 @@ export default class UserModel {
   }
 
   public async getById(id: number): Promise<User> {
-    const query = 'SELECT * FROM Users WHERE id=?';
+    const query = 'SELECT id, name, email FROM Users WHERE id=?';
 
     const [users] = await this.connection.execute(query, [id]);
 
