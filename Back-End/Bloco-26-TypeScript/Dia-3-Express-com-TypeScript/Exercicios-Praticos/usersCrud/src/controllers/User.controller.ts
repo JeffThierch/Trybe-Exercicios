@@ -3,53 +3,53 @@ import { StatusCodes } from "http-status-codes";
 import UserServices from "../services/User.services";
 
 export default class UserController {
-  private userServices: UserServices
+  private userService: UserServices
 
   constructor() {
-    this.userServices = new UserServices();
+    this.userService = new UserServices();
   }
 
-  public async getAll(req: Request, res: Response) {
-    const users = await this.userServices.getAll();
+  public getAll = async (req: Request, res: Response) => {
+    const users = await this.userService.getAll();
 
     return res.status(StatusCodes.OK).json(users);
   }
 
-  public async getById(req: Request, res: Response) {
+  public  getById = async (req: Request, res: Response) => {
     const { id } = req.params;
 
     const intID = parseInt(id, 10)
 
-    const user = await this.userServices.getById(intID);
+    const user = await this.userService.getById(intID);
 
     return res.status(StatusCodes.OK).json(user);
   }
 
-  public async create(req: Request, res: Response) {
+  public create = async (req: Request, res: Response) => {
     const { name, email, password } = req.body;
 
-    const newUser = await this.userServices.create({name, email, password});
+    const newUser = await this.userService.create({name, email, password});
 
     return res.status(StatusCodes.CREATED).json(newUser);
   }
 
-  public async remove(req: Request, res: Response) {
+  public remove = async (req: Request, res: Response) => {
     const { id } = req.params;
 
     const intID = parseInt(id, 10)
 
-    await this.userServices.remove(intID);
+    await this.userService.remove(intID);
 
     return res.status(StatusCodes.OK).json({message: `User with id: ${intID}, deleted with sucess.`});
   }
 
-  public async update(req: Request, res: Response) {
+  public update = async (req: Request, res: Response) => {
     const { id } = req.params;
     const { name, email, password } = req.body;
 
     const intID = parseInt(id, 10);
 
-    const newUser = await this.userServices.update(intID, {name, email, password});
+    const newUser = await this.userService.update(intID, {name, email, password});
 
     return res.status(StatusCodes.OK).json(newUser);
   }

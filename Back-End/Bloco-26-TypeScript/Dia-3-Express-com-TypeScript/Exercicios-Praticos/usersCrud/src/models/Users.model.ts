@@ -26,6 +26,16 @@ export default class UserModel {
     return user
   }
 
+  public async getByEmail(email: string): Promise<User> {
+    const query = 'SELECT id, name, email FROM Users WHERE email=?'
+
+    const [users] = await this.connection.execute(query, [email]);
+
+    const [user] = users as User[];
+
+    return user;
+  }
+
   public async create(user: User): Promise<User> {
     const {name, email, password} = user;
 
