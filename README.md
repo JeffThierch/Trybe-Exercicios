@@ -173,24 +173,24 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [X] 24.2 - ORM - Associations
 - [x] 24.3 - JWT - (JSON Web Token)
 - [x] 24.4 - Testando APIs com Testes de Integração
-- [ ] 24.5 - Projeto - API de Blogs
+- [X] 24.5 - Projeto - API de Blogs
 
 ##### Bloco 25: Deployment
 - [x] 25.1 - Introdução - Deploy
 - [x] 25.1 - Infraestrutura - Deploy com Heroku
-- [ ] 25.2 - Deploy Docker & Heroku
+- [X] 25.2 - Deploy Docker & Heroku
 - [ ] 25.3 - Projeto - Stranger Things
 
 
 ##### Bloco 26: TypeScript
-- [ ] 26.1 - Introdução - TypeScript
-- [ ] 26.1 - Introdução - TypeScript
-- [ ] 26.2 - Tipagem Estatica e Generics
-- [ ] 26.3 - Express com TypeScript
+- [X] 26.1 - Introdução - TypeScript
+- [X] 26.1 - Introdução - TypeScript
+- [X] 26.2 - Tipagem Estatica e Generics
+- [X] 26.3 - Express com TypeScript
 - [ ] 26.4 - Projeto - Trybe Smith
 
 ##### Bloco 27: Programação Orientada a Objetos (POO) e SOLID
-- [ ] 27.1 - Introdução a Orientação a Objetos
+- [X] 27.1 - Introdução a Orientação a Objetos
 - [ ] 27.2 - Herança e Interfaces
 - [ ] 27.3 - Polimorfismo
 - [ ] 27.4 - SOLID - Introdução
