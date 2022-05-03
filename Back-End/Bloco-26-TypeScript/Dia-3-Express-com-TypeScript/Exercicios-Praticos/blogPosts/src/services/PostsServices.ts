@@ -35,6 +35,10 @@ export default class PostsServices {
     return newPost;
   }
 
+  async remove(id: number): Promise<void> {
+    await this.model.remove(id);
+  }
+
   async searchByQueryParams(params: IQueryParams): Promise<IPost[]> {
     const posts = await this.model.searchByQueryParams(params);
 

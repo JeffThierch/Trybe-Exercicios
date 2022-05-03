@@ -54,7 +54,17 @@ export default class PostsModel {
 
   async searchByQueryParams(params: IQueryParams): Promise<IPost[]> {
     const {author, category, date} = params
-    const query = 'SELECT * FROM Posts WHERE author=? OR category=? OR publicationDate=?';
+
+    let query = 'SELECT * FROM Posts WHERE author=? OR category=? OR publicationDate=?';
+
+    if(!date) {
+      query = 'SELECT * FROM Posts WHERE author=? OR category=?';
+
+      const [posts] = await this.connection.execute(query, [author, category]);
+      
+      return posts as IPost[];
+    }
+
 
     const [posts] = await this.connection.execute(query, [author, category, date]);
 
