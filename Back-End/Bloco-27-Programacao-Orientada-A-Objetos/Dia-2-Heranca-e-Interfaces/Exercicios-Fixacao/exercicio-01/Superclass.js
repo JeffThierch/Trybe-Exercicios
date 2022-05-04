@@ -1,21 +1,24 @@
 "use strict";
 class Superclass {
-    constructor() {
-        this.isSuper = true;
+    constructor(isSuper) {
+        this.isSuper = isSuper;
     }
     sayHello() {
         console.log('Ola mundo!');
     }
 }
 class Subclass extends Superclass {
-    sayHello2() {
-        this.sayHello();
+    constructor() {
+        super(false);
     }
 }
 function myFunc(obj) {
-    obj.sayHello2();
+    if (obj.isSuper) {
+        return console.log('Super!');
+    }
+    return console.log('Sub!');
 }
-/* const superClass = new Superclass(); */
+const superClass = new Superclass(true);
 const subClass = new Subclass();
-/* myFunc(superClass); */
+myFunc(superClass);
 myFunc(subClass);
