@@ -34,7 +34,6 @@ class PostsModel {
     }
     async searchByQueryParams(params) {
         const { author, category, date } = params;
-        console.log(date);
         let query = 'SELECT * FROM Posts WHERE author=? OR category=? OR publicationDate=?';
         if (!date) {
             query = 'SELECT * FROM Posts WHERE author=? OR category=?';
