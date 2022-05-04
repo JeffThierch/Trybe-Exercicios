@@ -1,6 +1,6 @@
 "use strict";
 class Superclass {
-    constructor(isSuper) {
+    constructor(isSuper = true) {
         this.isSuper = isSuper;
     }
     sayHello() {
@@ -18,7 +18,7 @@ function myFunc(obj) {
     }
     return console.log('Sub!');
 }
-const superClass = new Superclass(true);
+const superClass = new Superclass();
 const subClass = new Subclass();
 myFunc(superClass);
 myFunc(subClass);

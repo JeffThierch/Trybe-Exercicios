@@ -1,8 +1,7 @@
 class Superclass {
-  public isSuper: boolean
+ 
 
-  constructor(isSuper: boolean) {
-    this.isSuper = isSuper;
+  constructor(public isSuper: boolean = true) {
   }
 
   sayHello() {
@@ -24,7 +23,7 @@ function myFunc(obj: Superclass) {
   return console.log('Sub!')
 }
 
-const superClass = new Superclass(true);
+const superClass = new Superclass();
 const subClass = new Subclass();
 
 myFunc(superClass);
