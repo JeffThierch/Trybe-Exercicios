@@ -14,7 +14,7 @@ class ExampleDatabase {
         this.logger = logger;
     }
     save(key, value) {
-        this.logger.log(`${key}: ${value}`);
+        this.logger.log(`${key} : ${value}`);
     }
 }
 const logger1 = new ConsoleLogger();

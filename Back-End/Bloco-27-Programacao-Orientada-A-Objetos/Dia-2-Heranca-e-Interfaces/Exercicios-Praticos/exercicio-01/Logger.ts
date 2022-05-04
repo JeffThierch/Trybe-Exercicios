@@ -22,7 +22,7 @@ interface Database {
 class ExampleDatabase implements Database {
   constructor(public logger: Logger = new ConsoleLogger) {}
   save(key: string, value: string) {
-    this.logger.log(`${key}: ${value}`)
+    this.logger.log(`${key} : ${value}`)
   }
 }
 
