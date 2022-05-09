@@ -18,6 +18,10 @@ class Order {
   }
 
   calcDiscountTotal() {
+    if(!this.discountPorcent) {
+      return 0
+    }
+    
     return (this.calcOrderTotal() * this.discountPorcent)
   }
 
