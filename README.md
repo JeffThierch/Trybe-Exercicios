@@ -179,7 +179,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [x] 25.1 - Introdução - Deploy
 - [x] 25.1 - Infraestrutura - Deploy com Heroku
 - [X] 25.2 - Deploy Docker & Heroku
-- [ ] 25.3 - Projeto - Stranger Things
+- [X] 25.3 - Projeto - Stranger Things
 
 
 ##### Bloco 26: TypeScript
@@ -191,8 +191,8 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 
 ##### Bloco 27: Programação Orientada a Objetos (POO) e SOLID
 - [X] 27.1 - Introdução a Orientação a Objetos
-- [ ] 27.2 - Herança e Interfaces
-- [ ] 27.3 - Polimorfismo
+- [X] 27.2 - Herança e Interfaces
+- [X] 27.3 - Polimorfismo
 - [ ] 27.4 - SOLID - Introdução
 - [ ] 27.5 - SOLID - Continuação
 - [ ] 27.6 - Projeto - Trybers and Dragons
