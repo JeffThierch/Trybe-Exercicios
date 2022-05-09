@@ -5,8 +5,8 @@ export default class Student extends Person {
   private _examsGrades: number[] = [];
   private _worksGrades: number[]= [];
 
-  constructor(name: string, brithDate: Date) {
-    super(name, brithDate);
+  constructor(person: Person) {
+    super(person.name, person.birthDate);
     this._enrollment = this.generateEnrollment();
   }
 
