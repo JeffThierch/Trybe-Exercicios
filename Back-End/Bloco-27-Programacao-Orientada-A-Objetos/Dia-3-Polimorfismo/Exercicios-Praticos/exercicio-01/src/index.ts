@@ -1,10 +1,9 @@
-import { EvaluationResult } from './EvaluationResult';
-import { Exam } from './Exam';
-import { Student } from './Student';
-import { Subject } from './Subject';
-import { Teacher } from './Teacher';
-import { Work } from './Work';
-
+import { EvaluationResult } from "./classes/EvaluationResult";
+import { Exam } from "./classes/Exam";
+import { Student } from "./classes/Student";
+import { Subject } from "./classes/Subject";
+import { Teacher } from "./classes/Teacher";
+import { Work } from "./classes/Work";
 
 const student01 = new Student('Jeff', new Date('2000/08/07'));
 const student02 = new Student('Robertin', new Date('1980/01/01'));

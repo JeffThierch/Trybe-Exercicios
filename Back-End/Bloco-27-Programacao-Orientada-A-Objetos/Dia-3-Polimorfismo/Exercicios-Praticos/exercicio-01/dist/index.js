@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const EvaluationResult_1 = require("./EvaluationResult");
-const Exam_1 = require("./Exam");
-const Student_1 = require("./Student");
-const Subject_1 = require("./Subject");
-const Teacher_1 = require("./Teacher");
-const Work_1 = require("./Work");
+const EvaluationResult_1 = require("./classes/EvaluationResult");
+const Exam_1 = require("./classes/Exam");
+const Student_1 = require("./classes/Student");
+const Subject_1 = require("./classes/Subject");
+const Teacher_1 = require("./classes/Teacher");
+const Work_1 = require("./classes/Work");
 const student01 = new Student_1.Student('Jeff', new Date('2000/08/07'));
 const student02 = new Student_1.Student('Robertin', new Date('1980/01/01'));
 console.log(student01);
