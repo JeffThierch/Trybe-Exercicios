@@ -1,0 +1,1 @@
+export type PaymentForm = "Credit Card" | "Money" | "Voucher"
