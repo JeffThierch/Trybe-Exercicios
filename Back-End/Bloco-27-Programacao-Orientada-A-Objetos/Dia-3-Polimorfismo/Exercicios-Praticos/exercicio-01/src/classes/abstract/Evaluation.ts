@@ -1,6 +1,4 @@
-import { Teacher } from "./Teacher";
-
-export type EvaluationType = "Exam" | "Work"
+import { Teacher } from "../Teacher";
 
 export abstract class Evaluation {
   private _score: number;

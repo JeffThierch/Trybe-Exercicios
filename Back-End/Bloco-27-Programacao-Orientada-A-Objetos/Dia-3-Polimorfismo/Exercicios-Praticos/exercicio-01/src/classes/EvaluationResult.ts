@@ -1,4 +1,4 @@
-import { Evaluation } from "./Evaluation";
+import { Evaluation } from "./abstract/Evaluation";
 
 export class EvaluationResult {
   private _evaluation: Evaluation;

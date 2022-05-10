@@ -1,4 +1,4 @@
-import { Evaluation } from "./Evaluation";
+import { Evaluation } from "./abstract/Evaluation";
 import { Teacher } from "./Teacher";
 
 export class Exam extends Evaluation {

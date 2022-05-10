@@ -1,5 +1,5 @@
-import { Person } from "./Person";
-import { Enrollable } from "./Enrollable";
+import { Person } from "./abstract/Person";
+import { Enrollable } from "../interfaces/Enrollable";
 
 export class Employee extends Person implements Enrollable{
   private _enrollment: string = String();

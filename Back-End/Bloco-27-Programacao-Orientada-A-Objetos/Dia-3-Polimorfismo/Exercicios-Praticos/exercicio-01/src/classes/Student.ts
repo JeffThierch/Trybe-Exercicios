@@ -1,6 +1,6 @@
-import { Enrollable } from './Enrollable';
+import { Enrollable } from '../interfaces/Enrollable';
 import { EvaluationResult } from './EvaluationResult';
-import { Person } from './Person';
+import { Person } from './abstract/Person';
 
 export class Student extends Person implements Enrollable{
   private _enrollment: string;
