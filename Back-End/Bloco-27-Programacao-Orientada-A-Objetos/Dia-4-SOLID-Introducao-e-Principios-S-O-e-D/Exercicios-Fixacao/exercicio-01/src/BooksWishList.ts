@@ -1,8 +1,4 @@
-type Book = {
-  book: string;
-  author: string;
-  genre: string;
-}
+import { Book } from './types/BookType';
 
 export default class BooksWishList {
   private wishlist: Book[] = [];
