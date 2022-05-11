@@ -63,6 +63,7 @@ setApproved(students);
 
 */
 
+/* Segunda Refac
 type Discipline = {
   name: string;
   grade: number;
@@ -74,7 +75,7 @@ type Student = {
   disciplines: Discipline[];
 };
 
-/* "Converter" */
+"Converter"
 const percentageGradesIntoLetters = ({ name, disciplines }: Student) => ({
   name,
   disciplines: disciplines.map(({ name, grade }) => {
@@ -90,13 +91,13 @@ const percentageGradesIntoLetters = ({ name, disciplines }: Student) => ({
     return { name, grade, letterGrade };
   })});
 
-/* "Determinar" */
+"Determinar"
 const approvedStudents = ({ disciplines }: Student): boolean =>
   disciplines.every(
     ({ grade }) => grade > 0.7
   );
 
-/* "Atualizar" */
+"Atualizar"
 const updateApprovalData = ({ name: studentName, disciplines }: Student): void => {
   console.log(`A pessoa com nome ${studentName} foi aprovada!`);
 
@@ -111,13 +112,11 @@ function setApproved(students: Student[]): void {
     .map(updateApprovalData);
 }
 
-/*
-  Não se esqueça que é necessário exportar ao final as funções para que você
-  possa testá-las
-*/
 export {
   percentageGradesIntoLetters,
   approvedStudents,
   updateApprovalData,
   setApproved,
 };
+
+*/
