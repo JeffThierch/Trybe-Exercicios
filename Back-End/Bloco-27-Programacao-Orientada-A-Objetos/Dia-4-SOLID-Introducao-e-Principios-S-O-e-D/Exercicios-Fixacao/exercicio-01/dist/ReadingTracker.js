@@ -1,30 +1,25 @@
 "use strict";
-/* eslint-disable class-methods-use-this */
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const notifications_1 = __importDefault(require("./notifications"));
 class ReadingTracker {
     constructor(readingGoal) {
         this.readingGoal = readingGoal;
         this.booksRead = 0;
-        this.wishlist = [];
     }
-    compareBooksReadWithReadingGoal() {
-        return (this.booksRead >= this.readingGoal) ? (this.progressNotification('Congratulations! You\'ve reached your reading goal!')) : (this.progressNotification('There are still some books to go!'));
+    sendNotificationBasedOnReadingGoal() {
+        if (this.booksRead >= this.readingGoal) {
+            return (0, notifications_1.default)('Congratulations! You\'ve reached your reading goal!');
+        }
+        return (0, notifications_1.default)('There are still some books to go!');
     }
     trackReadings(readsCount) {
         this.booksRead += readsCount;
-        this.compareBooksReadWithReadingGoal();
-    }
-    addToWishlist(book) {
-        this.wishlist.push(book);
-    }
-    showWishlist() {
-        console.log(this.wishlist);
-    }
-    progressNotification(message) {
-        console.log(message);
+        this.sendNotificationBasedOnReadingGoal();
     }
 }
 const readTracker = new ReadingTracker(20);
-readTracker.addToWishlist({ book: 'The Road', author: 'Cormac McCarthy', genre: 'Dystopia' });
-readTracker.showWishlist();
 readTracker.trackReadings(12);
 readTracker.trackReadings(9);
