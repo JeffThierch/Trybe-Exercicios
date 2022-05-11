@@ -4,7 +4,7 @@ type Book = {
   genre: string;
 }
 
-export default class WishList {
+export default class BooksWishList {
   private wishlist: Book[] = [];
 
   addToWishlist(book: Book): void {
@@ -16,7 +16,7 @@ export default class WishList {
   }
 }
 
-const wishList = new WishList();
+const wishList = new BooksWishList();
 
 wishList.addToWishlist({ book: 'The Road', author: 'Cormac McCarthy', genre: 'Dystopia' });
 wishList.showWishlist();
