@@ -1,6 +1,6 @@
 import ICepAPI from "./ICepAPI";
 
-export class MockedCepApi implements ICepAPI {
+export default class MockedCepApi implements ICepAPI {
   async getAddressByCEP(cep: string, number: number): Promise<string> {
     return `O endereço para o "CEP:${cep}, n°:${number}" é "endereço mocked"`;
   }
