@@ -13,8 +13,15 @@ export default class plantRepository implements IPlantsRepository {
     return plants;
   }
 
-  getPlantById(id: string): Promise<IPlant | null> {
-    throw new Error("Method not implemented.");
+  async getPlantById(id: string): Promise<IPlant | null> {
+    const plantsRaw = await fs.readFile('plantsData.json', { encoding: 'utf8' });
+    const plants: IPlant[] = JSON.parse(plantsRaw);
+
+    const plantById = plants.find((plant) => plant.id === id);
+
+    if (!plantById) return null;
+    
+    return plantById;
   }
 
   removePlantById(id: string): Promise<IPlant | null> {
@@ -28,7 +35,7 @@ export default class plantRepository implements IPlantsRepository {
   editPlant(id: string, newPlant: IPlant): Promise<IPlant> {
     throw new Error("Method not implemented.");
   }
-  
+
   async savePlant(newPlant: IPlant): Promise<IPlant> {
     const plantsRaw = await fs.readFile('plantsData.json', { encoding: 'utf8' });
     const plants: IPlant[] = JSON.parse(plantsRaw);

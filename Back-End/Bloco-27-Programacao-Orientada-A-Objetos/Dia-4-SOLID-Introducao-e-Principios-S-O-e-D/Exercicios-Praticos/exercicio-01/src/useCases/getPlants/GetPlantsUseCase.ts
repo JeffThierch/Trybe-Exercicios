@@ -8,7 +8,7 @@ export class GetPlantsUseCase {
   ) {};
 
   async execute(): Promise<IPlant[]> {
-    const plants = this.plantRepository.getPlants()
+    const plants = await this.plantRepository.getPlants()
 
     return plants
   }

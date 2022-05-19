@@ -2,16 +2,14 @@ import { IPlant } from "../../../interfaces/IPlant";
 import { Plant } from "../../entities/Plant";
 import { IPlantsRepository } from "../../repositories/IPlantRepository";
 
-export class CreatePlantUseCase {
+export class GetPlantsByIdUseCase {
   constructor(
     private plantRepository: IPlantsRepository
   ) {};
 
-  async execute(data: IPlant): Promise<IPlant> {
-    const newPlant = new Plant(data)
+  async execute(id: string): Promise<IPlant | null> {
+    const plant = await this.plantRepository.getPlantById(id)
 
-    const savedPlant = await this.plantRepository.savePlant(newPlant)
-
-    return savedPlant
+    return plant
   }
 }
