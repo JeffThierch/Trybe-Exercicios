@@ -20,12 +20,21 @@ export default class plantRepository implements IPlantsRepository {
     const plantById = plants.find((plant) => plant.id === id);
 
     if (!plantById) return null;
-    
+
     return plantById;
   }
 
-  removePlantById(id: string): Promise<IPlant | null> {
-    throw new Error("Method not implemented.");
+  async removePlantById(id: string): Promise<IPlant | null> {
+    const plantsRaw = await fs.readFile('plantsData.json', { encoding: 'utf8' });
+    const plants: IPlant[] = JSON.parse(plantsRaw);
+
+    const removedPlant = plants.find((plant) => plant.id === id);
+    if (!removedPlant) return null;
+
+    const newPlants = plants.filter((plant) => plant.id !== id);
+    await fs.writeFile('plantsData.json', JSON.stringify(newPlants));
+
+    return removedPlant;
   }
 
   getPlantsThatNeedsSunWithId(id: string): Promise<IPlant[]> {
