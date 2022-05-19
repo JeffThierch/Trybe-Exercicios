@@ -2,7 +2,7 @@ import { IPlant } from "../../interfaces/IPlant";
 import { Plant } from "../entities/Plant";
 
 export interface IPlantsRepository {
-  getPlants(): Promise<Plant[]>;
+  getPlants(): Promise<IPlant[]>;
   getPlantById(id: string): Promise<IPlant | null>;
   removePlantById(id: string): Promise<IPlant | null>;
   getPlantsThatNeedsSunWithId(id: string): Promise<IPlant[]>;
