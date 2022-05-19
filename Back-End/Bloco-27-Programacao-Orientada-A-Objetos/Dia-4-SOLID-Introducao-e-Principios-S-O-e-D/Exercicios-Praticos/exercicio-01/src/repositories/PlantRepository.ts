@@ -1,7 +1,6 @@
 import fs from "fs/promises";
 import { IOpsInfo } from "../../interfaces/IOpsInfo";
 import { IPlant } from "../../interfaces/IPlant";
-import { Plant } from "../entities/Plant";
 import { IPlantsRepository } from "./IPlantRepository";
 
 export default class plantRepository implements IPlantsRepository {
@@ -50,8 +49,17 @@ export default class plantRepository implements IPlantsRepository {
     return filteredPlants;
   }
 
-  editPlant(id: string, newPlant: IPlant): Promise<IPlant> {
-    throw new Error("Method not implemented.");
+  async editPlant(id: string, newPlant: IPlant): Promise<IPlant> {
+    const plantsRaw = await fs.readFile('plantsData.json', { encoding: 'utf8' });
+    const plants: IPlant[] = JSON.parse(plantsRaw);
+
+    const updatedPlants = plants.map((plant) => {
+      if (plant.id === id) return newPlant;
+      return plant;
+    });
+
+    await fs.writeFile('plantsData.json', JSON.stringify(updatedPlants));
+    return newPlant;
   }
 
   async savePlant(newPlant: IPlant): Promise<IPlant> {

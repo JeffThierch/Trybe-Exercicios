@@ -10,12 +10,18 @@ export class Plant {
   public origin: string;
   public specialCare?: IPlantSpecialCare;
 
-  constructor(props: Omit<IPlant, 'id'>) {
+  constructor(props: Omit<IPlant, 'id'>, id?: string) {
    this.breed = props.breed;
    this.size = props.size;
    this.needsSun = props.needsSun;
    this.origin = props.origin;
    this.specialCare = props.specialCare;
-   this.id = randomUUID()
+
+   if(id) {
+     this.id = id
+     return;
+    }
+    
+    this.id = randomUUID()
   }
 }
