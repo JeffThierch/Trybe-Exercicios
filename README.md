@@ -193,8 +193,8 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [X] 27.1 - Introdução a Orientação a Objetos
 - [X] 27.2 - Herança e Interfaces
 - [X] 27.3 - Polimorfismo
-- [ ] 27.4 - SOLID - Introdução
-- [ ] 27.5 - SOLID - Continuação
+- [X] 27.4 - SOLID - Introdução
+- [X] 27.5 - SOLID - Continuação
 - [ ] 27.6 - Projeto - Trybers and Dragons
 
 ##### Bloco 28: Projeto - TFC - Trybe Futebol Clube
