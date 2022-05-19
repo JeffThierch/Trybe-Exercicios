@@ -3,7 +3,7 @@ import { IOpsInfo } from "../../interfaces/IOpsInfo";
 import { IPlant } from "../../interfaces/IPlant";
 import { IPlantsRepository } from "./IPlantRepository";
 
-export default class plantRepository implements IPlantsRepository {
+export default class PlantRepository implements IPlantsRepository {
   async getPlants(): Promise<IPlant[]> {
     const plantsRaw = await fs.readFile('plantsData.json', { encoding: 'utf8' });
 
