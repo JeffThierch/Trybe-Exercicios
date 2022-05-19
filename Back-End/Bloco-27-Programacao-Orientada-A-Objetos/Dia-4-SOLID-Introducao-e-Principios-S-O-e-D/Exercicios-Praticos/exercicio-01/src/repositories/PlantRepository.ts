@@ -37,8 +37,17 @@ export default class plantRepository implements IPlantsRepository {
     return removedPlant;
   }
 
-  getPlantsThatNeedsSunWithId(id: string): Promise<IPlant[]> {
-    throw new Error("Method not implemented.");
+  async getPlantsThatNeedsSunWithId(id: string): Promise<IPlant[]> {
+    const plantsRaw = await fs.readFile('plantsData.json', { encoding: 'utf8' });
+    const plants: IPlant[] = JSON.parse(plantsRaw);
+
+    const filteredPlants = plants.filter((plant) =>
+      plant.id === id
+      && plant.needsSun
+      && (!plant.specialCare || plant.specialCare.waterFrequency > 2)
+    );
+
+    return filteredPlants;
   }
 
   editPlant(id: string, newPlant: IPlant): Promise<IPlant> {
