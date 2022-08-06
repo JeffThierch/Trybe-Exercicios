@@ -127,7 +127,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 ##### Bloco 18: Projeto App de Receitas
 - [X] 18.1 - Projeto - App de Receitas
 
-## Desenvolvimento Back-end :hourglass_flowing_sand:
+## Desenvolvimento Back-end :heavy_check_mark:
 
 ##### Bloco 19: Docker: Utilizando Containers
 - [X] 19.1 - Introdução - Back-end
